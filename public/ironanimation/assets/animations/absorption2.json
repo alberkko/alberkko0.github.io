@@ -1,0 +1,90 @@
+{
+
+  "visibilityRanges": {
+  
+    "sprite_fe2-01": [ [ 960, 1080 ] ],
+    "sprite_fe2-02": [ [ 360, 502 ] ],
+    "sprite_fe2-03": [ [ 0, 340 ] ],
+    "sprite_fe2-04": [ [ 360, 504 ] ],
+    
+    "sprite_fe3-01": [ [ 0, 102 ] ],
+
+    "sprite_haemiron-01": [ [ 0, 359 ] ],
+
+    "sprite_transferrin-01": [ [ 0, 390 ], [ 823, 1080 ] ],
+    "sprite_transferrin-02": [ [ 172, 1080 ] ],
+    "sprite_transferrin-03": [ [ 103, 353 ] ],
+    "sprite_apotransferrin-01": [ [ 0, 102 ], [ 639, 1080 ] ],
+    "sprite_apotransferrin-02": [ [ 0, 800 ] ],
+
+    "sprite_hepcidin-01": [ [ 0, 600 ] ],
+    "sprite_hepcidin-02": [ [ 0, 758 ] ],
+    "sprite_hepcidin-03": [ [ 270, 1080 ] ],
+
+    "sprite_ferritin-00": [ [ 900, 1080 ] ],
+    "sprite_ferritin-01": [ [ 0, 360 ] ],
+    "sprite_ferritin-02": [ [ 360, 900 ] ],
+
+    "sprite_cell-back": [ [ 0, 510], [ 960, 1080 ] ],
+
+    "group_incells": [ [ 0, 520 ], [ 900, 1080 ] ]
+  },
+
+  "renderOrders": [
+
+    { "order": 111, "targets":[ "sprite_cell-back" ] },
+
+    { "order": 112, "targets":[ "sprite_ferritin-.*",
+                                "sprite_dcytb",
+                                "sprite_dmt1",
+                                "sprite_ferropotin",
+                                "sprite_hcp1",
+                                "sprite_hephaestin" ] },
+
+    { "order": 113, "targets":[ "sprite_fe2-.*",
+                                "sprite_fe3-.*",
+                                "sprite_haemiron-.*",
+                                "sprite_apotransferrin-.*",
+                                "sprite_transferrin-.*",
+                                "sprite_hepcidin-.*" ] },
+
+    { "order": 114, "targets":[ "sprite_cell-decaying",
+                                "sprite_cell-new" ] },
+
+    { "order": 115, "targets":[ "sprite_cell-.*" ] },
+
+    { "order": 110, "targets":[	"sprite_.*" ] }
+  ],
+  
+  "masked": {
+    
+    "stream": [ "sprite_fe2-.*",
+                "sprite_fe3-.*",
+                "sprite_haemiron-.*",
+                "sprite_apotransferrin-.*",
+                "sprite_transferrin-.*",
+                "sprite_hepcidin-.*" ]
+  },
+
+  "selectable": {
+
+    "fe2":            "sprite_fe2-.*",
+    "fe3":            "sprite_fe3-.*",
+    "haem-iron":       "sprite_haemiron-.*",
+    "apotransferrin": "sprite_apotransferrin-.*",
+    "transferrin":    "sprite_transferrin-.*",
+    "hepcidin":       "sprite_hepcidin-.*",
+
+    "ferritin":       "sprite_ferritin-.*",
+    "dcytb":          "sprite_dcytb",
+    "dmt1":           "sprite_dmt1",
+    "ferropotin":     "sprite_ferropotin",
+    "hcp1":           "sprite_hcp1",
+    "hephaestin":     "sprite_hephaestin"
+  },
+
+  "tipped": {
+
+    "enterocyte":     "sprite_cell-.*"
+  }
+}

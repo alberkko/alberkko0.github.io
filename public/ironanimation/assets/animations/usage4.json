@@ -1,0 +1,201 @@
+{
+	"visibilityRanges": {
+
+		"sprite_katalase-green": [ [ 0, 170 ], [ 240, 410 ], [ 440, 620 ], [ 722, 774 ], [ 854, 944 ], [ 957, 1008 ], [ 1066, 1140 ], [ 1222, 1360 ] ],
+
+		"sprite_katalase-red":   [ [ 170, 240 ], [ 410, 440 ], [ 620, 722 ], [ 774, 854 ], [ 944, 957 ], [ 1008, 1066 ], [ 1140, 1222 ], [ 1360, 1500 ] ],
+
+		"sprite_h2o2-01": [ [ 0, 170 ] ],
+		"sprite_o2-01": [ [ 170, 240 ] ],
+		"sprite_h2o2-02": [ [ 95, 240 ] ],
+		"sprite_h2o-02": [ [ 240, 321 ] ],
+		"sprite_h2o2-03": [ [ 256, 410 ] ],
+		"sprite_o2-03": [ [ 410, 482 ] ],
+		"sprite_h2o2-04": [ [ 298, 440 ] ],
+		"sprite_h2o-04": [ [ 440, 524 ] ],
+		"sprite_h2o2-05": [ [ 475, 620 ] ],
+		"sprite_o2-05": [ [ 620, 703 ] ],
+		"sprite_h2o2-06": [ [ 569, 722 ] ],
+		"sprite_h2o-06": [ [ 722, 795 ] ],
+		"sprite_h2o2-07": [ [ 623, 774 ] ],
+		"sprite_o2-07": [ [ 774, 848 ] ],
+		"sprite_h2o2-08": [ [ 711, 854 ] ],
+		"sprite_h2o-08": [ [ 854, 937 ] ],
+		"sprite_h2o2-09": [ [ 803, 944 ] ],
+		"sprite_o2-09": [ [ 944, 1005 ] ],
+		"sprite_h2o2-10": [ [ 837, 957 ] ],
+		"sprite_h2o-10": [ [ 957, 1029 ] ],
+		"sprite_h2o2-11": [ [ 884, 1008 ] ],
+		"sprite_o2-11": [ [ 1008, 1076 ] ],
+		"sprite_h2o2-12": [ [ 945, 1066 ] ],
+		"sprite_h2o-12": [ [ 1066, 1137 ] ],
+		"sprite_h2o2-13": [ [ 1012, 1140 ] ],
+		"sprite_o2-13": [ [ 1140, 1205 ] ],
+		"sprite_h2o2-14": [ [ 1092, 1222 ] ],
+		"sprite_h2o-14": [ [ 1222, 1285 ] ],
+		"sprite_h2o2-15": [ [ 1229, 1360 ] ],
+		"sprite_o2-15": [ [ 1360, 1443 ] ],
+
+		"sprite_h2o2-16": [ [ 600, 836 ] ],
+		"sprite_h2o2-17": [ [ 600, 841 ] ],
+		"sprite_h2o2-18": [ [ 700, 905 ] ],
+		"sprite_h2o2-19": [ [ 727, 936 ] ],
+		"sprite_h2o2-20": [ [ 922, 1140 ] ],
+		"sprite_h2o2-21": [ [ 1174, 1233 ] ],
+
+		"sprite_haemosiderin-04": [ [ 60, 420 ] ],
+		"sprite_ferritine-05": [ [ 60, 420 ] ],
+		"sprite_ferritine-06": [ [ 60, 420 ] ],
+
+		"sprite_bubble-in-in": [ [ 137, 400 ] ],
+		"sprite_bubble-in-out": [ [ 137, 400 ] ],
+
+		"sprite_bubble-inside": [ [ 0, 1280 ] ],
+		"sprite_bubble-outline": [ [ 0, 1280 ] ],
+
+		"sprite_fe3-01": [ [ 390, 480 ] ],
+		"sprite_fe3-02": [ [ 390, 480 ] ],
+		"sprite_fe3-03": [ [ 390, 480 ] ],
+		"sprite_fe3-04": [ [ 390, 480 ] ],
+		"sprite_fe3-05": [ [ 390, 480 ] ],
+		"sprite_fe3-06": [ [ 390, 480 ] ],
+		"sprite_fe3-07": [ [ 390, 480 ] ],
+		"sprite_fe3-08": [ [ 390, 480 ] ],
+		"sprite_fe3-09": [ [ 390, 480 ], [ 906, 1500 ] ],
+		"sprite_fe3-10": [ [ 390, 480 ], [ 840, 1500 ] ],
+		"sprite_fe3-11": [ [ 390, 480 ] ],
+		"sprite_fe3-12": [ [ 390, 480 ] ],
+		"sprite_fe3-13": [ [ 390, 480 ] ],
+		"sprite_fe3-14": [ [ 390, 480 ] ],
+		"sprite_fe3-15": [ [ 390, 480 ] ],
+		"sprite_fe3-16": [ [ 390, 480 ] ],
+		"sprite_fe3-17": [ [ 390, 480 ] ],
+		"sprite_fe3-18": [ [ 390, 480 ] ],
+		"sprite_fe3-19": [ [ 390, 480 ], [ 1233, 1500 ] ],
+		"sprite_fe3-20": [ [ 390, 480 ] ],
+		"sprite_fe3-21": [ [ 390, 480 ] ],
+		"sprite_fe3-22": [ [ 390, 480 ], [ 936, 1500 ] ],
+		"sprite_fe3-23": [ [ 390, 480 ] ],
+		"sprite_fe3-24": [ [ 390, 480 ] ],
+		"sprite_fe3-25": [ [ 390, 480 ] ],
+		"sprite_fe3-26": [ [ 390, 480 ], [ 840, 1500 ] ],
+		"sprite_fe3-27": [ [ 390, 480 ], [ 1140, 1500 ] ],
+		"sprite_fe3-28": [ [ 390, 480 ] ],
+
+		"sprite_fe2-01": [ [ 480, 1500 ] ],
+		"sprite_fe2-02": [ [ 480, 1500 ] ],
+		"sprite_fe2-03": [ [ 480, 1500 ] ],
+		"sprite_fe2-04": [ [ 480, 1500 ] ],
+		"sprite_fe2-05": [ [ 480, 1500 ] ],
+		"sprite_fe2-06": [ [ 480, 1500 ] ],
+		"sprite_fe2-07": [ [ 480, 1500 ] ],
+		"sprite_fe2-08": [ [ 480, 1500 ] ],
+		"sprite_fe2-09": [ [ 480, 906 ] ],
+		"sprite_fe2-10": [ [ 480, 840 ] ],
+		"sprite_fe2-11": [ [ 480, 1500 ] ],
+		"sprite_fe2-12": [ [ 480, 1500 ] ],
+		"sprite_fe2-13": [ [ 480, 1500 ] ],
+		"sprite_fe2-14": [ [ 480, 1500 ] ],
+		"sprite_fe2-15": [ [ 480, 1500 ] ],
+		"sprite_fe2-16": [ [ 480, 1500 ] ],
+		"sprite_fe2-17": [ [ 480, 1500 ] ],
+		"sprite_fe2-18": [ [ 480, 1500 ] ],
+		"sprite_fe2-19": [ [ 480, 1233 ] ],
+		"sprite_fe2-20": [ [ 480, 1500 ] ],
+		"sprite_fe2-21": [ [ 480, 1500 ] ],
+		"sprite_fe2-22": [ [ 480, 936 ] ],
+		"sprite_fe2-23": [ [ 480, 1500 ] ],
+		"sprite_fe2-24": [ [ 480, 1500 ] ],
+		"sprite_fe2-25": [ [ 480, 1500 ] ],
+		"sprite_fe2-26": [ [ 480, 840 ] ],
+		"sprite_fe2-27": [ [ 480, 1140 ] ],
+		"sprite_fe2-28": [ [ 480, 1500 ] ],
+
+
+		"sprite_pros-01": [ [ 840, 1114 ] ],
+		"sprite_pros-02": [ [ 840, 1114 ] ],
+		"sprite_pros-03": [ [ 906, 1114 ] ],
+		"sprite_pros-04": [ [ 936, 1114 ] ],
+
+		"sprite_pros-05": [ [ 1140, 1322 ] ],
+		"sprite_pros-06": [ [ 1233, 1322 ] ]
+	},
+
+	"renderOrders": [
+
+		{ "order": 101, "targets": [
+			"sprite_lever"
+		] },
+
+		{ "order": 102, "targets": [
+			"sprite_cell"
+		] },
+
+		{ "order": 103, "targets": [
+			"sprite_bubble-inside"
+		] },
+
+		{ "order": 104, "targets": [
+			"sprite_bubble-in-out"
+		] },
+
+		{ "order": 105, "targets": [
+			"sprite_bubble-in-in"
+		] },
+
+		{ "order": 106, "targets": [
+			"sprite_bubble-outline",
+			"sprite_mithocondri",
+			"sprite_katalase-.*",
+			"sprite_haemosiderin-0[123]",
+			"sprite_ferritine-0[1234]"
+		] },
+
+		{ "order": 107, "targets": [ "sprite_haemosiderin-04" ] },
+		{ "order": 108, "targets": [ "sprite_ferritine-05" ] },
+		{ "order": 109, "targets": [ "sprite_ferritine-06" ] },
+
+		{ "order": 110, "targets": [
+			"sprite_fe2-.*",
+			"sprite_fe3-.*",
+			"sprite_pros-.*",
+			"sprite_h2o2-.*",
+			"sprite_h2o-.*",
+			"sprite_o2-.*"
+		] }
+	],
+
+	"masked": {
+
+		"cell-01": [  "sprite_cell" ],
+		"cell-02": [  "sprite_cell" ],
+		"cell-03": [  "sprite_cell" ],
+
+		"bubble-in": [ "sprite_bubble-in-.*" ],
+
+		"bubble-02": [ "sprite_bubble-inside", "sprite_bubble-outline" ],
+		"bubble-03": [ "sprite_bubble-inside", "sprite_bubble-outline" ],
+		"bubble-04": [ "sprite_bubble-inside", "sprite_bubble-outline" ],
+		"bubble-05": [ "sprite_bubble-inside", "sprite_bubble-outline" ]
+	},
+
+	"selectable": {
+
+		"fe2":          "sprite_fe2-.*",
+		"fe3":          "sprite_fe3-.*",
+		"catalase":     "sprite_katalase-.*",
+		"ferritin":     "sprite_ferritine-.*",
+		"haemosiderin": "sprite_haemosiderin-.*",
+		"o2":		    "sprite_o2-.*"
+	},
+
+	"tipped": {
+
+		"mitochondrium":         "sprite_mithocondri",
+		"lysosome":              "sprite_bubble-inside",
+		"iron-overloaded-cell":  "sprite_cell",
+		"h2o2":                  "sprite_h2o2-.*",
+		"h2o":                   "sprite_h2o-.*",
+		"pros":                  "sprite_pros-.*"
+	}
+}

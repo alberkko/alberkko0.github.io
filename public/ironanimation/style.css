@@ -1,0 +1,512 @@
+
+body.iron3dDragging {
+
+    cursor: pointer;
+}
+
+#iron3d * {
+
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 2.5vmin;
+}
+
+#iron3d {
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.iron3d-controls {
+
+    pointer-events: none;
+}
+
+#iron3d .button {
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+    user-select: none;
+    cursor: pointer;
+    background-size: 100% 300%;
+    background-position: 0 50%;
+    transition: none 200ms;
+    transition-property: background-color, background-position;
+
+    background-color: #e0e0e0;
+    background-image: linear-gradient( 180deg, #d0d0d0, #f0f0f0 );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: rgba( 255, 255, 255, 0.6 ) 0 0 2px inset;
+
+    /*text-align: center;
+    font-size: 1.3em;
+
+    justify-content: center;
+    align-items: center;*/
+
+    /*vertical-align: baseline;
+    baseline-shift: 20px;
+    line-height: 100%;*/
+}
+
+#iron3d .button:hover {
+
+    background-position: 0 100%;
+
+    background-color: #f0f0f0;
+}
+
+#iron3d .button:active {
+
+    background-position: 0 0;
+
+    background-color: #d0d0d0;
+}
+
+#iron3d .button:after {
+
+    content: '';
+
+    /*font-size: 2.5vmin;*/
+
+    font-size: 18px;
+
+    color: #1b1b1b;
+
+    transition: color 200ms ease-in-out;
+}
+
+@media(hover: hover) and (pointer: fine) {
+    #iron3d .button:hover:after {
+
+        color: #f41313;
+    }
+}
+
+
+
+.iron3d-controls #top {
+
+    pointer-events: all;
+
+    left: 10%;
+    width: 60px;
+    height: 60px;
+    padding: 2px;
+    padding-top: 14px;
+    box-sizing: content-box;
+
+    background: white;
+    box-shadow: 0 0 4px rgba( 0, 0, 0, 0.4 );
+
+    top: 0px;
+    position:absolute;
+    z-index: 100;
+
+    transition: top 400ms ease-in;
+}
+
+.iron3d-controls #top.hidden {
+
+    top: -90px;
+    pointer-events: none;
+}
+
+.iron3d-controls #up:before {
+
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 1px solid #1b1b1b;
+    box-sizing: border-box;
+
+    top: 0;
+    left:0;
+
+    box-shadow: rgba( 255, 255, 255, 0.6 ) 0 0 2px inset;
+}
+
+.iron3d-controls #up:after {
+
+    content: "\ea32";
+    font-size: 2em;
+}
+
+
+.iron3d-controls #bottom {
+
+    pointer-events: all;
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    bottom: 0px;
+    position:absolute;
+    z-index: 100;
+
+    transition: bottom 400ms ease-in;
+}
+
+.iron3d-controls #bottom.hidden {
+
+    bottom: -100px;
+    pointer-events: none;
+}
+
+
+.iron3d-controls #progressBar {
+
+    background-color: #8e8f9d;
+
+    border-top: 1px #333333 solid;
+
+    box-sizing: border-box;
+
+    cursor: pointer;
+
+    z-index: 99;
+
+    flex: 0 0 6px;
+
+    transition: flex-basis 400ms ease-out 1000ms;
+}
+
+body.iron3dDragging #progressBar, .iron3d-controls:hover #progressBar {
+
+    flex-basis: 15px;
+
+    transition: flex-basis 400ms ease-out;
+}
+
+.iron3d-controls #red {
+
+    background-color: #e52024;
+
+    border-top: 1px #d00b0b solid;
+    border-right: 1px #d00b0b solid;
+
+    height: 16px;
+    width: 0%;
+    position: absolute;
+    top: 0px;
+
+    pointer-events: none;
+
+    box-sizing: content-box;
+
+    z-index: 100;
+}
+
+.iron3d-controls #cursorContainer {
+
+    pointer-events: none;
+
+    margin: 0px 12px;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.iron3d-controls #cursor {
+
+    background: url( "./icons/cursor.png" );
+
+    height: 16px;
+    width: 25px;
+    left: 0%;
+    top: -1px;
+    position: absolute;
+
+    transform: translateX( -12px );
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    z-index: 101;
+
+    transition: opacity 200ms ease-out 800ms;
+}
+
+body.iron3dDragging #cursor, .iron3d-controls:hover #cursor {
+
+    opacity: 1;
+
+    transition: opacity 400ms ease-out;
+}
+
+.iron3d-controls #buttonsBar {
+
+    flex: 0 0 25px;
+    height: 25px;
+
+    background-color: grey;
+
+    border-top: 1px #333333 solid;
+
+    display: flex;
+    flex-direction: row;
+
+    z-index: 101;
+}
+
+
+
+
+@font-face {
+    font-family: 'icons';
+    src:  url('fonts/icons.eot?o8476a');
+    src:  url('fonts/icons.eot?o8476a#iefix') format('embedded-opentype'),
+    url('fonts/icons.ttf?o8476a') format('truetype'),
+    url('fonts/icons.woff?o8476a') format('woff'),
+    url('fonts/icons.svg?o8476a#icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="button"], [class*=" button"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.iron3d-controls .button#playpause:after {         content: "\ea1c"; }
+.iron3d-controls .button#playpause.pause:after {   content: "\ea1d"; }
+.iron3d-controls .button#stop:after {              content: "\ea1e"; }
+.iron3d-controls .button#rewind:after {            content: "\ea1f"; }
+.iron3d-controls .button#slow:after {              content: "\ea24"; }
+.iron3d-controls .button#previousanimation:after { content: "\ea21"; }
+.iron3d-controls .button#nextanimation:after {     content: "\ea22"; }
+
+
+
+.iron3d-controls #buttonsBar .button {
+
+    flex: 0 0 35px;
+    cursor: pointer;
+    z-index: 102;
+    border: 0
+}
+
+.iron3d-controls #buttonsBar .button:after {
+
+    border: 0;
+}
+
+
+.iron3d-controls #buttonsBar .button:not(:last-child), .iron3d-controls #buttonsBar #space {
+
+    border-right: 1px #333333 solid;
+}
+
+.iron3d-controls #playpause {
+
+    flex: 0 0 70px !important;
+}
+
+.iron3d-controls #space {
+
+    flex: 1 0 1px;
+
+    background: linear-gradient( 180deg, #999a9b, #c6cbcf );
+}
+
+
+
+#iron3d .tooltip {
+
+    font-size: 0.7em;
+    transform: translate( 14px, 14px );
+    padding: 0 4px 1px 4px;
+    position: absolute;
+    background-color: white;
+
+    border: 1px solid black;
+    border-radius: 4px;
+
+    box-shadow: 2px 2px 4px rgba( 0, 0, 0, 0.4 );
+    z-index: 99;
+
+    opacity: 0;
+    transition: opacity 0ms linear 0s;
+}
+
+#iron3d .tooltip.shown {
+
+    opacity: 1;
+    transition: opacity 400ms linear 1s;
+}
+
+#iron3d .navigation.quantities {
+
+    position:absolute;
+    background: white;
+    border: 2px red solid;
+    color: red;
+    padding: 4px;
+    padding-top: 1px;
+    user-select: none;
+    font-size: 60%;
+}
+
+#iron3d .navigation.total {
+
+    position:absolute;
+    border: 4px white solid;
+    background: red;
+    color: white;
+    padding: 3px;
+    padding-top: 1px;
+    user-select: none;
+    font-size: 60%;
+    left: 1px;
+    box-shadow: 1px 1px 0px 0px red, -1px -1px 0px 0px red, 1px -1px 0px 0px red, -1px 1px 0px 0px red;
+}
+
+#iron3d .navigation.label {
+
+    top: 0;
+    font-size: 1em;
+
+    padding: 0 4px;
+    /*background: rgba( 255, 255, 255, 0.8 );*/
+    text-shadow: 2px 2px white, -2px -2px white, -2px 2px white, 2px -2px white;
+    color: #2f3e48;
+    font-weight: bold;
+}
+
+#iron3d .navigation.play {
+
+    border: 1px solid #1b1b1b;
+}
+
+#iron3d .navigation.play:after {
+
+    /*background-image: url( "icons/animation.png" );*/
+    content: "\ea1c";
+    font-size: 1.6em;
+}
+
+
+#iron3d .regulation1.icon {
+
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+
+#iron3d .regulation1.icon:before {
+
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 1px solid #1b1b1b;
+    box-sizing: border-box;
+
+    top: 0;
+    left:0;
+
+    box-shadow: rgba( 255, 255, 255, 0.6 ) 0 0 2px inset;
+}
+
+#iron3d .regulation1.icon:after {
+
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+}
+
+#iron3d .regulation1.icon.low:after {
+
+    background-image: url( "icons/regulation_low.png" );
+}
+
+#iron3d .regulation1.icon.low:hover:after {
+
+    background-image: url( "icons/regulation_low_hover.png" );
+}
+
+#iron3d .regulation1.icon.high:after {
+
+    background-image: url( "icons/regulation_high.png" );
+}
+
+#iron3d .regulation1.icon.high:hover:after {
+
+    background-image: url( "icons/regulation_high_hover.png" );
+}
+
+
+
+#iron3d .label {
+
+    max-width: 100%;
+
+    font-size: 0.7em;
+
+    position:absolute;
+    user-select: none;
+    text-transform: uppercase;
+    color: #2f3e48;
+
+    /*left:50% !important;
+    transform: translateX( -50% );*/
+    text-align: center;
+    width: 100%;
+}
+
+#iron3d.hideLabels .label {
+
+    display: none;
+}
+
+#iron3d .alignLeft {
+
+    width: auto;
+    right: auto;
+    left: 0px !important;
+    text-align: left;
+}
+
+#iron3d .alignRight {
+
+    width: auto;
+    left: auto;
+    right: 0px !important;
+    text-align: right;
+}
+
+#iron3d .alignBottom {
+
+    bottom: 0px;
+}
+
+#iron3d .vertical {
+
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+#iron3d .navigation.label:hover {
+
+    color: #4878c8;
+}

@@ -1,0 +1,173 @@
+{
+
+	"visibilityRanges": {
+
+		"sprite_eythrocyt1": [ [    0,  160 ] ],
+		"sprite_eythrocyt2": [ [  160,  500 ] ],
+		"sprite_eythrocyt3": [ [  500,  790 ] ],
+		"sprite_eythrocyt4": [ [  790, 1186 ] ],
+		"group_eythrocyt5":  [ [ 1186, 2160 ] ],
+		"sprite_eythrocyt6": [ [ 2160, 2330 ] ],
+		"sprite_eythrocyt7": [ [ 2330, 2520 ] ],
+
+		"sprite_eythrocyt5c": [ [ 1186, 1850 ] ],
+		"sprite_eythrocyt5d": [ [ 1850, 2160 ] ],
+
+		"sprite_nucleus-02": [ [ 1850, 2034 ] ],
+		"sprite_nucleus-03": [ [ 2034, 2520 ] ],
+		
+		"sprite_epo-receptor-01": [ [ 36, 362 ], [ 406, 770 ] ],
+		"sprite_epo-on-receptor-01": [ [ 284, 362 ] ],
+		
+		"sprite_epo-receptor-02": [ [ 180, 472 ], [ 538, 1050 ] ],
+		"sprite_epo-on-receptor-02": [ [ 409, 472 ] ],
+		
+		"sprite_epo-receptor-03": [ [ 305, 723 ], [ 760, 922 ] ],
+		"sprite_epo-on-receptor-03": [ [ 641, 723 ] ],
+		
+		"group_transferrin-receptor-01": [ [ 788, 1380 ], [ 1475, 1940 ] ],
+		"sprite_transferrin-receptor1-01": [ [ 0, 1283 ], [ 1530, 1940 ] ],
+		"sprite_transferrin-receptor2-01": [ [ 1283, 1317 ] ],
+		"sprite_transferrin-receptor3-01": [ [ 1317, 1380 ] ],
+		"sprite_transferrin-receptor4-01": [ [ 1475, 1530 ] ],
+		
+		"group_transferrin-receptor-02": [ [ 1232, 1504 ], [ 1584, 1970 ] ],
+		"sprite_transferrin-receptor1-02": [ [ 1232, 1365 ], [ 1633, 1970 ] ],
+		"sprite_transferrin-receptor2-02": [ [ 1365, 1424 ] ],
+		"sprite_transferrin-receptor3-02": [ [ 1424, 1504 ] ],
+		"sprite_transferrin-receptor4-02": [ [ 1584, 1633 ] ],
+		
+		"sprite_transferrin-receptor1-03": [ [ 926, 1928 ] ],
+		
+		"group_transferrin-receptor-04": [ [ 1190, 1602 ], [ 1700, 1970 ] ],
+		"sprite_transferrin-receptor1-04": [ [ 1190, 1490 ], [ 1746, 1970 ] ],
+		"sprite_transferrin-receptor2-04": [ [ 1490, 1527 ] ],
+		"sprite_transferrin-receptor3-04": [ [ 1527, 1602 ] ],
+		"sprite_transferrin-receptor4-04": [ [ 1700, 1746 ] ],
+
+		"sprite_epo-01": [ [ 0, 58 ], [ 2458, 2520 ] ],
+		"sprite_epo-02": [ [ 100, 284 ] ],
+		"sprite_epo-03": [ [ 309, 409 ] ],
+		"sprite_epo-04": [ [ 580, 641 ] ],
+
+		"sprite_apotransferrin-01": [ [ 0, 1034 ], [ 1640, 2520 ] ],
+		"sprite_transferrin1-01":   [ [ 0,  815 ], [ 1560, 2520 ] ],
+		"sprite_transferrin1-02":   [ [ 0, 1196 ], [ 1874, 2520 ] ],
+		"sprite_transferrin2-01":   [ [ 0,  919 ], [ 1341, 2520 ] ],
+		"sprite_transferrin2-02":   [ [ 1242, 2520 ] ],
+
+		"sprite_transferrin2-03": [ [ 618, 1283 ] ],
+		"sprite_transferrin2-04": [ [ 490, 1317 ] ],
+		"sprite_transferrin2-05": [ [ 542, 1365 ] ],
+		"sprite_transferrin2-06": [ [ 500, 1424 ] ],
+		"sprite_transferrin2-07": [ [ 618, 1490 ] ],
+		"sprite_transferrin2-08": [ [ 680, 1527 ] ],
+		
+		"sprite_apotransferrin-03": [ [ 1530, 2440 ] ],
+		"sprite_apotransferrin-04": [ [ 1530, 2476 ] ],
+		"sprite_apotransferrin-05": [ [ 1633, 2520 ] ],
+		"sprite_apotransferrin-06": [ [ 1633, 2400 ] ],
+		"sprite_apotransferrin-07": [ [ 1746, 2466 ] ],
+		"sprite_apotransferrin-08": [ [ 1746, 2503 ] ],
+		
+		
+		
+		"sprite_fe2-01a": [ [ 1390, 1449 ] ],
+		"sprite_haem-iron-01a": [ [ 1449, 1513 ] ],
+		
+		"sprite_fe2-01b": [ [ 1406, 1467 ] ],
+		"sprite_haem-iron-01b": [ [ 1467, 1527 ] ],
+		
+		"sprite_fe2-02a": [ [ 1390, 1449 ] ],
+		"sprite_haem-iron-02a": [ [ 1449, 1509 ] ],
+		
+		"sprite_fe2-02b": [ [ 1406, 1467 ] ],
+		"sprite_haem-iron-02b": [ [ 1467, 1529 ] ],
+		
+		
+		
+		"sprite_fe2-03a": [ [ 1515, 1571 ] ],
+		"sprite_haem-iron-03a": [ [ 1571, 1588 ] ],
+		
+		"sprite_fe2-03b": [ [ 1528, 1586 ] ],
+		"sprite_haem-iron-03b": [ [ 1586, 1605 ] ],
+		
+		"sprite_fe2-04a": [ [ 1515, 1571 ] ],
+		"sprite_haem-iron-04a": [ [ 1571, 1588 ] ],
+		
+		"sprite_fe2-04b": [ [ 1528, 1586 ] ],
+		"sprite_haem-iron-04b": [ [ 1586, 1605 ] ],
+		
+		
+		
+		"sprite_fe2-05a": [ [ 1608, 1674 ] ],
+		"sprite_haem-iron-05a": [ [ 1674, 1735 ] ],
+		
+		"sprite_fe2-05b": [ [ 1625, 1691 ] ],
+		"sprite_haem-iron-05b": [ [ 1691, 1750 ] ],
+		
+		"sprite_fe2-06a": [ [ 1608, 1674 ] ],
+		"sprite_haem-iron-06a": [ [ 1674, 1735 ] ],
+		
+		"sprite_fe2-06b": [ [ 1625, 1691 ] ],
+		"sprite_haem-iron-06b": [ [ 1691, 1750 ] ]
+	},
+
+	"renderOrders": [
+
+		{ "order":   1, "targets":[	"sprite_bones" ] },
+
+		{ "order": 101, "targets":[	"sprite_arrow.*" ] },
+
+		{ "order": 121, "targets":[	"sprite_circle1" ] },
+		{ "order": 122, "targets":[	"sprite_circle2" ] },
+		{ "order": 123, "targets":[	"sprite_circle3" ] },
+		{ "order": 124, "targets":[	"sprite_circle4" ] },
+
+		{ "order": 110, "targets":[	"sprite_eythrocyt5a" ] },
+		{ "order": 111, "targets":[	"sprite_eythrocyt5b" ] },
+		{ "order": 112, "targets":[	"sprite_nucelus-01" ] },
+		{ "order": 113, "targets":[	"sprite_eythrocyt5[cd]{1}.*" ] },
+		{ "order": 114, "targets":[	"sprite_nucleus-.*" ] },
+		{ "order": 110, "targets":[	"sprite_eythrocyt.*" ] },
+		
+		{ "order": 114, "targets":[	"sprite_.*-receptor.*" ] },
+		
+		{ "order": 115, "targets":[	"sprite_epo-.*", "sprite_fe2-.*", "sprite_haem-.*" ] },
+		
+		{ "order": 105, "targets":[	"sprite_.*" ] }
+	],
+
+	"masked": {
+
+		"stream":  [ "sprite_eythrocyt7", "sprite_nucleus-03", "sprite_epo-0.*", "sprite_apotransferrin-.*", "sprite_transferrin[12]{1}-.*" ],
+		"circle3": [ "sprite_circle3" ],
+		"circle4": [ "sprite_circle4" ]
+	},
+
+	"selectable": {
+
+		"fe2":                  "sprite_fe2-.*",
+		"haem-iron":            "sprite_haem-iron-.*",
+
+		"apotransferrin":       "sprite_apotransferrin-.*",
+		"transferrin":          "sprite_transferrin[12]{1}-.*",
+		"transferrin-receptor": "sprite_transferrin-receptor.*",
+		"epo":                  "sprite_epo-0.*"
+	},
+
+	"tipped": {
+
+		"epo-receptor": "sprite_epo-receptor.*",
+
+		"step-cell":        "sprite_eythrocyt1",
+		"bfu-erythroid":    "sprite_eythrocyt2",
+		"cfu-erythroid":    "sprite_eythrocyt3",
+		"pro-erythroblast": "sprite_eythrocyt4",
+		"erythroblast":     "sprite_eythrocyt5a",
+		"reticulocyte":     "sprite_eythrocyt6",
+		"erythrocyte":      "sprite_eythrocyt7",
+
+		"cell-nucleus": 	"sprite_nucleus-03"
+	}
+}

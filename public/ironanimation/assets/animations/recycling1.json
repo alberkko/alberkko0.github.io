@@ -1,0 +1,56 @@
+{
+	"visibilityRanges": {
+    "sprite_erythrocyte-02": [ [ 263, 480 ] ],
+		"sprite_transferrin-02": [ [ 0, 338 ] ],
+		"sprite_transferrin-01": [ [ 338, 431 ] ],
+		"sprite_transferrin-03": [ [ 38, 475 ] ],
+		"sprite_apotransferrin-01": [ [ 0, 232 ],[ 246, 480 ] ],
+		
+		"sprite_fe2-04": [ [ 0, 219 ], [ 372, 480 ] ],
+		"sprite_fe2-03": [ [ 0, 160 ], [ 372, 480 ] ],
+		
+		"sprite_fe3-01": [ [ 219, 338 ] ]
+  },
+
+  "renderOrders": [
+
+    { "order": 1, "targets":[ "sprite_spleen" ] },
+
+    { "order": 109, "targets":[ "sprite_macrophage" ] },
+
+    { "order": 111, "targets":[ "sprite_erythrocyte-.*" ] },
+
+    { "order": 110, "targets":[	"sprite_.*" ] }
+  ],
+
+  "masked": {
+    
+    "stream": [
+                "sprite_erythrocyte-.*",
+                "sprite_apotransferrin-.*",
+                "sprite_transferrin-.*"
+              ]
+  },
+  
+  "selectable": {
+
+    "fe2":                  "sprite_fe2-.*",
+
+    "fe3":                  "sprite_fe3-.*",
+
+    "ferritin":             "sprite_ferritin.*",
+
+    "ferropotin":           "sprite_ferropotin",
+
+    "apotransferrin":       "sprite_apotransferrin-.*",
+    "transferrin":          "sprite_transferrin-.*",
+
+    "caeruloplasmin":       "sprite_caeruloplasmin"
+  },
+
+  "tipped": {
+
+    "macrophage":  "sprite_macrophage",
+    "erythrocyte": "sprite_erythrocyte-.*"
+  }
+}

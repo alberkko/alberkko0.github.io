@@ -1,0 +1,47 @@
+{
+
+	"visibilityRanges": {
+
+		"sprite_apotransferrin-01": [ [ 0, 465 ], [ 526, 720 ] ],
+		"sprite_apotransferrin-02": [ [ 161, 720 ] ],
+
+		"sprite_transferrin-01": [ [ 0, 362 ], [ 372, 720 ] ],
+		"sprite_transferrin-02": [ [ 0, 684 ] ],
+
+		"sprite_erythrocyte-01": [ [ 0, 358 ], [ 383, 720 ] ],
+		"sprite_erythrocyte-02": [ [ 0, 476 ] ],
+		"sprite_erythrocyte-03": [ [ 89, 702 ] ],
+
+		"sprite_skin-cell-02-02-a": [ [ 0, 145 ] ],
+		"sprite_skin-cell-02-02-b": [ [ 145, 720 ] ],
+
+		"sprite_skin-cell-03-02-a": [ [ 0, 479 ] ],
+		"sprite_skin-cell-03-02-b": [ [ 479, 720 ] ]
+	},
+
+	"renderOrders": [
+
+		{ "order": 100, "targets":[ ".*" ] }
+	],
+
+	"masked": {
+		
+		"stream": [ "sprite_apotransferrin-.*",
+								"sprite_transferrin-.*",
+								"sprite_erythrocyte-.*",
+								"sprite_skin-cell-02-01",
+								"sprite_skin-cell-03-01" ]
+	},
+
+	"selectable": {
+
+		"apotransferrin": "sprite_apotransferrin-.*",
+		"transferrin":    "sprite_transferrin-.*"
+	},
+
+	"tipped": {
+
+		"erythrocyte": "sprite_erythrocyte-.*",
+		"skin": "sprite_skin-cell-.*"
+	}
+}
