@@ -428,6 +428,13 @@ export default new Vuex.Store({
 				enable = true
 			}
 			return enable
+		},
+		homeState: state => {
+			let enable = false
+			if (state.route.name == 'home') {
+				enable = true
+			}
+			return enable
 		}
 	}
 })

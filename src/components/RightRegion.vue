@@ -1,5 +1,6 @@
 <template>
-	<v-navigation-drawer
+<div></div>
+	<!-- <v-navigation-drawer
 		:value="rightdrawer"
 		@input="setRightDrawer($event)"
 		mini-variant-width="50"
@@ -10,8 +11,8 @@
 		dark
 		dense
 		id="right-column"
-	>
-		<div class="d-flex flex-column justify-space-between" style="height:100%;">
+	> -->
+		<!-- <div class="d-flex flex-column justify-space-between" style="height:100%;">
 			<v-list>
 				<v-tooltip left>
 					<template v-slot:activator="{ on: tooltip }">
@@ -93,76 +94,76 @@
 					<span>{{ $t('legallabel') }}</span>
 				</v-tooltip>
 			</v-list>
-		</div>
-	</v-navigation-drawer>
+		</div> -->
+	<!-- </v-navigation-drawer> -->
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import { mapGetters } from 'vuex'
-export default {
-	name: 'RightRegion',
-	data: () => ({}),
-	computed: {
-		...mapState(['dataloaded', 'showminimap']),
-		...mapGetters(['location', 'enableMinimap']),
-		rightdrawer() {
-			return (
-				this.$store.state.rightdrawer &&
-				this.$store.state.tourmode == false
-			)
-		},
-		existreferences() {
-			let exist = false
-			if (
-				this.dataloaded &&
-				typeof this.location.currentnode.related !== 'undefined' &&
-				typeof this.location.currentnode.related['ELI'] !== 'undefined'
-			) {
-				exist = true
-			}
-			return exist
-		}
-	},
-	mounted() {
-		if (this.$vuetify.breakpoint.lgAndUp) {
-			this.$store.commit('SET_RIGHT_DRAWER', true)
-		}
-	},
-	methods: {
-		setRightDrawer(val) {
-			if (!this.$vuetify.breakpoint.lgAndUp) {
-				this.$store.commit('SET_RIGHT_DRAWER', val)
-			}
-		},
-		toggleMinimap() {
-			this.$store.commit('TOGGLE_MINIMAP')
-			this.$emit('CLICK_SOUND')
-		},
-		openTablesDialog() {
-			this.$store.commit('SET_TABLES_DIALOG', true)
-		},
-		openLegalDialog() {
-			this.$store.commit('SET_LEGAL_DIALOG', true)
-		},
-		openReferencesDialog() {
-			this.$store.commit('SET_REFERENCES_DIALOG', true)
-		}
-	}
-}
+// import { mapState } from 'vuex'
+// import { mapGetters } from 'vuex'
+// export default {
+// 	name: 'RightRegion',
+// 	data: () => ({}),
+// 	computed: {
+// 		...mapState(['dataloaded', 'showminimap']),
+// 		...mapGetters(['location', 'enableMinimap']),
+// 		rightdrawer() {
+// 			return (
+// 				this.$store.state.rightdrawer &&
+// 				this.$store.state.tourmode == false
+// 			)
+// 		},
+// 		existreferences() {
+// 			let exist = false
+// 			if (
+// 				this.dataloaded &&
+// 				typeof this.location.currentnode.related !== 'undefined' &&
+// 				typeof this.location.currentnode.related['ELI'] !== 'undefined'
+// 			) {
+// 				exist = true
+// 			}
+// 			return exist
+// 		}
+// 	},
+// 	mounted() {
+// 		if (this.$vuetify.breakpoint.lgAndUp) {
+// 			this.$store.commit('SET_RIGHT_DRAWER', true)
+// 		}
+// 	},
+// 	methods: {
+// 		setRightDrawer(val) {
+// 			if (!this.$vuetify.breakpoint.lgAndUp) {
+// 				this.$store.commit('SET_RIGHT_DRAWER', val)
+// 			}
+// 		},
+// 		toggleMinimap() {
+// 			this.$store.commit('TOGGLE_MINIMAP')
+// 			this.$emit('CLICK_SOUND')
+// 		},
+// 		openTablesDialog() {
+// 			this.$store.commit('SET_TABLES_DIALOG', true)
+// 		},
+// 		openLegalDialog() {
+// 			this.$store.commit('SET_LEGAL_DIALOG', true)
+// 		},
+// 		openReferencesDialog() {
+// 			this.$store.commit('SET_REFERENCES_DIALOG', true)
+// 		}
+// 	}
+// }
 </script>
 
 <style scoped lang="scss">
-#right-column {
-	background-color: #838383;
-	.v-list {
-		background-color: transparent;
-	}
-}
-.v-list-item__icon {
-	margin-right: 0 !important;
-}
-.v-list-item--disabled {
-	opacity: 0.5;
-}
+// #right-column {
+// 	background-color: #838383;
+// 	.v-list {
+// 		background-color: transparent;
+// 	}
+// }
+// .v-list-item__icon {
+// 	margin-right: 0 !important;
+// }
+// .v-list-item--disabled {
+// 	opacity: 0.5;
+// }
 </style>

@@ -63,8 +63,8 @@
 						class="grey lighten-2"
 						v-on="on"
 						@click="toggleLabels"
-						:class="showlabels ? 'v-btn--active' : ''"
-					>
+						:class="showlabels ? 'v-btn--active' : ''">
+						
 						<v-icon v-if="!showlabels">mdi-format-title</v-icon>
 						<v-icon v-if="showlabels">mdi-format-clear</v-icon>
 					</v-btn>

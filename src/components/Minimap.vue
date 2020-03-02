@@ -204,8 +204,8 @@ export default {
 <style lang="scss">
 #minimap-container {
 	position: absolute;
-	top: 8px;
-	right: 0;
+	top: 5px;
+	right: 15px;
 	background: white;
 	z-index: 1;
 }

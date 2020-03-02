@@ -15,42 +15,7 @@
 			</v-list-item>
 			<v-divider></v-divider>
 		</v-list>
-		<div class="column-buttons">
-			<ToggleTour></ToggleTour>
-			<v-tooltip bottom>
-				<template v-slot:activator="{ on }">
-					<v-btn
-						small
-						tile
-						class="grey lighten-2"
-						v-on="on"
-						@click="toggleAllPanels"
-						:class="allpanels ? 'v-btn--active' : ''"
-					>
-						<v-icon v-if="!allpanels">mdi-eye-outline</v-icon>
-						<v-icon v-if="allpanels">mdi-eye-off-outline</v-icon>
-					</v-btn>
-				</template>
-				<span v-if="!allpanels">{{ $t('show_all') }}</span>
-				<span v-if="allpanels">{{ $t('hide_all') }}</span>
-			</v-tooltip>
-			<v-tooltip bottom>
-				<template v-slot:activator="{ on }">
-					<v-btn
-						small
-						tile
-						class="grey lighten-2"
-						v-on="on"
-						@click="toggleQuantities"
-						:class="showlabels ? 'v-btn--active' : ''"
-					>
-						<v-icon>mdi-bottle-wine</v-icon>
-					</v-btn>
-				</template>
-				<span v-if="!showlabels">{{ $t('quantity_on') }}</span>
-				<span v-if="showlabels">{{ $t('quantity_off') }}</span>
-			</v-tooltip>
-		</div>
+
 		<div class="flex-grow-1 column-panels">
 			<v-row justify="center">
 				<v-expansion-panels accordion transparent :multiple="allpanels" v-model="panels">
@@ -69,14 +34,14 @@
 		</div>
 	</div>
 </template>
+
+
 <script>
-import ToggleTour from '../components/ToggleTour'
 import { mapState } from 'vuex'
 import { findIndex } from 'lodash'
 export default {
 	name: 'home',
 	components: {
-		ToggleTour
 	},
 	data: () => ({
 		panels: [],
@@ -137,19 +102,19 @@ export default {
 	computed: {
 		...mapState(['mainNavigation', 'previewpanels', 'showlabels'])
 	},
-	methods: {
-		toggleAllPanels() {
-			if (this.allpanels) {
-				//this.allpanels = false
-				this.$store.commit('EMPTY_PREVIEW')
-			} else {
-				//this.allpanels = true
-				this.$store.commit('PREVIEW_ALL')
-			}
-		},
-		toggleQuantities() {
-			this.$store.commit('TOGGLE_LABELS')
-		}
-	}
+	// methods: {
+	// 	toggleAllPanels() {
+	// 		if (this.allpanels) {
+	// 			//this.allpanels = false
+	// 			this.$store.commit('EMPTY_PREVIEW')
+	// 		} else {
+	// 			//this.allpanels = true
+	// 			this.$store.commit('PREVIEW_ALL')
+	// 		}
+	// 	},
+	// 	toggleQuantities() {
+	// 		this.$store.commit('TOGGLE_LABELS')
+	// 	}
+	// }
 }
 </script>

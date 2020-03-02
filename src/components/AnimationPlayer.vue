@@ -276,7 +276,7 @@ export default {
 <style>
 .iron3d-controls #up:before,
 #iron3d .regulation1.icon:before {
-	top: 100px;
+	top: 0;
 	left: 0;
 }
 .animationcapture {
@@ -303,10 +303,6 @@ export default {
 	animation: blinker 2s linear infinite;
 }
 #loading-wrapper {
-	z-index: 999999;
-}
-
-.utility-toolbar {
 	z-index: 999999;
 }
 
