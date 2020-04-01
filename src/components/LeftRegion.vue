@@ -1,26 +1,48 @@
 <template>
-	<v-navigation-drawer
-		id="left-column"
-		width="315"
-		style="top: 85px"
-		app
-		clipped
-		floating
-		:value="drawer"
-		@input="setDrawer($event)"
-	>
-		<router-view />
-	</v-navigation-drawer>
+	<div>
+		<v-navigation-drawer
+			v-if="isMicrosite || isSecondaryNavigation"
+			id="left-column-micro"
+			width="290"
+			style="top: 85px"
+			app
+			clipped
+			floating
+			:value="drawer"
+			@input="setDrawer($event)"
+		>
+			<router-view />
+		</v-navigation-drawer>
+
+		<v-navigation-drawer
+			v-else
+			id="left-column"
+			width="315"
+			style="top: 85px"
+			app
+			clipped
+			floating
+			:value="drawer"
+			@input="setDrawer($event)"
+		>
+			<router-view />
+		</v-navigation-drawer>
+	</div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
 	name: 'LeftRegion',
-	data: () => ({}),
+	data: () => ({
+		mini: true
+	}),
 	computed: {
+		...mapGetters(['isMicrosite', 'isSecondaryNavigation']),
 		drawer() {
 			return (
-				this.$store.state.drawer && this.$store.state.tourmode == false
+				//this.$store.state.drawer && this.$store.state.tourmode == false
+				this.$store.state.drawer
 			)
 		}
 	},
@@ -39,4 +61,14 @@ export default {
 }
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+#left-column-mico {
+	max-height: calc(100% - 85px) !important;
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.left-column-wraper{
+	height: 100%;
+	border-right: solid 1px rgba(0, 0, 0, 0.12) !important;
+}
+</style>

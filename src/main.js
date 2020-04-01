@@ -12,7 +12,16 @@ import { sync } from 'vuex-router-sync'
 import scrshot from 'js_screen_shots'
 import { mapState } from 'vuex'
 import '@/assets/global.scss'
+import VueGtag from "vue-gtag";
+import VueTouch from 'vue-touch';
+
 Vue.use(fullscreen)
+
+Vue.use(VueGtag, {
+	config: { id: "G-V3XEBMLH2K" }
+  });
+
+Vue.use(VueTouch);
 
 window.html2canvas = scrshot.html2canvas
 window.Canvas2Image = scrshot.Canvas2Image
@@ -66,7 +75,8 @@ const VM = new Vue({
 							dom.querySelector(
 								'#copyright-watermark'
 							).style.display = 'block'
-							let animationcontrols = dom.querySelector('#bottom')
+							let animationcontrols = dom.querySelector('#AnimationPlayerToolbar')
+							// console.log("anim controls:: "+animationcontrols)
 							animationcontrols.parentNode.removeChild(
 								animationcontrols
 							)

@@ -1,120 +1,169 @@
 <template>
-	<div class="home left-column-wraper d-flex flex-column">
-		<v-list class="pb-0 pt-0">
-			<v-list-item :to="{
-					name: 'home'
-				}" class="section-nav-link" active-class="active">
-				<v-list-item-content>
-					<v-list-item-title
-						class="text-uppercase subtitle-1 font-weight-medium"
-					>{{ mainNavigation.name }}</v-list-item-title>
-				</v-list-item-content>
-				<v-list-item-icon>
-					<v-icon>mdi-chevron-right-box-outline</v-icon>
-				</v-list-item-icon>
-			</v-list-item>
-			<v-divider></v-divider>
-		</v-list>
+	<div class="fill-height">
+		<v-container class="fill-height animation-section">
+			<div class="home left-column-wraper d-flex flex-column">
+				<v-card outlined class="pa-2 home-card">
+					<v-card-title class="headline mb-1">{{ mainNavigation.name }}</v-card-title>
+					<v-card-text>An ingenious, interactive online version of the IronAtlas was developed with the help of medical experts and scientific agencies based on an originally simple written illustration of the individual stages of iron metabolism in A3 and poster format.</v-card-text>
+					<v-card-actions>
+						<v-btn
+							:to="{name: mainNavigation.route}"
+							depressed
+							dark
+							color="rgb(0, 102, 255)"
+						>Online Version</v-btn>
+						<v-btn
+							outlined
+							color="rgb(0, 102, 255)"
+							class="install-app-btn"
+							@click="install_btn_tracker"
+						>Install App</v-btn>
+					</v-card-actions>
+				</v-card>
 
-		<div class="flex-grow-1 column-panels">
-			<v-row justify="center">
-				<v-expansion-panels accordion transparent :multiple="allpanels" v-model="panels">
-					<v-expansion-panel v-for="item in mainNavigation.childs" :key="item.key">
-						<v-expansion-panel-header class="body-2 text-uppercase">{{ item.name }}</v-expansion-panel-header>
-						<v-expansion-panel-content class="body-3">
-							<div v-html="item.cidescription"></div>
-							<v-btn small outlined color="primary" class="mt-3">
-								Open
+				<v-list class="pb-0 resnews flex-grow-1">
+					<template v-for="(item, ind) in micrositeNavigation.childs">
+						<v-list-item
+							:key="item.cid"
+							:to="{
+						name: item.route,
+						params: { id: item[paramkey] }
+					}"
+							class="section-nav-link"
+							active-class="active"
+						>
+							<v-list-item-content>
+								<v-list-item-title class="text-uppercase subtitle-1 font-weight-medium">{{ item.name }}</v-list-item-title>
+							</v-list-item-content>
+							<v-list-item-icon>
 								<v-icon>mdi-chevron-right</v-icon>
-							</v-btn>
-						</v-expansion-panel-content>
-					</v-expansion-panel>
-				</v-expansion-panels>
-			</v-row>
-		</div>
+							</v-list-item-icon>
+						</v-list-item>
+						<v-divider :key="ind"></v-divider>
+					</template>
+				</v-list>
+			</div>
+			<span class="bg"></span>
+		</v-container>
+		<HomeFooter></HomeFooter>
 	</div>
 </template>
 
-
 <script>
 import { mapState } from 'vuex'
-import { findIndex } from 'lodash'
+import HomeFooter from '../components/HomeFooter'
 export default {
-	name: 'home',
-	components: {
-	},
-	data: () => ({
-		panels: [],
-		allpanels: false
-	}),
-	watch: {
-		panels(newValue) {
-			//console.log('Updating from ' + oldValue + ' to ' + newValue)
-			if (this.allpanels) {
-				if (this.panels.length < this.mainNavigation.childs.length) {
-					let allpanels = []
-					for (
-						let i = 0;
-						i < this.mainNavigation.childs.length;
-						i++
-					) {
-						allpanels.push(i)
-					}
-					let difference = allpanels.filter(
-						x => !this.panels.includes(x)
-					)
-					this.allpanels = false
-					this.panels = difference
-				}
-			} else {
-				if (typeof newValue !== 'undefined') {
-					let previewId = this.mainNavigation.childs[newValue].refcode
-					this.$store.commit('SET_PREVIEW', previewId)
-				} else {
-					this.$store.commit('EMPTY_PREVIEW')
-				}
-			}
-		},
-		previewpanels(newValue) {
-			if (newValue === 'all') {
-				//console.log(newValue)
-				this.allpanels = true
-				let allpanels = []
-				for (let i = 0; i < this.mainNavigation.childs.length; i++) {
-					allpanels.push(i)
-				}
-				this.panels = allpanels
-			} else {
-				this.allpanels = false
-				let newindex = findIndex(this.mainNavigation.childs, function(
-					o
-				) {
-					return o.refcode == newValue
-				})
-				if (newindex > -1) {
-					this.panels = newindex
-				} else {
-					this.panels = undefined
-				}
-			}
+	name: 'Home',
+	methods: {
+		install_btn_tracker() {
+			this.$gtag.event('install_app', {
+				event_category: 'app_installation'
+			})
 		}
 	},
-	computed: {
-		...mapState(['mainNavigation', 'previewpanels', 'showlabels'])
+	components: {
+		HomeFooter
 	},
-	// methods: {
-	// 	toggleAllPanels() {
-	// 		if (this.allpanels) {
-	// 			//this.allpanels = false
-	// 			this.$store.commit('EMPTY_PREVIEW')
-	// 		} else {
-	// 			//this.allpanels = true
-	// 			this.$store.commit('PREVIEW_ALL')
-	// 		}
-	// 	},
-	// 	toggleQuantities() {
-	// 		this.$store.commit('TOGGLE_LABELS')
-	// 	}
-	// }
+
+	data: () => ({}),
+	computed: {
+		...mapState([
+			'mainNavigation',
+			'micrositeNavigation',
+			'paramkey',
+			'secondaryNavigation'
+		])
+	},
 }
 </script>
+
+
+<style scoped lang="scss">
+.left-column-wraper {
+	max-width: 500px;
+	left: 5vw;
+	margin-right: 5vw;
+	position: absolute;
+	z-index: 1;
+}
+
+.fill-height {
+	height: 100%;
+}
+
+.container {
+	padding: 0%;
+}
+
+.theme--light.v-list {
+	background-color: rgb(1, 1, 1, 0);
+}
+
+.theme--light.v-card {
+	background-color: rgb(1, 1, 1, 0);
+	border: dotted thin rgba(0, 0, 0, 0.4) !important;
+}
+
+.resnews {
+	padding-top: 50px;
+}
+
+.home {
+	height: 100%;
+	padding-top: 20vh;
+}
+
+.headline {
+	font-weight: 700 !important;
+	text-transform: uppercase;
+}
+
+.install-app-btn {
+	border: dotted thin rgba(0, 0, 0, 0.4) !important;
+	border-color: rgb(255, 0, 51) !important;
+}
+
+.bg {
+	width: 100%;
+	height: 100%;
+	margin-left: 20%;
+	background: url('../assets/homebackground24.jpg') no-repeat center center;
+	background-size: contain;
+	transform: scale(1);
+	opacity: 0.4;
+}
+
+.v-card__text {
+	color: rgb(0, 0, 0) !important;
+}
+
+.v-content {
+	background-color: #bbbdde;
+}
+
+@media only screen and (max-width: 1400px) {
+	.bg {
+		width: 100%;
+		height: 100%;
+		margin-left: 20vw;
+		background: url('../assets/homebackground24.jpg') no-repeat center
+			center;
+		background-size: cover;
+		transform: scale(1);
+		opacity: 0.4;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.bg {
+		width: 100%;
+		height: 100%;
+		margin-left: 20vw;
+		background: url('../assets/homebackground24.jpg') no-repeat center
+			center;
+		background-size: cover;
+		transform: scale(1);
+		opacity: 0.2;
+	}
+}
+</style>

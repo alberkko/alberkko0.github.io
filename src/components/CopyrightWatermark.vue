@@ -1,5 +1,9 @@
 <template>
-	<div id="copyright-watermark" style="display:none;" :class="tourmode ? 'right-pos' : ''">
+	<div
+		id="copyright-watermark"
+		style="display:none;"
+		:class="tourmode ? 'right-pos' : ''"
+	>
 		www.ironatlas.com
 		<strong class="cw-comp d-block">2019 Vifor Pharma</strong>
 		{{ $t('cp_watermark') }}

@@ -1,38 +1,28 @@
 <template>
-	<v-dialog
-		v-model="tablesdialog"
-		transition="dialog-bottom-transition"
-		hide-overlay
-		scrollable
-		max-width="800"
-		:persistent="persistdialog"
-		no-click-animation
-		:fullscreen="$vuetify.breakpoint.mdAndDown"
-	>
-		<v-card id="tablesdialog" class="dialog-content" tile>
-			<v-card-title class="pa-0">
-				<v-toolbar flat dark dense class="v-sheet-bg">
-					<v-toolbar-title>{{ maindata.name }}</v-toolbar-title>
-					<v-spacer />
-					<v-btn icon dark @click="tablesdialog = false">
-						<v-icon>mdi-close</v-icon>
-					</v-btn>
-				</v-toolbar>
-			</v-card-title>
-			<v-card-text class="px-3 pb-0">
-				<v-row justify="center">
-					<v-expansion-panels class="grey lighten-2" accordion hover>
-						<v-expansion-panel v-for="(item, ind) in tablesdata" :key="item.cid" :index="ind">
-							<v-expansion-panel-header ripple>{{ item.cititle }}</v-expansion-panel-header>
-							<v-expansion-panel-content>
-								<div v-html="item.fc"></div>
-							</v-expansion-panel-content>
-						</v-expansion-panel>
-					</v-expansion-panels>
-				</v-row>
-			</v-card-text>
-		</v-card>
-	</v-dialog>
+	<div class="scroll">
+		<v-row justify="center">
+			<v-expansion-panels v-model="panel" multiple focusable>
+				<h1 class="page-title">{{maindata.name}}</h1>
+				<v-expansion-panel v-for="(item, ind) in tablesdata" :key="item.cid" :index="ind">
+					<v-expansion-panel-header>{{item.cititle}}</v-expansion-panel-header>
+					<v-expansion-panel-content class="content">
+						<v-card class="mx-auto" flat>
+							<v-list-item>
+								<v-list-item-content>
+									<div class="overline mb-4">{{maindata.name}}</div>
+									<v-card-text class="news-title mb-1">{{item.cititle}}</v-card-text>
+									<v-card-text >
+										<div v-html="item.fc"></div>
+									</v-card-text>
+								</v-list-item-content>
+								<v-img height="150" cover :src="item.imageSm"></v-img>
+							</v-list-item>
+						</v-card>
+					</v-expansion-panel-content>
+				</v-expansion-panel>
+			</v-expansion-panels>
+		</v-row>
+	</div>
 </template>
 
 <script>
@@ -40,19 +30,10 @@ import { mapState } from 'vuex'
 export default {
 	name: 'Tables',
 	data: () => ({
-		openitem: undefined,
-		clonedopenitem: undefined
+		panel: [1,1,1,1]
 	}),
 	computed: {
-		...mapState(['savescr', 'persistdialog']),
-		tablesdialog: {
-			get() {
-				return this.$store.state.tablesdialog
-			},
-			set(val) {
-				this.$store.commit('SET_TABLES_DIALOG', val)
-			}
-		},
+		...mapState(['assets']),
 		maindata() {
 			var data = {
 				name: 'Tables',
@@ -61,11 +42,8 @@ export default {
 					LI: []
 				}
 			}
-			if (
-				typeof this.$store.getters.secondaryNavigation.childs !==
-				'undefined'
-			) {
-				data = this.$store.getters.secondaryNavigation.childs[0]
+			if (typeof this.$store.getters.microsite.childs !== 'undefined') {
+				data = this.$store.getters.microsite.childs[2]
 			}
 			return data
 		},
@@ -73,9 +51,7 @@ export default {
 			var itemsfound = []
 			this.maindata.documentsinside.LI.forEach(id => {
 				var item = this.$store.getters.getCIExtra(id)
-				if (item) {
-					itemsfound.push(item)
-				}
+				itemsfound.push(item)
 			})
 			return itemsfound
 		}
@@ -84,16 +60,97 @@ export default {
 }
 </script>
 
-<style lang="scss">
-#tablesdialog {
-	table {
-		td {
-			line-height: 1rem !important;
-			padding: 5px;
-		}
-	}
-	.responsive-table {
-		overflow-x: auto;
-	}
+<style lang="scss" scoped>
+.scroll {
+	height: 100vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.news-title{
+	font-weight: 500;
+	font-size: x-large;
+}
+
+.v-expansion-panels:not(.v-expansion-panels--accordion):not(.v-expansion-panels--tile)
+	> .v-expansion-panel--next-active
+	.v-expansion-panel-header {
+	border-bottom-left-radius: 0px !important;
+	border-bottom-right-radius: 0px !important;
+}
+
+.theme--light.v-expansion-panels.v-expansion-panels--focusable .v-expansion-panel-header--active:hover::before, .theme--light.v-expansion-panels.v-expansion-panels--focusable .v-expansion-panel-header--active::before{
+	opacity: 0 !important;
+}
+
+.theme--light.v-expansion-panels.v-expansion-panels--focusable .v-expansion-panel-header:hover::before{
+opacity: 0 !important;
+}
+
+.v-expansion-panel-header--active{
+	color: white;
+	background-color: #9d1f30;
+}
+
+.v-responsive {
+	max-width: 20%;
+}
+
+.page-title{
+flex: 1;
+color: #9d1f30;
+}
+.v-expansion-panels {
+	width: 65%;
+	top: 150px;
+	margin-bottom: 120px;
+}
+.v-expansion-panel {
+	margin-left: 0%;
+}
+.content {
+	padding-top: 20px;
+	flex-direction: row !important;
+}
+
+.v-list-item{
+	flex-direction: row;
+}
+
+.v-expansion-panel-content__wrap {
+	display: flex;
+	flex-direction: row !important;
+}
+
+.v-card__text {
+	padding-left: 0;
+	padding-top: 0;
+	line-height: 170%;
+}
+
+.v-card__actions{
+	padding-top: 0;
+}
+
+.v-list-item__content{
+	padding-bottom: 0;
+}
+
+@media only screen and (max-width: 768px) {
+.v-responsive {
+	max-width: 100%;
+}
+.v-list-item{
+	flex-direction: column-reverse;
+}
+.news-title{
+	font-weight: 500;
+	font-size: large;
+}
+
+.v-expansion-panels {
+	width: 80%;
+}
+
 }
 </style>

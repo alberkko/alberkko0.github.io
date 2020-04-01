@@ -1,5 +1,5 @@
 .overflow-hidden {
-	overflow: hidden !important;
+	overflow: hidden;
 }
 .v-expansion-panel-content {
 	p {
@@ -22,7 +22,7 @@
 $border-color: rgba(0, 0, 0, 0.12);
 $border-color-active: rgba(0, 0, 0, 0.418);
 .v-sheet-bg {
-	background-color: #70829c !important;
+	background-color: #9d1f30 !important;
 	color: #ffffff;
 }
 .content-grey-bg {

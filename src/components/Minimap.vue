@@ -1,10 +1,15 @@
 <template>
-	<div v-if="showminimap && enableMinimap && !tourmode" id="minimap-container">
+	<div v-if="showminimap && enableMinimap" id="minimap-container">
 		<v-card tile>
-			<v-card-title dark class="subtitle-1 py-1 px-2 v-sheet-bg">
+			<v-card-title class="subtitle-1 py-1 px-2 v-sheet-bg">
 				{{ $t('minimap') }}
 				<v-spacer></v-spacer>
-				<v-icon v-if="$vuetify.breakpoint.mdAndDown" dark @click="toggleMinimap">mdi-close</v-icon>
+				<v-icon
+					v-if="$vuetify.breakpoint.mdAndDown"
+					dark
+					@click="toggleMinimap"
+					>mdi-close</v-icon
+				>
 			</v-card-title>
 			<v-divider></v-divider>
 			<v-card-text class="content-grey-bg pa-0">
@@ -22,9 +27,7 @@
 							></a>
 						</template>
 						<span class="text-uppercase">
-							{{
-							$t('absorption_sec_title')
-							}}
+							{{ $t('absorption_sec_title') }}
 						</span>
 					</v-tooltip>
 					<v-tooltip bottom>
@@ -39,9 +42,7 @@
 							></a>
 						</template>
 						<span class="text-uppercase">
-							{{
-							$t('transport_sec_title')
-							}}
+							{{ $t('transport_sec_title') }}
 						</span>
 					</v-tooltip>
 					<v-tooltip bottom>
@@ -56,9 +57,7 @@
 							></a>
 						</template>
 						<span class="text-uppercase">
-							{{
-							$t('usage_sec_title')
-							}}
+							{{ $t('usage_sec_title') }}
 						</span>
 					</v-tooltip>
 					<v-tooltip bottom>
@@ -73,9 +72,7 @@
 							></a>
 						</template>
 						<span class="text-uppercase">
-							{{
-							$t('loss_sec_title')
-							}}
+							{{ $t('loss_sec_title') }}
 						</span>
 					</v-tooltip>
 					<v-tooltip bottom>
@@ -90,9 +87,7 @@
 							></a>
 						</template>
 						<span class="text-uppercase">
-							{{
-							$t('recycling_sec_title')
-							}}
+							{{ $t('recycling_sec_title') }}
 						</span>
 					</v-tooltip>
 					<v-tooltip bottom>
@@ -107,9 +102,7 @@
 							></a>
 						</template>
 						<span class="text-uppercase">
-							{{
-							$t('storage_sec_title')
-							}}
+							{{ $t('storage_sec_title') }}
 						</span>
 					</v-tooltip>
 					<v-tooltip bottom>
@@ -124,9 +117,7 @@
 							></a>
 						</template>
 						<span class="text-uppercase">
-							{{
-							$t('regulation_sec_title')
-							}}
+							{{ $t('regulation_sec_title') }}
 						</span>
 					</v-tooltip>
 					<svg
@@ -149,9 +140,7 @@
 			</v-card-text>
 			<v-divider></v-divider>
 			<v-card-actions class="body-2 text-uppercase">
-				{{
-				location.navmaintitle
-				}}
+				{{ location.navmaintitle }}
 			</v-card-actions>
 		</v-card>
 	</div>
@@ -204,11 +193,18 @@ export default {
 <style lang="scss">
 #minimap-container {
 	position: absolute;
-	top: 5px;
+	top: 70px;
 	right: 15px;
 	background: white;
 	z-index: 1;
 }
+
+// @media only screen and (max-width: 765px) {
+// 	#minimap-container {
+// 		top: 65px;
+// 	}
+// }
+
 .map-holder {
 	width: 130px;
 	height: 170px;

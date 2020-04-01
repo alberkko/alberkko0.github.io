@@ -13,9 +13,7 @@
 				<v-card-title class="pa-0 v-sheet-bg">
 					<v-toolbar flat dark dense class="v-sheet-bg">
 						<v-toolbar-title>
-							{{
-							$t('referenceslabel')
-							}}
+							{{ $t('referenceslabel') }}
 						</v-toolbar-title>
 						<v-spacer />
 						<v-btn icon dark @click="referencesdialog = false">
@@ -26,20 +24,28 @@
 				<v-card-text class="pa-0">
 					<v-list class="pa-0">
 						<template v-for="(item, ind) in referencelist">
-							<v-list-item two-line :key="ind" :href="item.external_link" target="_blank">
+							<v-list-item
+								two-line
+								:key="ind"
+								:href="item.external_link"
+								target="_blank"
+							>
 								<v-list-item-content>
 									<span class="font-weight-bold">
-										{{
-										item.cititle
-										}}
+										{{ item.cititle }}
 									</span>
 									{{ item.cidescription }}
 								</v-list-item-content>
 								<v-list-item-action>
-									<v-icon color="primary">mdi-open-in-new</v-icon>
+									<v-icon color="primary"
+										>mdi-open-in-new</v-icon
+									>
 								</v-list-item-action>
 							</v-list-item>
-							<v-divider v-if="ind + 1 < referencelist.length" :key="item.cid"></v-divider>
+							<v-divider
+								v-if="ind + 1 < referencelist.length"
+								:key="item.cid"
+							></v-divider>
 						</template>
 					</v-list>
 				</v-card-text>
@@ -48,8 +54,12 @@
 		<div id="footer-references" v-if="savescr != 0">
 			<span class="text-uppercase">{{ $t('referenceslabel') }}:</span>
 			<template v-for="(item, ind) in referencelist">
-				<span :key="ind">{{ item.cititle }} {{ item.cidescription }}</span>
-				<span :key="item.cid" v-if="ind + 1 < referencelist.length">&nbsp;|&nbsp;</span>
+				<span :key="ind"
+					>{{ item.cititle }} {{ item.cidescription }}</span
+				>
+				<span :key="item.cid" v-if="ind + 1 < referencelist.length"
+					>&nbsp;|&nbsp;</span
+				>
 			</template>
 		</div>
 	</div>

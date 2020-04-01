@@ -1,8 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import Section from '../views/Section.vue'
+import IMLandingLeft from '../views/IMLandingLeft.vue'
+import MSLandingLeft from '../views/MSLandingLeft.vue'
+import SectionLeft from '../views/SectionLeft.vue'
+//import HomeView from '../views/HomeView.vue'
+//import IMView from '../views/IMView.vue'
 import i18n from '../i18n'
+import VueGtag from 'vue-gtag'
 Vue.use(VueRouter)
 //const i18n = Vue.i18n
 
@@ -15,22 +19,47 @@ const routes = [
 	{
 		path: '/:locale',
 		name: 'home',
-		component: Home
+		component: IMLandingLeft
 	},
 	{
-		path: '/:locale/:id/:element?',
+		path: '/:locale/ironmetabolism',
+		name: 'ironmetabolism',
+		component: IMLandingLeft
+	},
+	{
+		path: '/:locale/:id',
+		name: 'microsite',
+		props: true,
+		component: MSLandingLeft
+	},
+	{
+		path: '/:locale/:id',
+		name: 'secondaryNavigation',
+		props: true,
+		component: MSLandingLeft
+	},
+	{
+		path: '/:locale/ironmetabolism/:id/:element?',
 		name: 'section',
 		props: true,
 		// route level code-splitting
 		// this generates a separate chunk (about.[hash].js) for this route
 		// which is lazy-loaded when the route is visited.
-		component: Section
+		component: SectionLeft
 	}
 ]
 
 const router = new VueRouter({
 	routes
 })
+
+Vue.use(
+	VueGtag,
+	{
+		config: { id: 'G-V3XEBMLH2K' }
+	},
+	router
+)
 
 router.beforeEach((to, from, next) => {
 	//console.log('trigged ROUTE change', router)
@@ -53,6 +82,9 @@ router.beforeEach((to, from, next) => {
 	// Set locale
 	i18n.locale = locale
 	to.params.locale = locale
+	/* if (typeof to.params.section == 'undefined') {
+		to.params.section = 'ironmetabolism'
+	} */
 	// Move on the next hook (render component view)
 	next()
 })

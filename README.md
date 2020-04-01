@@ -79,22 +79,26 @@ regulation3
 
 ## TODO
 
-1. Check again mapping of codes
-2. Implement language in router
-3. Apply all labels for all languages
-4. Check how to handle history mode routing in the server
-5. Finalize Screenshot behaviour (how to include existing canvas)
-    1. Consider elements which are shown only in screenshot like references and the copyright mesage
-6. Implement CLICK sound
-7. Guided Tour
-8. What about minimap
-9. Content
-    1. Tables style should be corrected
-    2. References style should be rechecked
-10. References issue with the links
-11. Who controls the text that is shown on the animation (LABELS)
-12. Step by step mode
-    1. Support jump mode (prev-next)?
-    2. Do we need to have a stypebystep mode entered callback?
-    3. Check all animations mapping
-    4. Better handling of autoplay mode, case when switching scenarios
+3. Destroy player method - Drop this ands use Interrupt and resume
+   1. It resumes wher it was left
+4. What about the background music - Maybe lower a little bit later...
+5. Tooltips in all languages for utility elements
+6. Regulation
+   1. Issue with tour mode
+   2. Zommed mode to be considered in "Regulation" landing
+7. Do we need to support progressbar draging? - Not supported...for now
+8.  Implement routing with history mode
+9.  Implement Google Analytics - crosschannel Web - and Appstore
+    1.  Provide credentials to Albert
+10. With the existing implementation playing after the last step is lost - Gaetan
+11. Do we need to control sound separately (bg music and speaker) - No need
+12. Better handling language switch when is speaking - Alban
+13. Autoplay issue - https://blog.videojs.com/autoplay-best-practices-with-video-js/ - Ask user to respond...(introduce a resume button, maybe rfom the homepage to feel familiar) - Alban
+14. Minimap behaviour on mobile...should not show automatically - Albert
+15. Swipe navigation... - Pending release from the Animation - Gaetan
+16. Align step markers with progressbar - Use the callback info animationReadyCallback - Alban
+17. Animation seems to brake under a strssed navigation - what should we do. - (window.iron3d.setShowControlsCallback( ( showTop, showBottom )) - Alban
+18. Recheck screenshot - its broken - Alban
+19. Better styling of legal sections links in the footer - Albert
+20. Review Microsite - Alban
+

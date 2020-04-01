@@ -1,4 +1,5 @@
 {
+	"appname": "IRONATLAS",
 	"absorption_sec_title": "Absorción",
 	"transport_sec_title": "Transporte",
 	"usage_sec_title": "Uso",
@@ -33,5 +34,11 @@
 	"tourpanel_play": "Reproducir",
 	"tourpanel_prev": "Capítulo anterior",
 	"tourpanel_next": "Siguiente capítulo",
-	"cp_watermark": "Se permite el uso no comercial para fines de instrucción en forma no alterada con indicación de la fuente."
+	"cp_watermark": "Se permite el uso no comercial para fines de instrucción en forma no alterada con indicación de la fuente.",
+	"section_start": "Reproducir",
+	"loading_label": "Cargando",
+	"cc_on": "Habilitar subtítulos",
+	"cc_off": "Deshabilitar subtítulos",
+	"cc_full": "Subtítulos completos",
+	"back": "Espalda"
 }

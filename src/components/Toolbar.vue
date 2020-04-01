@@ -23,114 +23,38 @@
 				contain
 			/>
 		</a>
-		<v-toolbar-title class="pr-2 align-center d-none d-md-block" style="height:38px;">
+		<v-toolbar-title
+			class="pr-2 align-center d-none d-md-block"
+			style="height:38px;"
+		>
 			<span class="title font-weight-light font-italic">
-				<small>The interactive medical iron portal</small>
+				<small>{{ navigation.cititle }}</small>
 			</span>
 		</v-toolbar-title>
 		<v-spacer />
 		<span
 			class="overline mr-3 pt-2 d-none d-sm-block"
 			style="text-transform:none !important;"
-		>Version 3.0</span>
-		<v-btn icon @click.stop="toggleDrawer()" class="mr-1" v-if="!tourmode">
+			>Version 3.0</span
+		>
+		<v-btn icon @click.stop="toggleDrawer()" class="mr-1" v-if="!homeState">
 			<v-icon>mdi-menu</v-icon>
 		</v-btn>
-		<a class="vifor-link font-weight-medium" dark href="https://www.viforpharma.com/" target="_blank">
+		<a
+			class="vifor-link font-weight-medium"
+			dark
+			href="https://www.viforpharma.com/"
+			target="_blank"
+		>
 			<!-- <v-icon class="mr-1">mdi-menu</v-icon> -->
 			Vifor Pharma
 		</a>
 		<template class="grey darken-1 pr-0" v-slot:extension>
-			<v-breadcrumbs
-				light
-				:items="location.pathlist"
-				class="pl-0 flex-nowrap"
-				:class="tourmode ? 'tour-enabled' : ''"
-			>
-				<template v-slot:item="props">
-					<v-breadcrumbs-item
-						v-if="
-							$vuetify.breakpoint.lgAndUp ||
-								props.item.ishome ||
-								props.item.current
-						"
-						class="text-truncate"
-						:to="{
-							name: props.item.route,
-							params: { id: props.item[paramkey] }
-						}"
-						:active-class="
-							props.item.current || tourmode
-								? 'v-breadcrumbs__item--disabled'
-								: ''
-						"
-						:disabled="tourmode"
-						:class="!$vuetify.breakpoint.lgAndUp ? 'px-0' : ''"
-					>
-						<v-icon v-if="props.item.ishome" class="mr-1">mdi-home</v-icon>
-						<template v-if="
-								props.item.ishome && $vuetify.breakpoint.lgAndUp
-							">
-							<span>{{ props.item.name }}</span>
-						</template>
-						<template v-if="!props.item.ishome">
-							<span class="d-block text-truncate">{{ props.item.name }}</span>
-						</template>
-					</v-breadcrumbs-item>
-					<v-menu
-						light
-						bottom
-						:disabled="tourmode"
-						v-if="
-							($vuetify.breakpoint.lgAndUp ||
-								props.item.ishome) &&
-								props.item.childs.length
-						"
-					>
-						<template v-slot:activator="{ on: breadcrumb }">
-							<v-btn icon v-on="{ ...breadcrumb }" :disabled="tourmode">
-								<v-icon>mdi-chevron-right</v-icon>
-							</v-btn>
-						</template>
-						<v-list class="nav-dropdown">
-							<template v-for="(child, ind) in props.item.childs">
-								<v-list-item
-									:key="ind"
-									:to="{
-										name: 'section',
-										params: { id: child[paramkey] }
-									}"
-								>
-									<v-list-item-title>{{ child.name }}</v-list-item-title>
-								</v-list-item>
-								<template v-if="$vuetify.breakpoint.mdAndDown">
-									<v-list-item
-										v-for="(subchild,
-										subind) in child.childs"
-										:key="ind + '-' + subind"
-										:to="{
-											name: 'section',
-											params: { id: subchild[paramkey] }
-										}"
-									>
-										<v-list-item-title>
-											<v-icon>mdi-chevron-right</v-icon>
-											{{ subchild.name }}
-										</v-list-item-title>
-									</v-list-item>
-								</template>
-							</template>
-						</v-list>
-					</v-menu>
-				</template>
-				<template class="d-none" v-slot:divider>
-					<v-icon></v-icon>
-				</template>
-			</v-breadcrumbs>
+			<Breadcrumb />
 			<v-spacer></v-spacer>
 			<v-spacer></v-spacer>
 			<v-toolbar-items class>
-				<v-tooltip bottom v-if="$vuetify.breakpoint.lgAndUp">
+				<!-- <v-tooltip bottom v-if="$vuetify.breakpoint.lgAndUp">
 					<template v-slot:activator="{ on }">
 						<v-btn
 							light
@@ -140,23 +64,32 @@
 							:class="isfullscreen ? 'v-btn--active' : ''"
 						>
 							<v-icon v-if="!isfullscreen">mdi-fullscreen</v-icon>
-							<v-icon v-if="isfullscreen">mdi-fullscreen-exit</v-icon>
+							<v-icon v-if="isfullscreen"
+								>mdi-fullscreen-exit</v-icon
+							>
 						</v-btn>
 					</template>
 					<span v-if="!isfullscreen">{{ $t('fullscreen_off') }}</span>
 					<span v-if="isfullscreen">{{ $t('fullscreen_on') }}</span>
-				</v-tooltip>
-				<v-tooltip bottom v-if="$vuetify.breakpoint.lgAndUp">
+				</v-tooltip> -->
+				<!-- <v-tooltip bottom v-if="$vuetify.breakpoint.lgAndUp">
 					<template v-slot:activator="{ on }">
-						<v-btn light icon v-on="on" @click="saveScreenshot" :disabled="savescr == 1" active-class>
+						<v-btn
+							light
+							icon
+							v-on="on"
+							@click="saveScreenshot"
+							:disabled="savescr == 1"
+							active-class
+						>
 							<v-icon>mdi-camera-outline</v-icon>
 						</v-btn>
 					</template>
 					<span v-if="savescr == 0">{{ $t('screenshot') }}</span>
 					<span v-if="savescr == 1">{{ $t('screenshot') }}</span>
 					<span v-if="savescr == 2">{{ $t('screenshot') }}</span>
-				</v-tooltip>
-				<v-tooltip bottom v-if="$vuetify.breakpoint.lgAndUp">
+				</v-tooltip> -->
+				<!-- <v-tooltip bottom v-if="$vuetify.breakpoint.lgAndUp">
 					<template v-slot:activator="{ on }">
 						<v-btn light icon v-on="on" @click="toggleSound">
 							<v-icon v-if="sound">mdi-volume-high</v-icon>
@@ -165,7 +98,7 @@
 					</template>
 					<span v-if="sound">{{ $t('sound_off') }}</span>
 					<span v-if="!sound">{{ $t('sound_on') }}</span>
-				</v-tooltip>
+				</v-tooltip> -->
 				<v-menu
 					left
 					bottom
@@ -176,7 +109,12 @@
 					<template v-slot:activator="{ on: menu }">
 						<v-tooltip bottom>
 							<template v-slot:activator="{ on: tooltip }">
-								<v-btn light icon v-on="{ ...tooltip, ...menu }">{{ currentlangobj.code }}</v-btn>
+								<v-btn
+									light
+									icon
+									v-on="{ ...tooltip, ...menu }"
+									>{{ currentlangobj.code }}</v-btn
+								>
 							</template>
 							<span>{{ currentlangobj.label }}</span>
 						</v-tooltip>
@@ -193,7 +131,9 @@
 									: ''
 							"
 						>
-							<v-list-item-title>{{ lang.label }}</v-list-item-title>
+							<v-list-item-title>{{
+								lang.label
+							}}</v-list-item-title>
 						</v-list-item>
 					</v-list>
 				</v-menu>
@@ -205,7 +145,7 @@
 						</v-btn>
 					</template>
 					<v-list class="mobile-options-dropdown" dense>
-						<v-list-item
+						<!-- <v-list-item
 							link
 							:input-value="showminimap"
 							:disabled="!enableMinimap"
@@ -215,22 +155,25 @@
 								<v-icon>mdi-compass</v-icon>
 							</v-list-item-icon>
 							<v-list-item-content>
-								<v-list-item-title>{{ $t('minimap') }}</v-list-item-title>
+								<v-list-item-title>{{
+									$t('minimap')
+								}}</v-list-item-title>
 							</v-list-item-content>
-						</v-list-item>
-						<v-list-item link @click="$store.commit('SET_TABLES_DIALOG', true)">
+						</v-list-item> -->
+						<!-- <v-list-item
+							link
+							@click="$store.commit('SET_TABLES_DIALOG', true)"
+						>
 							<v-list-item-icon>
 								<v-icon>mdi-file-table</v-icon>
 							</v-list-item-icon>
 							<v-list-item-content>
 								<v-list-item-title>
-									{{
-									$t('tableslabel')
-									}}
+									{{ $t('tableslabel') }}
 								</v-list-item-title>
 							</v-list-item-content>
-						</v-list-item>
-						<v-list-item
+						</v-list-item> -->
+						<!-- <v-list-item
 							link
 							:disabled="!existreferences"
 							@click="
@@ -242,34 +185,67 @@
 							</v-list-item-icon>
 							<v-list-item-content>
 								<v-list-item-title>
-									{{
-									$t('referenceslabel')
-									}}
+									{{ $t('referenceslabel') }}
 								</v-list-item-title>
 							</v-list-item-content>
-						</v-list-item>
-						<v-list-item link @click="$store.commit('SET_LEGAL_DIALOG', true)">
+						</v-list-item> -->
+						<!-- <v-list-item
+							link
+							@click="$store.commit('SET_LEGAL_DIALOG', true)"
+						>
 							<v-list-item-icon>
 								<v-icon>mdi-information-outline</v-icon>
 							</v-list-item-icon>
 							<v-list-item-content>
 								<v-list-item-title>
-									{{
-									$t('legallabel')
-									}}
+									{{ $t('legallabel') }}
 								</v-list-item-title>
 							</v-list-item-content>
-						</v-list-item>
-						<v-divider></v-divider>
-						<v-list-item link @click="saveScreenshot" :disabled="savescr == 1">
+						</v-list-item> -->
+						<!-- <v-divider class="my-2"></v-divider> -->
+						<v-list-item
+							link
+							@click="saveScreenshot"
+							:disabled="savescr == 1"
+						>
 							<v-list-item-icon>
 								<v-icon>mdi-camera-outline</v-icon>
 							</v-list-item-icon>
 							<v-list-item-content>
 								<v-list-item-title>
-									{{
-									$t('screenshot')
-									}}
+									{{ $t('screenshot') }}
+								</v-list-item-title>
+							</v-list-item-content>
+						</v-list-item>
+						<v-list-item link @click="toggleSound">
+							<v-list-item-icon>
+								<v-icon v-if="sound">mdi-volume-high</v-icon>
+								<v-icon v-if="!sound">mdi-volume-off</v-icon>
+							</v-list-item-icon>
+							<v-list-item-content>
+								<v-list-item-title v-if="sound">
+									{{ $t('sound_off') }}
+								</v-list-item-title>
+								<v-list-item-title v-if="!sound">
+									{{ $t('sound_on') }}
+								</v-list-item-title>
+							</v-list-item-content>
+						</v-list-item>
+						<v-list-item link @click="toggleFullscreen">
+							<v-list-item-icon>
+								<v-icon v-if="!isfullscreen"
+									>mdi-fullscreen</v-icon
+								>
+								<v-icon v-if="isfullscreen"
+									>mdi-fullscreen-exit</v-icon
+								>
+							</v-list-item-icon>
+							<v-list-item-content>
+								<v-list-item-title v-if="!isfullscreen">
+									{{ $t('fullscreen_on') }}
+								</v-list-item-title>
+								<v-list-item-title v-if="isfullscreen">
+									{{ $t('fullscreen_off') }}
 								</v-list-item-title>
 							</v-list-item-content>
 						</v-list-item>
@@ -281,16 +257,21 @@
 </template>
 
 <script>
+import Breadcrumb from './Breadcrumb'
 import { mapState } from 'vuex'
 import { mapGetters } from 'vuex'
 export default {
 	name: 'Toolbar',
+	components: {
+		Breadcrumb
+	},
 	data: () => ({
 		closelangmenuonclick: false,
 		langmenuopen: false
 	}),
 	computed: {
 		...mapState([
+			'navigation',
 			'paramkey',
 			'dataloaded',
 			'isfullscreen',
@@ -301,7 +282,12 @@ export default {
 			'showminimap',
 			'savescr'
 		]),
-		...mapGetters(['currentlangobj', 'location', 'enableMinimap']),
+		...mapGetters([
+			'currentlangobj',
+			'location',
+			'enableMinimap',
+			'homeState'
+		]),
 		logolink() {
 			let baseURL = 'https://ironatlas.medline.ch/'
 			let langurl = 'ironatlas-'
@@ -420,6 +406,7 @@ $header-height: 50px;
 	}
 	.v-breadcrumbs__item {
 		color: rgba(0, 0, 0, 1);
+		text-transform: uppercase;
 		.mobile-view & {
 			text-overflow: ellipsis;
 			overflow: hidden;

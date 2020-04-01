@@ -1,11 +1,22 @@
 <template>
-	<div id="tour-panel" v-if="tourmode && !navtransitioning">
+	<div id="tour-panel" class="d-none" v-if="tourmode && !navtransitioning">
 		<v-fade-transition v-if="$vuetify.breakpoint.lgAndUp">
 			<v-card elevation="15" outlined tile>
-				<v-card-title dark class="subtitle-2 pb-1 pt-2 px-2 panel-title">
+				<v-card-title
+					dark
+					class="subtitle-2 pb-1 pt-2 px-2 panel-title"
+				>
 					<span>{{ $t('tourpanel_title') }}</span>
 					<v-spacer />
-					<v-btn small tile depressed color="red darken-2" class="close-tour-btn" dark @click="stopTour">
+					<v-btn
+						small
+						tile
+						depressed
+						color="red darken-2"
+						class="close-tour-btn"
+						dark
+						@click="stopTour"
+					>
 						<v-icon>mdi-close</v-icon>
 					</v-btn>
 				</v-card-title>
@@ -36,30 +47,38 @@
 							>
 								<span>
 									<v-icon>mdi-chevron-right</v-icon>
-									<v-icon style="margin-left:-22.5px;">mdi-chevron-right</v-icon>
-									<v-icon style="margin-left:-22.5px;">mdi-chevron-right</v-icon>
+									<v-icon style="margin-left:-22.5px;"
+										>mdi-chevron-right</v-icon
+									>
+									<v-icon style="margin-left:-22.5px;"
+										>mdi-chevron-right</v-icon
+									>
 								</span>
 								<span style="margin-left: -12px;">
 									<v-icon>mdi-chevron-right</v-icon>
-									<v-icon style="margin-left:-22.5px;">mdi-chevron-right</v-icon>
-									<v-icon style="margin-left:-22.5px;">mdi-chevron-right</v-icon>
+									<v-icon style="margin-left:-22.5px;"
+										>mdi-chevron-right</v-icon
+									>
+									<v-icon style="margin-left:-22.5px;"
+										>mdi-chevron-right</v-icon
+									>
 								</span>
 								<span style="margin-left: -12px;">
 									<v-icon>mdi-chevron-right</v-icon>
-									<v-icon style="margin-left:-22.5px;">mdi-chevron-right</v-icon>
-									<v-icon style="margin-left:-22.5px;">mdi-chevron-right</v-icon>
+									<v-icon style="margin-left:-22.5px;"
+										>mdi-chevron-right</v-icon
+									>
+									<v-icon style="margin-left:-22.5px;"
+										>mdi-chevron-right</v-icon
+									>
 								</span>
 							</v-btn>
 						</template>
 						<span v-if="tourautoplay">
-							{{
-							$t('tourpanel_autoplay_off')
-							}}
+							{{ $t('tourpanel_autoplay_off') }}
 						</span>
 						<span v-if="!tourautoplay">
-							{{
-							$t('tourpanel_autoplay_on')
-							}}
+							{{ $t('tourpanel_autoplay_on') }}
 						</span>
 					</v-tooltip>
 				</v-card-text>
@@ -124,44 +143,60 @@
 						key="stepinfo-title"
 					>
 						<span class="text-truncate flex-grow-1">
-							{{
-							location.currentnode.name
-							}}
+							{{ location.currentnode.name }}
 						</span>
-						<span class="flex-grow-0 pl-2" style="white-space: nowrap">
+						<span
+							class="flex-grow-0 pl-2"
+							style="white-space: nowrap"
+						>
 							{{ tourcurrentstep }}/{{
-							location.currentnode.steps.length
+								location.currentnode.steps.length
 							}}
 						</span>
 					</v-card-title>
-					<v-divider v-if="!toursteptransitioning" key="stepinfo-divider"></v-divider>
-					<v-card-text class="pa-2" v-if="!toursteptransitioning" key="stepinfo-text">
+					<v-divider
+						v-if="!toursteptransitioning"
+						key="stepinfo-divider"
+					></v-divider>
+					<v-card-text
+						class="pa-2"
+						v-if="!toursteptransitioning"
+						key="stepinfo-text"
+					>
 						<div
 							v-html="
 								location.currentnode.steps[tourcurrentstep - 1]
 									.cidescription
 							"
 						></div>
-						<div v-html="
+						<div
+							v-html="
 								location.currentnode.steps[tourcurrentstep - 1]
 									.fc
-							"></div>
+							"
+						></div>
 					</v-card-text>
 				</v-fade-transition>
 			</v-card>
 		</v-fade-transition>
 		<v-fade-transition v-if="$vuetify.breakpoint.mdAndDown">
 			<div class="tour-panel-sm">
-				<v-card-text class="pa-2 white" v-if="!toursteptransitioning" key="stepinfo-text">
+				<v-card-text
+					class="pa-2 white"
+					v-if="!toursteptransitioning"
+					key="stepinfo-text"
+				>
 					<div
 						v-html="
 							location.currentnode.steps[tourcurrentstep - 1]
 								.cidescription
 						"
 					></div>
-					<div v-html="
+					<div
+						v-html="
 							location.currentnode.steps[tourcurrentstep - 1].fc
-						"></div>
+						"
+					></div>
 				</v-card-text>
 				<div class="d-flex step-prg">
 					<span
@@ -172,7 +207,14 @@
 					></span>
 				</div>
 				<div class="d-flex">
-					<v-btn tile small depressed color="red darken-2" dark @click="stopTour">
+					<v-btn
+						tile
+						small
+						depressed
+						color="red darken-2"
+						dark
+						@click="stopTour"
+					>
 						<v-icon>mdi-close</v-icon>
 					</v-btn>
 					<v-btn
@@ -187,18 +229,30 @@
 					>
 						<span>
 							<v-icon>mdi-chevron-right</v-icon>
-							<v-icon style="margin-left:-22.5px;">mdi-chevron-right</v-icon>
-							<v-icon style="margin-left:-22.5px;">mdi-chevron-right</v-icon>
+							<v-icon style="margin-left:-22.5px;"
+								>mdi-chevron-right</v-icon
+							>
+							<v-icon style="margin-left:-22.5px;"
+								>mdi-chevron-right</v-icon
+							>
 						</span>
 						<span style="margin-left: -12px;">
 							<v-icon>mdi-chevron-right</v-icon>
-							<v-icon style="margin-left:-22.5px;">mdi-chevron-right</v-icon>
-							<v-icon style="margin-left:-22.5px;">mdi-chevron-right</v-icon>
+							<v-icon style="margin-left:-22.5px;"
+								>mdi-chevron-right</v-icon
+							>
+							<v-icon style="margin-left:-22.5px;"
+								>mdi-chevron-right</v-icon
+							>
 						</span>
 						<span style="margin-left: -12px;">
 							<v-icon>mdi-chevron-right</v-icon>
-							<v-icon style="margin-left:-22.5px;">mdi-chevron-right</v-icon>
-							<v-icon style="margin-left:-22.5px;">mdi-chevron-right</v-icon>
+							<v-icon style="margin-left:-22.5px;"
+								>mdi-chevron-right</v-icon
+							>
+							<v-icon style="margin-left:-22.5px;"
+								>mdi-chevron-right</v-icon
+							>
 						</span>
 					</v-btn>
 					<v-btn
@@ -295,9 +349,9 @@ export default {
 <style lang="scss">
 $tourpanel-border-color: rgba(0, 0, 0, 0.418);
 #tour-panel {
-	position: fixed;
+	position: absolute;
 	top: 144px;
-	left: 32px;
+	left: 332px;
 	width: 300px;
 	z-index: 1;
 	.panel-title {

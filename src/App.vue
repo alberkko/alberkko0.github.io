@@ -1,15 +1,17 @@
 <template>
 	<v-app :class="savescr != 0 ? 'scr-mode' + mobileclass : mobileclass">
-		<RightRegion />
-		<UtilityToolbar />
-		<LeftRegion />
+		<LeftRegion v-if="!homeState" />
 		<Toolbar />
-		<TourPanel />
+		<!-- <TourPanel /> -->
 		<v-content>
-			<AnimationPlayer />
+			<AnimationPlayer v-show="isIM" />
+			<HomeView v-if="homeState" />
+			<MicrositeView v-if="isMicrosite" />
+			<SecondaryNavigationView v-if="isSecondaryNavigation" />
 		</v-content>
-		<Tables />
-		<LegalNotice />
+		<InformationDialog />
+		<ElementDetailsDialog />
+		<ElementsTable />
 		<CopyrightWatermark v-if="savescr != 0" />
 		<Referenes />
 		<SWUpdatePopup />
@@ -26,21 +28,24 @@
 </template>
 
 <script>
+import HomeView from './views/Home'
+import MicrositeView from './views/Microsite'
+import SecondaryNavigationView from './views/SecondaryNavigation'
 import LeftRegion from './components/LeftRegion'
-import RightRegion from './components/RightRegion'
 import AnimationPlayer from './components/AnimationPlayer'
-import UtilityToolbar from './components/UtilityToolbar'
 import Toolbar from './components/Toolbar'
-import Tables from './components/Tables'
-import LegalNotice from './components/LegalNotice'
+import InformationDialog from './components/InformationDialog'
+import ElementDetailsDialog from './components/ElementDetailsDialog'
+import ElementsTable from './components/ElementsTable'
 import Referenes from './components/Referenes'
-import TourPanel from './components/TourPanel'
+//import TourPanel from './components/TourPanel'
 import CopyrightWatermark from './components/CopyrightWatermark'
 import SWUpdatePopup from './components/SWUpdatePopup'
 
 import store from '@/store/store.js'
 
 import { mapState } from 'vuex'
+import { mapGetters } from 'vuex'
 
 export default {
 	name: 'App',
@@ -51,6 +56,13 @@ export default {
 	},
 	computed: {
 		...mapState(['currentlang', 'savescr']),
+		...mapGetters([
+			'homeState',
+			'isIM',
+			'isIMLanding',
+			'isMicrosite',
+			'isSecondaryNavigation'
+		]),
 		mobileclass() {
 			let mobileclass = ''
 			if (this.$vuetify.breakpoint.mdAndDown) {
@@ -60,15 +72,17 @@ export default {
 		}
 	},
 	components: {
+		HomeView,
+		MicrositeView,
+		SecondaryNavigationView,
 		Toolbar,
 		LeftRegion,
-		RightRegion,
 		AnimationPlayer,
-		UtilityToolbar,
-		Tables,
-		LegalNotice,
+		InformationDialog,
+		ElementDetailsDialog,
+		ElementsTable,
 		Referenes,
-		TourPanel,
+		//TourPanel,
 		CopyrightWatermark,
 		SWUpdatePopup
 	},
@@ -96,5 +110,9 @@ export default {
 	top: 0;
 	z-index: 100000;
 	visibility: hidden;
+}
+
+.v-content{
+	background: linear-gradient(0deg, #bbbdde 0%, white 100%);
 }
 </style>

@@ -1,111 +1,240 @@
 <template>
-	<div v-if="!tourmode">
-		<v-app-bar app flat dense height="50" style="top: 85px" clipped-right color="#fff">
-			<!-- toolbar button on homescreen -->
-			<ToggleTour></ToggleTour>
-			<v-tooltip v-if="homeState" bottom>
-				<template v-slot:activator="{ on }">
-					<v-btn
-						small
-						tile
-						class="grey lighten-2"
-						v-on="on"
-						@click="toggleAllPanels"
-						:class="allpanels ? 'v-btn--active' : ''"
-					>
-						<v-icon v-if="!allpanels">mdi-eye-outline</v-icon>
-						<v-icon v-if="allpanels">mdi-eye-off-outline</v-icon>
-					</v-btn>
-				</template>
-				<span v-if="!allpanels">{{ $t('show_all') }}</span>
-				<span v-if="allpanels">{{ $t('hide_all') }}</span>
-			</v-tooltip>
+	<div>
+		<v-app-bar
+			flat
+			dense
+			height="50"
+			color="rgb(1,2,1,0)"
+			absolute
+			class="utility-app-bar"
+		>
+			<!-- <ToggleTour></ToggleTour> -->
+			<div v-if="isIMLanding">
+				<v-tooltip bottom>
+					<template v-slot:activator="{ on: tooltip }">
+						<v-btn
+							tile
+							class="v-utility-btn"
+							link
+							v-on="{ ...tooltip }"
+							@click="$router.push({ name: 'home' })"
+						>
+							<v-icon color="blue darken-4"
+								>mdi-subdirectory-arrow-left
+								mdi-rotate-90</v-icon
+							>
+						</v-btn>
+					</template>
+					<!-- <span>{{ $t('show_all') }}</span> -->
+					<span>{{ $t('back') }}</span>
+				</v-tooltip>
+			</div>
 
-			<v-tooltip bottom>
-				<template v-slot:activator="{ on }">
-					<v-btn
-						small
-						tile
-						class="grey lighten-2"
-						v-on="on"
-						@click="toggleQuantities"
-						:class="showlabels ? 'v-btn--active' : ''"
-					>
-						<v-icon>mdi-bottle-wine</v-icon>
-					</v-btn>
-				</template>
-				<span v-if="!showlabels">{{ $t('quantity_on') }}</span>
-				<span v-if="showlabels">{{ $t('quantity_off') }}</span>
-			</v-tooltip>
+			<div v-if="!isIMLanding">
+				<v-tooltip bottom>
+					<template v-slot:activator="{ on: tooltip }">
+						<v-btn
+							tile
+							class="v-utility-btn"
+							link
+							v-on="{ ...tooltip }"
+							@click="$router.push({ name: 'ironmetabolism' })"
+						>
+							<v-icon color="blue darken-4"
+								>mdi-subdirectory-arrow-left
+								mdi-rotate-90</v-icon
+							>
+						</v-btn>
+					</template>
+					<!-- <span>{{ $t('show_all') }}</span> -->
+					<span>{{ $t('back') }}</span>
+				</v-tooltip>
+			</div>
+
+			<div v-if="!isIMLanding && $vuetify.breakpoint.mdAndDown">
+				<v-tooltip bottom>
+					<template v-slot:activator="{ on: tooltip }">
+						<v-btn
+							tile
+							class="v-utility-btn"
+							link
+							v-on="{ ...tooltip }"
+							@click="openInformationDialog"
+						>
+							<v-icon color="blue darken-4"
+								>mdi-information-outline</v-icon
+							>
+						</v-btn>
+					</template>
+					<!-- <span>{{ $t('show_all') }}</span> -->
+					<span>{{ $t('sectioninfolabel') }}</span>
+				</v-tooltip>
+			</div>
+
+			<div v-if="!isIMLanding && $vuetify.breakpoint.mdAndDown">
+				<v-tooltip bottom>
+					<template v-slot:activator="{ on: tooltip }">
+						<v-btn
+							v-if="$vuetify.breakpoint.smAndDown"
+							tile
+							class="v-utility-btn"
+							link
+							v-on="{ ...tooltip }"
+							@click="toggleElements"
+						>
+							<v-icon color="blue darken-4"
+								>mdi-format-list-bulleted</v-icon
+							>
+						</v-btn>
+						<!-- <v-btn
+							v-else
+							tile
+							class="v-utility-btn"
+							link
+							v-on="{ ...tooltip }"
+							@click="toggleElements()"
+						>
+							<v-icon color="blue darken-4"
+								>mdi-format-list-bulleted</v-icon
+							>
+						</v-btn> -->
+					</template>
+					<!-- <span>{{ $t('show_all') }}</span> -->
+					<span>{{ $t('sectionelementslabel') }}</span>
+				</v-tooltip>
+			</div>
+
+			<div v-if="isIMLanding">
+				<v-tooltip bottom>
+					<template v-slot:activator="{ on }">
+						<v-btn
+							tile
+							class="v-utility-btn"
+							v-on="on"
+							@click="toggleAllPanels"
+							:class="allpanels ? 'v-btn--active' : ''"
+						>
+							<v-icon color="blue darken-4" v-if="!allpanels"
+								>mdi-eye-outline</v-icon
+							>
+							<v-icon color="blue darken-4" v-if="allpanels"
+								>mdi-eye-off-outline</v-icon
+							>
+						</v-btn>
+					</template>
+					<span v-if="!allpanels">{{ $t('show_all') }}</span>
+					<span v-if="allpanels">{{ $t('hide_all') }}</span>
+				</v-tooltip>
+			</div>
+
+			<div v-if="isIMLanding">
+				<v-tooltip bottom>
+					<template v-slot:activator="{ on }">
+						<v-btn
+							tile
+							class="v-utility-btn"
+							v-on="on"
+							@click="toggleQuantities"
+							:class="showlabels ? 'v-btn--active' : ''"
+						>
+							<v-icon color="blue darken-4"
+								>mdi-bottle-wine</v-icon
+							>
+						</v-btn>
+					</template>
+					<span v-if="!showlabels">{{ $t('quantity_on') }}</span>
+					<span v-if="showlabels">{{ $t('quantity_off') }}</span>
+				</v-tooltip>
+			</div>
+
+			<div v-if="!isIMLanding">
+				<v-tooltip bottom>
+					<template v-slot:activator="{ on }">
+						<v-btn
+							tile
+							class="v-utility-btn"
+							v-on="on"
+							@click="toggleLabels"
+							:class="showlabels ? 'v-btn--active' : ''"
+						>
+							<v-icon color="blue darken-4" v-if="!showlabels"
+								>mdi-format-title</v-icon
+							>
+							<v-icon color="blue darken-4" v-if="showlabels"
+								>mdi-format-clear</v-icon
+							>
+						</v-btn>
+					</template>
+					<span v-if="!showlabels">{{ $t('labels_on') }}</span>
+					<span v-if="showlabels">{{ $t('labels_off') }}</span>
+				</v-tooltip>
+			</div>
 
 			<v-spacer />
 
-			<v-tooltip v-if="enableMinimap" bottom>
-				<template v-slot:activator="{ on: tooltip }">
-					<v-btn
-						small
-						tile
-						class="grey lighten-2"
-						link
-						v-on="{ ...tooltip }"
-						@click="toggleMinimap"
-						:input-value="showminimap"
-						:disabled="!enableMinimap"
-					>
-						<v-icon>mdi-compass</v-icon>
-					</v-btn>
-				</template>
-				<span>{{ $t('minimap') }}</span>
-			</v-tooltip>
+			<div>
+				<v-tooltip bottom>
+					<template v-slot:activator="{ on: tooltip }">
+						<v-btn
+							tile
+							class="v-utility-btn"
+							link
+							v-on="{ ...tooltip }"
+							:disabled="!existreferences"
+							@click="openReferencesDialog"
+						>
+							<v-icon color="blue darken-4">mdi-asterisk</v-icon>
+						</v-btn>
+					</template>
+					<span>{{ $t('referenceslabel') }}</span>
+				</v-tooltip>
+			</div>
 
-			<v-tooltip bottom>
-				<template v-slot:activator="{ on: tooltip }">
-					<v-btn small tile class="grey lighten-2" link @click="openTablesDialog" v-on="{ ...tooltip }">
-						<v-icon>mdi-file-table</v-icon>
-					</v-btn>
-				</template>
-				<span>{{ $t('tableslabel') }}</span>
-			</v-tooltip>
+			<div v-if="enableMinimap">
+				<v-tooltip bottom>
+					<template v-slot:activator="{ on: tooltip }">
+						<v-btn
+							tile
+							class="v-utility-btn"
+							link
+							v-on="{ ...tooltip }"
+							v-if="$vuetify.breakpoint.smAndDown"
+							@click="toggleMinimap(), closeElementsTable()"
+							:input-value="showminimap"
+							:disabled="!enableMinimap"
+						>
+							<v-icon color="blue darken-4">mdi-compass</v-icon>
+						</v-btn>
 
-			<v-tooltip bottom>
-				<template v-slot:activator="{ on: tooltip }">
-					<v-btn
-						small
-						tile
-						class="grey lighten-2"
-						link
-						v-on="{ ...tooltip }"
-						:disabled="!existreferences"
-						@click="openReferencesDialog"
-					>
-						<v-icon>mdi-asterisk</v-icon>
-					</v-btn>
-				</template>
-				<span>{{ $t('referenceslabel') }}</span>
-			</v-tooltip>
-
-			<v-tooltip bottom>
-				<template v-slot:activator="{ on: tooltip }">
-					<v-btn small tile class="grey lighten-2" link @click="openLegalDialog" v-on="{ ...tooltip }">
-						<v-icon>mdi-information-outline</v-icon>
-					</v-btn>
-				</template>
-				<span>{{ $t('legallabel') }}</span>
-			</v-tooltip>
+						<v-btn
+							v-else
+							tile
+							class="v-utility-btn"
+							link
+							v-on="{ ...tooltip }"
+							@click="toggleMinimap()"
+							:input-value="showminimap"
+							:disabled="!enableMinimap"
+						>
+							<v-icon color="blue darken-4">mdi-compass</v-icon>
+						</v-btn>
+					</template>
+					<span>{{ $t('minimap') }}</span>
+				</v-tooltip>
+			</div>
 		</v-app-bar>
 	</div>
 </template>
 
-
 <script>
-import ToggleTour from '../components/ToggleTour'
+// import ToggleTour from '../components/ToggleTour'
 import { mapState } from 'vuex'
 import { findIndex } from 'lodash'
 import { mapGetters } from 'vuex'
 export default {
 	name: 'UtilityToolbar',
 	components: {
-		ToggleTour
+		// ToggleTour
 	},
 	data: () => ({
 		panels: [],
@@ -120,7 +249,7 @@ export default {
 			'showminimap',
 			'tourmode'
 		]),
-		...mapGetters(['location', 'enableMinimap', 'homeState']),
+		...mapGetters(['location', 'enableMinimap', 'isIMLanding']),
 		rightdrawer() {
 			return (
 				this.$store.state.rightdrawer &&
@@ -209,21 +338,42 @@ export default {
 			this.$store.commit('TOGGLE_MINIMAP')
 			this.$emit('CLICK_SOUND')
 		},
+		closeElementsTable() {
+			this.$store.commit('CLOSE_ELEMENTS_TABLE')
+		},
+		closeMinimap() {
+			this.$store.commit('CLOSE_MINIMAP')
+		},
+		toggleElements() {
+			this.closeMinimap()
+			this.$store.commit('TOGGLE_ELEMENTS')
+		},
 		openTablesDialog() {
 			this.$store.commit('SET_TABLES_DIALOG', true)
 		},
 		openLegalDialog() {
 			this.$store.commit('SET_LEGAL_DIALOG', true)
 		},
+		openInformationDialog() {
+			this.$store.commit('SET_INFO_DIALOG', true)
+		},
 		openReferencesDialog() {
 			this.$store.commit('SET_REFERENCES_DIALOG', true)
+		},
+		toggleLabels() {
+			this.$store.commit('TOGGLE_LABELS')
 		}
 	}
 }
 </script>
 
 <style scoped>
-.utility-toolbar {
-	top: 185px;
+.v-utility-btn {
+	border: 1px solid #9d1f30;
+	min-width: 0 !important;
+	width: 40px !important;
+	height: 40px !important;
+	top: 10px;
+	margin: 4px;
 }
 </style>
