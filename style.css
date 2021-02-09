@@ -40,12 +40,18 @@ body {
     /* position: absolute; */
     display: flex;
     align-items: center;
-   
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ld{
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .logo-text{
     color: white;
-    font-size: 45px;
+    font-size: 3rem;
     font-weight: bold;
 }
 
@@ -104,6 +110,12 @@ body {
     justify-content: center;
     font-weight: 600;
     font-size: 18px;
+}
+
+.hb{
+    width: auto;
+    height: auto;
+    max-width: 30%;
 }
 
 .sub-headline{
@@ -198,13 +210,19 @@ body {
     /* font-weight: 700; */
 }
 
+    .mapimg{
+        margin-bottom: 0px;
+    }
+
 .footer-left{
     margin-top: 15%;
     margin-left: 10%;
+    flex-wrap: wrap;
 }
 
 .footer-right{
     margin-top: 30%;
+    flex-wrap: wrap;
 }
 
 .red-block{
@@ -214,6 +232,8 @@ body {
     margin-top: -3rem;
     min-height: 100px;
     left: 15%;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .email{
@@ -237,6 +257,12 @@ body {
         justify-content: left;
     }
 
+    .hb{
+        width: auto;
+        height: auto;
+        max-width: 70%;
+    }
+
     .sub-headline {
         width: 90%;
     }
@@ -255,6 +281,7 @@ body {
     .footer-left{
         margin-top: 30%;
         margin-left: 10%;
+        justify-content: center;
     }
     
 
@@ -262,9 +289,42 @@ body {
 
 @media only screen and (max-width: 500px){ 
 
+    .hb{
+        width: auto;
+        height: auto;
+        max-width: 90%;
+        margin-top: 5rem;
+    }
+
     .mid-col {
         width: 80% !important; 
     }
+
+    .red-block{
+        background: #FF1D34;
+        width: 100%;
+        position: relative;
+        margin-top: -3rem;
+        min-height: 100px;
+        left: 0%;
+    }
+
+    .mapimg{
+        margin-bottom: 30px;
+    }
+    
+
+}
+
+@media only screen and (max-width: 300px){ 
+
+    .hb{
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        margin-top: 10rem;
+    }
+
 
     .red-block{
         background: #FF1D34;
