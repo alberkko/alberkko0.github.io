@@ -6,6 +6,29 @@ body {
     background-color: #F9F4F7;
   }
 
+  html{
+      overflow-x: hidden;
+  }
+
+
+  a:link {
+    text-decoration: none !important;
+  }
+  
+  a:visited {
+    text-decoration: none !important;
+  }
+  
+  a:hover {
+    text-decoration: none !important;
+  }
+  
+  a:active {
+    text-decoration: none !important;
+  }
+
+
+
 .navbar-links{
     width: 100%;
     display: flex;
@@ -125,6 +148,7 @@ body {
     padding-bottom: 10px;
     border-radius: 5px;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .banner-donate{
@@ -137,6 +161,16 @@ body {
     padding-bottom: 10px;
     border-radius: 5px;
     font-weight: 500;
+    cursor: pointer;
+}
+
+.banner-donate:hover{
+    background-color: #be1425;
+    border: 2px solid #be1425;
+}
+
+.banner-learn:hover{
+    color: white;
 }
 
 .col-donate{
@@ -155,6 +189,11 @@ body {
     justify-content: center;
     font-weight: 600;
     font-size: 18px;
+}
+
+.col-donate:hover{
+    border: 2px solid #c91325;
+    background-color: #c91325;
 }
 
 .hb{
@@ -398,6 +437,71 @@ max-height: 420px;
      flex-direction: column;
  }
 
+ .text-l{
+     margin-left: 5rem;
+ }
+
+
+.donate-page{
+    background-color: #ECF1F4;
+}
+
+.banner-wrapper{
+    position: relative;
+    /* display: flex;
+    justify-content: flex-end; */
+}
+.d-text{
+width: 100%;
+}
+.d-img-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    /* right: 0px; */
+}
+
+.d-img{
+    max-width: 100%;
+    height: 700px;
+    object-fit: cover;
+}
+
+
+.d-text{
+    position: absolute;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+.cs-title{
+    font-size: 35px;
+    color: #FF1D34;
+    font-weight: 800;
+}
+
+.cs-sub{
+    font-weight: 600;
+    width: 70%;
+    font-size: 20px;
+    margin-top: 1rem;
+}
+
+.nav-item{
+    font-family: 'Poppins';
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -435,6 +539,18 @@ max-height: 420px;
 
 
 @media only screen and (max-width: 1000px) {
+
+    .d-text{
+        color: white;
+        text-shadow: 0px 0px 5px rgb(0, 0, 0);
+        width: 90%;
+        margin-top: 20%;
+    }
+
+    .text-l{
+        margin-left: 0rem;
+    }
+   
 
     .row3{
         margin-top: 0%;
@@ -550,6 +666,15 @@ max-height: 420px;
 }
 
 @media only screen and (max-width: 550px){ 
+    
+
+    .d-text{
+        color: white;
+        text-shadow: 0px 0px 5px rgb(0, 0, 0);
+        width: 90%;
+        margin-top: 50%;
+    }
+
 
     .img1 {
         max-height: 300px;
