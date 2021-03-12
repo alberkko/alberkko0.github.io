@@ -1,0 +1,79 @@
+{
+	"visibilityRanges": {
+		
+		"sprite_arrow1": [ [ 380, 1800 ] ],
+		
+		"sprite_hepcidin-01": [ [ 800, 1500 ] ],
+		"sprite_hepcidin-02": [ [ 840, 1590 ] ],
+		"sprite_hepcidin-03": [ [ 675, 1627 ] ],
+		
+		"sprite_transferrin-receptor1-01": [ [   0, 388 ], [ 631, 1800 ] ],
+		"sprite_transferrin-receptor2-01": [ [ 388, 465 ] ],
+		"sprite_transferrin-receptor3-01": [ [ 465, 539 ] ],
+		"sprite_transferrin-receptor4-01": [ [ 580, 631 ] ],
+
+		"sprite_fe2-05": [ [ 539,  934 ] ],
+		"sprite_fe2-06": [ [ 539, 1190 ] ],
+		"sprite_fe2-07": [ [ 569, 1134 ] ],
+		"sprite_fe2-08": [ [ 569, 1024 ] ],
+		
+		"sprite_fe3-01": [ [ 1191, 1298 ] ],
+
+		"sprite_apotransferrin-01": [ [ 631, 1359 ] ],
+		"sprite_apotransferrin-02": [ [ 631, 1499 ] ],
+		"sprite_apotransferrin-03": [ [   0,  571 ], [ 1599, 1800 ] ],
+		
+		"sprite_transferrin1-03": [ [   0,  570 ], [ 1558, 1800 ] ],
+		"sprite_transferrin1-04": [ [   0,  733 ] ],
+		"sprite_transferrin1-05": [ [ 855, 1597 ] ],
+		"sprite_transferrin1-06": [ [ 855, 1298 ] ],
+
+		"sprite_transferrin2-03": [ [  148,  388 ] ],
+		"sprite_transferrin2-04": [ [  221,  465 ] ],
+		"sprite_transferrin2-08": [ [    0,  642 ] ],
+		"sprite_transferrin2-09": [ [ 1298, 1645 ] ]
+	},
+	
+	"renderOrders": [
+		
+		{ "order": 110, "targets":[ "sprite_hepatocyte" ] },
+		{ "order": 111, "targets":[ "sprite_caeruloplasmin",
+		"sprite_ferropotin",
+		"sprite_irp",
+		"sprite_ferritin.*",
+		"sprite_transferrin-receptor.*" ] },
+		{ "order": 112, "targets":[ "sprite_arrow.*" ] },
+		{ "order": 113, "targets":[ "sprite_.*" ] }
+	],
+	
+	"masked": {
+		
+		"stream": [ "sprite_apotransferrin-.*",
+					"sprite_transferrin[12]{1}-.*",
+					"sprite_hepcidin-.*" ],
+		
+		"arrow1": [ "sprite_arrow1" ],
+		
+		"arrow2": [ "sprite_arrow2" ]
+	},
+	
+	"selectable": {
+
+		"fe2":                  "sprite_fe2-.*",
+		"fe3":                  "sprite_fe3-.*",
+		"apotransferrin":       "sprite_apotransferrin-.*",
+		"transferrin":          "sprite_transferrin[12]{1}-.*",
+		"hepcidin":             "sprite_hepcidin-.*",
+		
+		"ferritin":             "sprite_ferritin",
+		"ferropotin":           "sprite_ferropotin",
+		"caeruloplasmin":       "sprite_caeruloplasmin",
+		"irp":                  "sprite_irp",
+		"transferrin-receptor": "sprite_transferrin-receptor.*"
+	},
+	
+	"tipped": {
+		
+		"hepatocyte":     "sprite_hepatocyte"
+	}
+}

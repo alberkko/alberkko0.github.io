@@ -1,0 +1,22 @@
+[
+      {
+            "en":[
+                  {
+                        "message":"We use cookies to offer you a variety of services and to continuously improve the user-friendliness of our website. By using this website, you agree to the use of cookies in accordance with our <a style='color: #ffffff !important' href=\"https://ironatlas.medline.ch/#/en/legal-notice\">Cookie Policy</a>.",
+                        "btn":"Continue"
+                  }
+            ],
+            "de":[
+                  {
+                        "message":"Wir benutzen Cookies, um Ihnen eine Vielzahl von Services anzubieten, und um die Benutzerfreundlichkeit unserer Webseite stetig verbessern zu können. Mit der Nutzung der Webseite erklären Sie sich mit dem Einsatz von Cookies, gemäß unserer <a style='color: #ffffff !important href=\"https://ironatlas.medline.ch/#/en/legal-notice\">Cookie Policy</a>, einverstanden.",
+                        "btn":"OK"
+                  }
+            ],
+            "fr":[
+                  {
+                        "message":"Ce site utilise des cookies.  Pour savoir comment ces cookies sont utilisés, veuillez lire la notice correspondante. Si vous acceptez l’utilisation des cookies, veuillez continuer à utiliser notre site.",
+                        "btn":"Continuer"
+                  }
+            ]
+      }
+  ]

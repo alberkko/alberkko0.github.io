@@ -1,0 +1,92 @@
+{
+	"visibilityRanges": {
+
+		"sprite_ferritin1": [ [ 1415, 2040 ] ],
+		"sprite_ferritin2": [ [    0,   97 ], [ 1400, 1415 ] ],
+		"sprite_ferritin3": [ [   97,  171 ], [ 1359, 1400 ] ],
+		"sprite_ferritin4": [ [  171, 1359 ] ],
+		
+		"sprite_transferrin-receptor1-01": [ [   0, 388 ], [ 631, 2040 ] ],
+		"sprite_transferrin-receptor2-01": [ [ 388, 465 ] ],
+		"sprite_transferrin-receptor3-01": [ [ 465, 539 ] ],
+		"sprite_transferrin-receptor4-01": [ [ 580, 631 ] ],
+		
+		"group_transferrin-receptor-02":   [ [ 580, 1170 ] ],
+		"sprite_transferrin-receptor1-02": [ [ 580,  707 ], [ 908, 1170 ] ],
+		"sprite_transferrin-receptor2-02": [ [ 702,  799 ] ],
+		"sprite_transferrin-receptor3-02": [ [ 799,  860 ] ],
+		"sprite_transferrin-receptor4-02": [ [ 870,  908 ] ],
+
+		"sprite_fe2-01": [ [  13,  720 ] ],
+		"sprite_fe2-02": [ [  97,  750 ] ],
+		"sprite_fe2-03": [ [ 171,  770 ] ],
+		"sprite_fe2-04": [ [ 540, 1599 ] ],
+		"sprite_fe2-05": [ [ 546, 1807 ] ],
+		"sprite_fe2-06": [ [ 564, 1745 ] ],
+		"sprite_fe2-07": [ [ 560, 2015 ] ],
+		"sprite_fe2-08": [ [ 854, 1361 ] ],
+		"sprite_fe2-09": [ [ 854, 1404 ] ],
+		"sprite_fe2-10": [ [ 881, 1374 ] ],
+		"sprite_fe2-11": [ [ 881, 1415 ] ],
+		
+		"sprite_fe3-01": [ [  720,  860 ] ],
+		"sprite_fe3-02": [ [  750,  840 ] ],
+		"sprite_fe3-03": [ [  770,  840 ] ],
+		"sprite_fe3-04": [ [ 1745, 1840 ] ],
+
+		"sprite_apotransferrin-01": [ [  631,  840 ] ],
+		"sprite_apotransferrin-02": [ [  631,  860 ] ],
+		"sprite_apotransferrin-03": [ [  908, 1314 ] ],
+		"sprite_apotransferrin-04": [ [  908, 1254 ] ],
+		"sprite_transferrin1-01":   [ [  860, 1178 ] ],
+		"sprite_transferrin1-02":   [ [ 1374, 1840 ] ],
+		"sprite_transferrin1-03":   [ [    0,  571 ], [ 1799, 2040 ] ],
+		"sprite_transferrin2-01":   [ [  840, 1039 ] ],
+		"sprite_transferrin2-02":   [ [ 1840, 2039 ] ],
+		"sprite_transferrin2-03":   [ [  148,  388 ] ],
+		"sprite_transferrin2-04":   [ [  221,  465 ] ],
+		"sprite_transferrin2-05":   [ [  460,  702 ] ],
+		"sprite_transferrin2-06":   [ [  500,  799 ] ],
+		"sprite_transferrin2-07":   [ [ 1040, 1837 ] ]
+		
+	},
+	
+	"renderOrders": [
+		
+		{ "order": 110, "targets":[ "sprite_hepatocyte" ] },
+		{ "order": 111, "targets":[ "sprite_caeruloplasmin",
+																"sprite_ferropotin",
+																"sprite_irp",
+																"sprite_ferritin.*",
+																"sprite_transferrin-receptor.*" ] },
+		{ "order": 112, "targets":[ "sprite_arrow.*" ] },
+		{ "order": 113, "targets":[ "sprite_.*" ] }
+	],
+	
+	"masked": {
+		
+		"stream": [ "sprite_apotransferrin-.*",
+					"sprite_transferrin[12]{1}-.*" ],
+		
+		"arrows": [ "sprite_arrow.*" ]
+	},
+	
+	"selectable": {
+		
+		"fe2":                  "sprite_fe2-.*",
+		"fe3":                  "sprite_fe3-.*",
+		"apotransferrin":       "sprite_apotransferrin-.*",
+		"transferrin":          "sprite_transferrin[12]{1}-.*",
+		
+		"ferritin":             "sprite_ferritin.*",
+		"ferropotin":           "sprite_ferropotin",
+		"caeruloplasmin":       "sprite_caeruloplasmin",
+		"irp":                  "sprite_irp",
+		"transferrin-receptor": "sprite_transferrin-receptor.*"
+	},
+	
+	"tipped": {
+		
+		"hepatocyte":     "sprite_hepatocyte"
+	}
+}

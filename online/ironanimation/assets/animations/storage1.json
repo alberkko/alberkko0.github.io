@@ -1,0 +1,90 @@
+{
+	"visibilityRanges": {
+		
+		"sprite_fe2-04": [ [ 360, 671 ] ],
+		"sprite_fe2-05": [ [ 360, 665 ] ],
+		"sprite_fe2-06": [ [ 2, 128 ] ],
+		"sprite_fe2-07": [ [ 128, 355 ] ],
+		"sprite_fe2-08": [ [ 134, 299 ] ],
+		"sprite_fe2-09": [ [ 144, 479 ] ],
+		"sprite_fe2-10": [ [ 144, 419 ] ],
+		
+		"sprite_fe3-01": [ [ 128, 330 ] ],
+		
+		"sprite_ferritin-03": [ [ 0, 300 ],[ 600, 720 ] ],
+		"sprite_ferritin-02": [ [ 300, 356 ] ],
+		"sprite_ferritin-01": [ [ 356, 420 ] ],
+		"sprite_ferritin-full": [ [ 420, 549 ] ],
+		
+		"sprite_haemosiderin-03": [ [ 549, 720 ] ],
+		
+		"sprite_ferritin-full001": [ [ 0, 2 ], [ 479, 720 ]  ],
+		"sprite_ferritin-04": [ [ 2, 479 ] ],
+		
+		"sprite_transferrin-02": [ [ 303, 719 ] ],
+		"sprite_transferrin-04": [ [ 0, 89 ],[ 390, 720 ] ],
+		"sprite_apotransferrin-02": [ [ 200, 330 ] ],
+		"sprite_transferrin-03": [ [ 330, 455 ] ],
+		"sprite_apotransferrin-03": [ [ 200, 499 ] ],
+
+		"sprite_transferrin-recepter-00": [ [ 200, 719 ] ],
+		"sprite_transferrin-recepter-01": [ [ 0, 89 ],[ 719, 720 ] ],
+		"sprite_transferrin-recepter-02": [ [ 89, 128 ] ],
+		"sprite_transferrin-recepter-03": [ [ 173, 200 ] ],
+		
+		"sprite_transferrin-05": [ [ 0, 477 ],[ 486, 720 ] ],
+		
+		"sprite_erythrocyte-02": [ [ 590, 720 ] ]
+	},
+	
+	"renderOrders": [
+		
+		{ "order": 2, "targets":[ "sprite_arrow" ] },
+		
+		{ "order": 2, "targets":[ "sprite_spleen",
+															"sprite_liver",
+															"sprite_bones" ] },
+		
+		{ "order": 109, "targets":[ "sprite_macrophage" ] },
+		
+		{ "order": 111, "targets":[ "sprite_erythrocyte-.*" ] },
+		
+		{ "order": 112, "targets":[	"ripples_.*" ] },
+		
+		{ "order": 110, "targets":[	"sprite_.*" ] }
+	],
+	
+	"masked": {
+		"stream": 	[
+						"sprite_erythrocyte-.*",
+						"sprite_apotransferrin-.*",
+						"sprite_transferrin-[01]{1}.*"
+					]
+	},
+	
+	"selectable": {
+		
+		"fe2":                  "sprite_fe2-.*",
+
+		"fe3":                  "sprite_fe3-.*",
+
+		"ferritin":             "sprite_ferritin.*",
+
+		"haemosiderin": 		"sprite_haemosiderin-.*",
+
+		"ferropotin":           "sprite_ferropotin",
+
+		"apotransferrin":       "sprite_apotransferrin-.*",
+		"transferrin":          "sprite_transferrin-[01]{1}.*",
+
+		"transferrin-receptor": "sprite_transferrin-recepter.*",
+
+		"caeruloplasmin":       "sprite_caeruloplasmin"
+	},
+	
+	"tipped": {
+
+		"macrophage":  "sprite_macrophage",
+		"erythrocyte": "sprite_erythrocyte-.*"
+	}
+}

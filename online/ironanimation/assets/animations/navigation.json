@@ -1,0 +1,23 @@
+{
+	"visibilityRanges": { },
+
+	"renderOrders": [
+						{ "order": 0, "targets": [ "body_silhouette" ] },
+						{ "order": 1, "targets": [ "body_muscle" ] },
+						{ "order": 2, "targets": [ "body_intestine" ] },
+						{ "order": 3, "targets": [ "body_boils" ] },
+						{ "order": 4, "targets": [ "body_spleen" ] },
+						{ "order": 5, "targets": [ "body_lever" ] },
+						{ "order": 6, "targets": [ "body_bone" ] },
+
+						{ "order": 101, "targets": [ "preview_storage1" ] },
+						{ "order": 102, "targets": [ "preview_regulation1" ] },
+						{ "order": 100, "targets": [ "preview_.*" ] }
+	],
+
+	"masked": [ ],
+
+	"selectable": { },
+
+	"tipped": { }
+}

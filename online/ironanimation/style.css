@@ -1,0 +1,311 @@
+
+body.iron3dDragging {
+
+    cursor: pointer;
+}
+
+#iron3d * {
+
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+@media only screen and (max-width: 600px) {
+
+    #iron3d * {
+        font-size: 2.4vmin;
+    }
+}
+
+@media only screen and (min-width: 600px ) {
+
+    #iron3d * {
+        font-size: 1.8vmin;
+    }
+}
+
+#iron3d {
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+#iron3d .button {
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+    user-select: none;
+    cursor: pointer;
+    background-size: 100% 300%;
+    background-position: 0 50%;
+    transition: none 200ms;
+    transition-property: background-color, background-position;
+
+    background-color: #e0e0e0;
+    background-image: linear-gradient( 180deg, #d0d0d0, #f0f0f0 );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: rgba( 255, 255, 255, 0.6 ) 0 0 2px inset;
+
+    /*text-align: center;
+    font-size: 1.3em;
+
+    justify-content: center;
+    align-items: center;*/
+
+    /*vertical-align: baseline;
+    baseline-shift: 20px;
+    line-height: 100%;*/
+}
+
+#iron3d .button:hover {
+
+    background-position: 0 100%;
+
+    background-color: #f0f0f0;
+}
+
+#iron3d .button:active {
+
+    background-position: 0 0;
+
+    background-color: #d0d0d0;
+}
+
+#iron3d .button:after {
+
+    content: '';
+
+    /*font-size: 2.5vmin;*/
+
+    font-size: 18px;
+
+    color: #1b1b1b;
+
+    transition: color 200ms ease-in-out;
+}
+
+@media(hover: hover) and (pointer: fine) {
+    #iron3d .button:hover:after {
+
+        color: #f41313;
+    }
+}
+
+#iron3d .tooltip {
+
+    font-size: 0.7em;
+    transform: translate( 14px, 14px );
+    padding: 0 4px 1px 4px;
+    position: absolute;
+    background-color: white;
+
+    border: 1px solid black;
+    border-radius: 4px;
+
+    box-shadow: 2px 2px 4px rgba( 0, 0, 0, 0.4 );
+    z-index: 99;
+
+    opacity: 0;
+    transition: opacity 0ms linear 0s;
+}
+
+#iron3d .tooltip.shown {
+
+    opacity: 1;
+    transition: opacity 400ms linear 1s;
+}
+
+#iron3d .navigation.quantities {
+
+    position:absolute;
+    background: rgba( 255, 255, 255, 0.6 );
+    color: red;
+    border: 1px red solid;
+    padding: 0.3ch;
+    user-select: none;
+    font-size: 80%;
+    /*line-height: 160%;*/
+}
+
+#iron3d .navigation.total {
+
+    position:absolute;
+    border: 4px white solid;
+    background: rgba( 255, 0, 0, 0.6 );
+    color: white;
+    padding: 4px 6px;
+    user-select: none;
+    font-size: 80%;
+    left: 1px;
+    box-shadow: 1px 1px 0px 0px red, -1px -1px 0px 0px red, 1px -1px 0px 0px red, -1px 1px 0px 0px red;
+}
+
+#iron3d .navigation.label {
+
+    /*top: 0;*/
+    font-size: 1.4em;
+
+    padding: 0 4px;
+    /*background: rgba( 255, 255, 255, 0.8 );*/
+    text-shadow: 2px 2px white, -2px -2px white, -2px 2px white, 2px -2px white;
+    color: #2f3e48;
+    font-weight: bold;
+    z-index: 10;
+}
+
+@media only screen and (max-width: 600px) {
+    #iron3d .navigation.quantities, #iron3d .navigation.total {
+        font-size: 100%;
+    }
+
+    /*#iron3d .navigation.quantities {
+        line-height: 200%;
+    }*/
+}
+
+@media only screen and (min-width: 600px ) {
+
+    #iron3d .navigation.play {
+
+        width: initial !important;
+        height: initial !important;
+
+        top: 4px;
+        bottom: 4px;
+        left: 4px;
+        right: 4px;
+        position: absolute;
+    }
+}
+
+#iron3d .navigation.play {
+
+    border: 1px solid #1b1b1b;
+}
+
+#iron3d .navigation.play:after {
+
+    /*background-image: url( "icons/animation.png" );*/
+    content: "\ea1c";
+    font-size: 2.6em;
+}
+
+
+#iron3d .regulation1.icon {
+
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+
+#iron3d .regulation1.icon:before {
+
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 1px solid #1b1b1b;
+    box-sizing: border-box;
+
+    top: 0;
+    left:0;
+
+    box-shadow: rgba( 255, 255, 255, 0.6 ) 0 0 2px inset;
+}
+
+#iron3d .regulation1.icon:after {
+
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+}
+
+#iron3d .regulation1.icon.low:after {
+
+    background-image: url( "icons/regulation_low.png" );
+}
+
+#iron3d .regulation1.icon.low:hover:after {
+
+    background-image: url( "icons/regulation_low_hover.png" );
+}
+
+#iron3d .regulation1.icon.high:after {
+
+    background-image: url( "icons/regulation_high.png" );
+}
+
+#iron3d .regulation1.icon.high:hover:after {
+
+    background-image: url( "icons/regulation_high_hover.png" );
+}
+
+
+
+#iron3d .label {
+
+    max-width: 100%;
+
+    font-size: 1.3em;
+
+    position:absolute;
+    user-select: none;
+    text-transform: uppercase;
+    color: #2f3e48;
+
+    /*left:50% !important;
+    transform: translateX( -50% );*/
+    text-align: center;
+    width: 100%;
+}
+
+#iron3d .label.compact {
+
+    font-size: 1.1em;
+    letter-spacing: -0.04em;
+    line-height: 110%;
+}
+
+#iron3d.hideLabels .label {
+
+    display: none;
+}
+
+#iron3d .alignLeft {
+
+    width: auto;
+    right: auto;
+    left: 0px !important;
+    text-align: left;
+}
+
+#iron3d .alignRight {
+
+    width: auto;
+    left: auto;
+    right: 0px !important;
+    text-align: right;
+}
+
+#iron3d .alignBottom {
+
+    bottom: 0px;
+}
+
+#iron3d .vertical {
+
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+#iron3d .navigation.label:hover {
+
+    color: #4878c8;
+}
