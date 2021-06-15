@@ -1,143 +1,289 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link href="style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta charset="utf-8">
+  <title></title>
+  <link href="stylesheet.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
 </head>
 
-<body>
+<style>
+  body {
+    font-family: 'Maax';
+    overflow-x: hidden;
+  }
 
-    <div>
-        <div id="navbar">
-        </div>
-        <div>
-            <img src="/assets/banner.png" class="banner" alt="">
-            <div class="banner-logo">
-                <div class="main-text"><img src="/assets/bh_logo.png" width="230px" alt="">
-                    <div class="logo-text">Bergen <br /> Hatzalah</div>
-                </div>
-                <div class="banner-subtext">Launching in Mid-2021</div>
-                <div class="d-flex mt-5 ld">
-                    <a href="/WhoWeAre.html">
-                        <div class="mx-3 mt-2 banner-learn">Learn more</div>
-                    </a>
-                    <a href="/donate.html">
-                    <div class="mx-3 mt-2 banner-donate">Donate</div>
-                    </a>
-                </div>
+  body:after {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-image: url(assets/download.gif);
+    opacity: .05;
+    z-index: 100000;
+    pointer-events: none;
+  }
+
+  .imgs:hover {
+    filter: grayscale(0%);
+  }
+
+  .imgs {
+    filter: grayscale(100%);
+  }
+
+  .oneone:hover {
+    /* height: 400px !important; */
+    transform: scale(0.95);
+  }
+
+  .oneone {
+    transition: all .3s ease-in-out;
+  }
+
+  .twotwo {
+    transition: all .3s ease-in-out;
+    transform: scale(1.2);
+
+    margin-top: 8rem;
+    padding-left: 9rem;
+  }
+
+  .twotwo:active {
+    transform: scale(1.15);
+  }
+</style>
+
+<body style="background-color: #030303; color: white;">
+  <div>
+
+    <div class="d-flex justify-content-between"
+      style="align-items: center;  margin-top: 40px; margin-left: 40px; margin-right: 40px; z-index: 10000;">
+      <div>
+        <a style="font-weight: 700; font-size: 30px; color: white; text-decoration: none;" href="/">
+          Alberkko</a>
+      </div>
+      <div class="d-flex">
+        <a href="/me.html" style="font-weight: 700; font-size: 20px;  color: white; text-decoration: none;">about
+          me</a>
+      </div>
+    </div>
+    <div class="example1-viewport twotwo">
+      <div class="d-flex items example1-content" style="margin-right: 5rem;">
+
+        <div class="item item1">
+          <div style="margin-left: 50px; position: relative;">
+            <div class="oneone">
+              <div
+                style="margin-left: 423px; margin-bottom: -52px; font-weight: 700; -webkit-text-stroke-width: .5px; -webkit-text-stroke-color: rgb(255, 255, 255); color: #030303; font-size: 38px;">
+                01</div>
+              <a style="color: white; text-decoration: none;" href="/easyweb.html">
+                <img class="imgs" style="position: absolute; z-index: 2;" src="assets/p1.png" alt="">
+                <img style="position: relative; z-index: 1; margin-left: 90px; margin-top: 50px;" src="assets/43424.png"
+                  alt="">
+                <p style="margin-top: -65px; font-weight: 700; font-size: 26px;">EASYWEB OS</p>
+                <img style="margin-left: 195px; margin-top: -95px;" src="assets/Line 1.png" alt="">
+                <p style="margin-top: -40px; font-weight: 300; font-size: 13px;">UI/UX design for corporate Thin Client
+                  solution.</p>
             </div>
+            </a>
+          </div>
         </div>
 
-        <div class="d-flex justify-content-center mt-5 hearbeat-headline">
-            <img src="/assets/heartbeat.png" class="hb" alt="">
-            <div class="sub-headline">In emergency medical situations where every second counts, immediate emergency
-                care can mean the difference between life and death.</div>
-        </div>
-    </div>
-
-    <div class="container-fluid main-c">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="col-md-1 hidden-sm">
-
-                    </div>
-                    <div class="col-md-4 col-left-wrapper">
-                        <div class="row">
-                            <div class="col-md-12 col-left">
-                                <div class="col-title">
-                                    Emergency Medical Response
-                                </div>
-                                <div class="col-sub">
-                                    Our experienced members are ready to respond to any medical emergency in in
-                                    Englewood and its environs
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 col-left">
-                                <div class="col-title">24/7 Emergency Dispatch</div>
-                                <div class="col-sub">Hatzalah state of the art dispatch is manned 24 hours a day by
-                                    highly trained local volunteers</div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12 col-left">
-                                <div class="col-title">Proven First Response System</div>
-                                <div class="col-sub">Using first response vehicles, Hatzalah dispatches the closest EMTs
-                                    directly to the scene so care can begin before an ambulance arrives</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-3 d-flex justify-content-center py-5">
-                        <div class="mid-col col-md-12">
-                            <div class="row">
-                                <div class="col-md-12 mid-title border-bottom2 pb-5">
-                                    24 Hours
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12 mid-title border-bottom2 pb-5">
-                                    365 Days
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12 mid-title border-bottom2 pb-5">
-                                    No Matter<br /> the Weather
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12 mid-title">
-                                    We'll be there
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="row">
-                            <div class="col-md-12 partner-col">
-                                <div class="col-title">Partner with us</div>
-                                <div class="col-sub">Bergen Hatzalah's mission is to improve medical outcomes and save
-                                    lives by enhancing existing emergency medical services in the Bergen area.</div>
-                                <div class="col-donate">Become a volunteer</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-1 hidden-sm">
-
-                    </div>
-                </div>
+        <div class="item item2" style="width: 550px;">
+          <div style="margin-left: 50px;  position: relative;">
+            <div class="oneone">
+              <div
+                style="margin-left: 423px; margin-bottom: -52px; font-weight: 700; -webkit-text-stroke-width: .5px; -webkit-text-stroke-color: rgb(255, 255, 255); color: #030303; font-size: 38px;">
+                02</div>
+              <a style="color: white; text-decoration: none;" href="/superposition.html">
+                <img class="imgs" style="position: absolute; z-index: 2;" src="assets/p2.png" alt="">
+                <img style="position: relative; z-index: 1; margin-left: 90px; margin-top: 50px;" src="assets/43424.png"
+                  alt="">
+                <p style="margin-top: -65px; font-weight: 700; font-size: 26px;">SUPERPOSITION</p>
+                <img style="margin-left: 235px; margin-top: -95px; width: 180px; height: 3px;" src="assets/Line 1.png"
+                  alt="">
+                <p style="margin-top: -40px; font-weight: 300; font-size: 13px;">Superposition application launch
+                  campaign.
+                  solution.</p>
+              </a>
             </div>
+          </div>
         </div>
+
+
+        <div class="item item3" style="width: 550px;">
+          <div style="margin-left: 50px; position: relative;">
+            <div class="oneone">
+              <div
+                style="margin-left: 423px; margin-bottom: -52px; font-weight: 700; -webkit-text-stroke-width: .5px; -webkit-text-stroke-color: rgb(255, 255, 255); color: #030303; font-size: 38px;">
+                03</div>
+              <a style="color: white; text-decoration: none;" href="/hyperfluids.html">
+                <img class="imgs" style="position: absolute; z-index: 2;" src="assets/hyperfluids_thumb.png" alt="">
+                <img style="position: relative; z-index: 1; margin-left: 90px; margin-top: 50px;" src="assets/43424.png"
+                  alt="">
+                <p style="margin-top: -65px; font-weight: 700; font-size: 26px;">HYPERFLUIDS</p>
+                <img style="margin-left: 235px; margin-top: -95px; width: 180px; height: 3px;" src="assets/Line 1.png"
+                  alt="">
+                <p style="margin-top: -40px; font-weight: 300; font-size: 13px;">Superposition application launch
+                  campaign.
+                  solution.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="item item4" style="width: 550px;">
+          <div style="margin-left: 50px; position: relative;">
+            <div class="oneone">
+              <div
+                style="margin-left: 423px; margin-bottom: -52px; font-weight: 700; -webkit-text-stroke-width: .5px; -webkit-text-stroke-color: rgb(255, 255, 255); color: #030303; font-size: 38px;">
+                04</div>
+              <a style="color: white; text-decoration: none;" href="/turnup.html">
+                <img class="imgs" style="position: absolute; z-index: 2;" src="assets/turnup_th.png" alt="">
+                <img style="position: relative; z-index: 1; margin-left: 90px; margin-top: 50px;" src="assets/43424.png"
+                  alt="">
+                <p style="margin-top: -65px; font-weight: 700; font-size: 26px;">TURN UP</p>
+                <img style="margin-left: 235px; margin-top: -95px; width: 180px; height: 3px;" src="assets/Line 1.png"
+                  alt="">
+                <p style="margin-top: -40px; font-weight: 300; font-size: 13px;">Superposition application launch
+                  campaign.
+                  solution.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="item item5" style="width: 550px;">
+          <div style="margin-left: 50px; position: relative;">
+            <div class="oneone">
+              <div
+                style="margin-left: 423px; margin-bottom: -52px; font-weight: 700; -webkit-text-stroke-width: .5px; -webkit-text-stroke-color: rgb(255, 255, 255); color: #030303; font-size: 38px;">
+                05</div>
+              <a style="color: white; text-decoration: none;" href="/freelancer.html">
+                <img class="imgs" style="position: absolute; z-index: 2;" src="assets/free_th.png" alt="">
+                <img style="position: relative; z-index: 1; margin-left: 90px; margin-top: 50px;" src="assets/43424.png"
+                  alt="">
+                <p style="margin-top: -65px; font-weight: 700; font-size: 26px;">FREELANCER</p>
+                <img style="margin-left: 235px; margin-top: -95px; width: 180px; height: 3px;" src="assets/Line 1.png"
+                  alt="">
+                <p style="margin-top: -40px; font-weight: 300; font-size: 13px;">Superposition application launch
+                  campaign.
+                  solution.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="item item5" style="width: 550px;">
+          <div style="margin-left: 50px;  position: relative;">
+            <div class="oneone">
+              <div
+                style="margin-left: 423px; margin-bottom: -52px; font-weight: 700; -webkit-text-stroke-width: .5px; -webkit-text-stroke-color: rgb(255, 255, 255); color: #030303; font-size: 38px;">
+                06</div>
+              <a style="color: white; text-decoration: none;" href="/e-learning.html">
+                <img class="imgs" style="position: absolute; z-index: 2;" src="assets/fau th.png" alt="">
+                <img style="position: relative; z-index: 1; margin-left: 90px; margin-top: 50px;" src="assets/43424.png"
+                  alt="">
+                <p style="margin-top: -65px; font-weight: 700; font-size: 26px;">E-LEARNING F.A.U.</p>
+                <img style="margin-left: 235px; margin-top: -95px; width: 180px; height: 3px;" src="assets/Line 1.png"
+                  alt="">
+                <p style="margin-top: -40px; font-weight: 300; font-size: 13px;">Superposition application launch
+                  campaign.
+                  solution.</p>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="item item5" style="width: 550px; opacity: 0 !important;">
+          <div style="margin-left: 50px; position: relative;">
+            <div class="oneone">
+              <div
+                style="margin-left: 423px; margin-bottom: -52px; font-weight: 700; -webkit-text-stroke-width: .5px; -webkit-text-stroke-color: rgb(255, 255, 255); color: #030303; font-size: 38px;">
+                06</div>
+              <img class="imgs" style="position: absolute; z-index: 2;" src="assets/fau th.png" alt="">
+              <img style="position: relative; z-index: 1; margin-left: 90px; margin-top: 50px;" src="assets/43424.png"
+                alt="">
+              <p style="margin-top: -65px; font-weight: 700; font-size: 26px;">E-LEARNING F.A.U.</p>
+              <img style="margin-left: 235px; margin-top: -95px; width: 180px; height: 3px;" src="assets/Line 1.png"
+                alt="">
+              <p style="margin-top: -40px; font-weight: 300; font-size: 13px;">Superposition application launch
+                campaign.
+                solution.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
 
-    <div id="footer">
+    <div style="margin-top: 5rem;">
+      <a href="./projects.html"
+        style="font-size: 13px; margin-top: 1rem; margin-left: 3rem; text-decoration: underline; color: white;">
+        SEE ALL MY PROJECTS
+      </a>
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script>
-        $(function () {
-            $("#footer").load("footer.html");
-        });
-    </script>
-    <script>
-        $(function () {
-            $("#navbar").load("navbar.html");
-        });
-    </script>
+
+    <div
+      style="margin-left: 3rem; margin-right: 3rem; margin-top: 7rem; display: flex; justify-content: space-between;">
+      <div style="display: flex;">
+        <div style="margin-right: 1rem;">
+          <img src="assets/behance (1).png" alt="">
+        </div>
+
+        <div style="margin-right: 1rem;">
+          <img src="assets/instagram.png" alt="">
+        </div>
+
+        <div style="margin-right: 1rem;">
+          <img src="assets/envelope.png" alt="">
+        </div>
+
+        <div style="margin-right: 1rem;">
+          <img src="assets/resume-and-cv.png" alt="">
+        </div>
+      </div>
+      <div class="display: flex;">
+        Privacy • Imprint
+      </div>
+    </div>
+
+  </div>
+  <script src="js/scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://unpkg.com/scrollbooster@2/dist/scrollbooster.min.js"></script>
+
+  <script>
+
+    new ScrollBooster({
+      viewport: document.querySelector('.example1-viewport'),
+      content: document.querySelector('.example1-content'),
+      scrollMode: 'transform', // use CSS 'transform' property
+      direction: 'horizontal', // allow only horizontal scrolling
+      emulateScroll: true, // scroll on wheel events
+    });
+  </script>
 </body>
 
 </html>

@@ -1,0 +1,569 @@
+@font-face {
+    font-family: 'Maax';
+    src: url('Maax-Bold.woff2') format('woff2'),
+        url('Maax-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Maax';
+    src: url('Maax.woff2') format('woff2'),
+        url('Maax.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Maax';
+    src: url('Maax-Mediumitalic.woff2') format('woff2'),
+        url('Maax-Mediumitalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Maax';
+    src: url('Maax-BoldItalic.woff2') format('woff2'),
+        url('Maax-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Maax';
+    src: url('Maax-Black.woff2') format('woff2'),
+        url('Maax-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Maax';
+    src: url('Maax-Medium.woff2') format('woff2'),
+        url('Maax-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Maax';
+    src: url('Maax-Italic.woff2') format('woff2'),
+        url('Maax-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Schnyder L';
+    src: url('SchnyderL-BoldItalic.woff2') format('woff2'),
+        url('SchnyderL-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Schnyder L';
+    src: url('SchnyderL-DemiItalic.woff2') format('woff2'),
+        url('SchnyderL-DemiItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Schnyder L';
+    src: url('SchnyderL-Bold.woff2') format('woff2'),
+        url('SchnyderL-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Schnyder L';
+    src: url('SchnyderL-Demi.woff2') format('woff2'),
+        url('SchnyderL-Demi.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Schnyder L';
+    src: url('SchnyderL-LightItalic.woff2') format('woff2'),
+        url('SchnyderL-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Schnyder L';
+    src: url('SchnyderL-Light.woff2') format('woff2'),
+        url('SchnyderL-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Schnyder M';
+    src: url('SchnyderM-BoldItalic.woff2') format('woff2'),
+        url('SchnyderM-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Schnyder M';
+    src: url('SchnyderM-Bold.woff2') format('woff2'),
+        url('SchnyderM-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Schnyder M';
+    src: url('SchnyderM-DemiItalic.woff2') format('woff2'),
+        url('SchnyderM-DemiItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Schnyder M';
+    src: url('SchnyderM-Demi.woff2') format('woff2'),
+        url('SchnyderM-Demi.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Schnyder M';
+    src: url('SchnyderM-LightItalic.woff2') format('woff2'),
+        url('SchnyderM-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Schnyder M';
+    src: url('SchnyderM-Light.woff2') format('woff2'),
+        url('SchnyderM-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Schnyder S';
+    src: url('SchnyderS-BoldItalic.woff2') format('woff2'),
+        url('SchnyderS-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Schnyder S';
+    src: url('SchnyderS-Bold.woff2') format('woff2'),
+        url('SchnyderS-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Schnyder S';
+    src: url('SchnyderS-DemiItalic.woff2') format('woff2'),
+        url('SchnyderS-DemiItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Schnyder S';
+    src: url('SchnyderS-LightItalic.woff2') format('woff2'),
+        url('SchnyderS-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Schnyder S';
+    src: url('SchnyderS-Demi.woff2') format('woff2'),
+        url('SchnyderS-Demi.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Schnyder S';
+    src: url('SchnyderS-Light.woff2') format('woff2'),
+        url('SchnyderS-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Schnyder XL';
+    src: url('SchnyderXL-BoldItalic.woff2') format('woff2'),
+        url('SchnyderXL-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Schnyder XL';
+    src: url('SchnyderXL-Bold.woff2') format('woff2'),
+        url('SchnyderXL-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Schnyder XL';
+    src: url('SchnyderXL-DemiItalic.woff2') format('woff2'),
+        url('SchnyderXL-DemiItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Schnyder XL';
+    src: url('SchnyderXL-Demi.woff2') format('woff2'),
+        url('SchnyderXL-Demi.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Schnyder XL';
+    src: url('SchnyderXL-LightItalic.woff2') format('woff2'),
+        url('SchnyderXL-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Schnyder XL';
+    src: url('SchnyderXL-Light.woff2') format('woff2'),
+        url('SchnyderXL-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DM Serif Display';
+    src: url('DMSerifDisplay-Regular.woff2') format('woff2'),
+        url('DMSerifDisplay-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DM Serif Display';
+    src: url('DMSerifDisplay-Italic.woff2') format('woff2'),
+        url('DMSerifDisplay-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+
+@font-face {
+    font-family: 'GT Walsheim Pro';
+    src: url('GTWalsheimPro-Black.woff2') format('woff2'),
+        url('GTWalsheimPro-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro';
+    src: url('GTWalsheimPro-BlackOblique.woff2') format('woff2'),
+        url('GTWalsheimPro-BlackOblique.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro';
+    src: url('GTWalsheimPro-Bold.woff2') format('woff2'),
+        url('GTWalsheimPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro';
+    src: url('GTWalsheimPro-BoldOblique.woff2') format('woff2'),
+        url('GTWalsheimPro-BoldOblique.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro Condensed';
+    src: url('GTWalsheimPro-CondensedBlack.woff2') format('woff2'),
+        url('GTWalsheimPro-CondensedBlack.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro Condensed';
+    src: url('GTWalsheimPro-CondensedBlackOblique.woff2') format('woff2'),
+        url('GTWalsheimPro-CondensedBlackOblique.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro Condensed';
+    src: url('GTWalsheimPro-CondensedBold.woff2') format('woff2'),
+        url('GTWalsheimPro-CondensedBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro Condensed';
+    src: url('GTWalsheimPro-CondensedLight.woff2') format('woff2'),
+        url('GTWalsheimPro-CondensedLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro Condensed';
+    src: url('GTWalsheimPro-CondensedBoldOblique.woff2') format('woff2'),
+        url('GTWalsheimPro-CondensedBoldOblique.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro Condensed';
+    src: url('GTWalsheimPro-CondensedLightOblique.woff2') format('woff2'),
+        url('GTWalsheimPro-CondensedLightOblique.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro Cond';
+    src: url('GTWalsheimPro-CondensedMedium.woff2') format('woff2'),
+        url('GTWalsheimPro-CondensedMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro Cond';
+    src: url('GTWalsheimPro-CondensedMediumOblique.woff2') format('woff2'),
+        url('GTWalsheimPro-CondensedMediumOblique.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro Condensed';
+    src: url('GTWalsheimPro-CondensedRegular.woff2') format('woff2'),
+        url('GTWalsheimPro-CondensedRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro Condensed';
+    src: url('GTWalsheimPro-CondensedRegularOblique.woff2') format('woff2'),
+        url('GTWalsheimPro-CondensedRegularOblique.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro Condensed';
+    src: url('GTWalsheimPro-CondensedThin.woff2') format('woff2'),
+        url('GTWalsheimPro-CondensedThin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro Condensed';
+    src: url('GTWalsheimPro-CondensedThinOblique.woff2') format('woff2'),
+        url('GTWalsheimPro-CondensedThinOblique.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro Cond Ultra';
+    src: url('GTWalsheimPro-CondensedUltraBold.woff2') format('woff2'),
+        url('GTWalsheimPro-CondensedUltraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro Cond Ultra';
+    src: url('GTWalsheimPro-CondensedUltraBoldOblique.woff2') format('woff2'),
+        url('GTWalsheimPro-CondensedUltraBoldOblique.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GTWalsheimPro-CondensedULight';
+    src: url('GTWalsheimPro-CondensedUltraLight.woff2') format('woff2'),
+        url('GTWalsheimPro-CondensedUltraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GTWalsheimPro-CondensedULightIt';
+    src: url('GTWalsheimPro-CondensedUltraLightOblique.woff2') format('woff2'),
+        url('GTWalsheimPro-CondensedUltraLightOblique.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro';
+    src: url('GTWalsheimPro-Light.woff2') format('woff2'),
+        url('GTWalsheimPro-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro';
+    src: url('GTWalsheimPro-LightOblique.woff2') format('woff2'),
+        url('GTWalsheimPro-LightOblique.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro';
+    src: url('GTWalsheimPro-Medium.woff2') format('woff2'),
+        url('GTWalsheimPro-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro';
+    src: url('GTWalsheimPro-MediumOblique.woff2') format('woff2'),
+        url('GTWalsheimPro-MediumOblique.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro';
+    src: url('GTWalsheimPro-Regular.woff2') format('woff2'),
+        url('GTWalsheimPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro';
+    src: url('GTWalsheimPro-RegularOblique.woff2') format('woff2'),
+        url('GTWalsheimPro-RegularOblique.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro';
+    src: url('GTWalsheimPro-Thin.woff2') format('woff2'),
+        url('GTWalsheimPro-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro';
+    src: url('GTWalsheimPro-ThinOblique.woff2') format('woff2'),
+        url('GTWalsheimPro-ThinOblique.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro Ultra';
+    src: url('GTWalsheimPro-UltraBold.woff2') format('woff2'),
+        url('GTWalsheimPro-UltraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Walsheim Pro Ultra';
+    src: url('GTWalsheimPro-UltraBoldOblique.woff2') format('woff2'),
+        url('GTWalsheimPro-UltraBoldOblique.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+

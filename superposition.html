@@ -1,0 +1,490 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="stylesheet.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<style>
+    body {
+        font-family: 'Maax';
+        overflow-x: hidden;
+    }
+
+    body:after {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background-image: url(assets/download.gif);
+        opacity: .05;
+        z-index: 100000;
+        pointer-events: none;
+    }
+
+    .imgs:hover {
+        filter: grayscale(0%);
+    }
+
+    .imgs {
+        filter: grayscale(100%);
+    }
+
+    .img-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 712px;
+        width: 300px;
+        background-color: #F2F2F2;
+        z-index: 2;
+    }
+
+    .img-overlay-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 712px;
+        width: 300px;
+        background-color: #F2F2F2;
+        z-index: 2;
+    }
+
+    .img-container {
+        margin: 120px auto;
+        position: relative;
+        width: 1298px;
+        height: 712px;
+        overflow: hidden;
+        visibility: hidden;
+    }
+
+    .img-container-2 {
+        /* margin: 120px auto; */
+        position: relative;
+        /* width: 1920px;
+    height: 1080px; */
+        overflow: hidden;
+        visibility: hidden;
+    }
+
+    .reveal-text {
+        visibility: hidden;
+    }
+
+    .line {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+    }
+</style>
+
+
+
+
+
+
+<body style="background-color: #F2F2F2; color: white;">
+    <div id="luxy">
+
+        <div class="d-flex justify-content-between"
+            style="align-items: center;  margin-top: 40px; margin-left: 40px; margin-right: 40px;">
+            <div>
+                <a style="font-weight: 700; font-size: 30px; color: #1D1D1D; text-decoration: none;" href="/">
+                    Alberkko</a>
+            </div>
+            <div class="d-flex">
+                <a href="/easyweb.html"
+                    style="font-weight: 700; font-size: 20px;  color: #1D1D1D; text-decoration: none;">about
+                    me</a>
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: center; margin-top: 15rem;">
+            <div data-aos="fade-up" data-aos-duration="1000"
+                style="font-weight: 900; font-size: 160px; color: #1d1d1d; font-family: Schnyder L;">
+                Superposition</div>
+        </div>
+
+        <div class="d-flex justify-content-between" style="color: black; margin-top: 7rem;">
+            <div data-aos="fade-up" data-aos-duration="1500" style="width: 30%; margin-left: 10rem; margin-top: -5rem;">
+                <img src="assets/right-arrow.png">
+            </div>
+            <div style="width: 40%; flex-direction: column;" class="d-flex">
+                <div data-aos="fade-up" data-aos-duration="1500"
+                    style="font-family: GT Walsheim Pro; font-size: 15px; font-weight: 500">Superposition</div>
+                <div data-aos="fade-up" data-aos-duration="1500" style="font-family: GT Walsheim Pro; font-size: 14px;">
+                    Mobile
+                    App Design / Interaction Design</div>
+
+                <div data-aos="fade-up" data-aos-duration="2000"
+                    style="margin-top: 3rem; font-family: GT Walsheim Pro; font-size: 15px; font-weight: 500">Mobile
+                    Application</div>
+                <div data-aos="fade-up" data-aos-duration="2000" style="font-family: GT Walsheim Pro; font-size: 14px;">
+                    Welcome
+                    to the future of beauty!</div>
+                <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="0"
+                    style="margin-top: 20px; font-family: GT Walsheim Pro; font-size: 14px; width: 70%;">Superposition
+                    lets
+                    you to find the
+                    best providers in your area, get an insider’s
+                    perspective on all beauty procedure options, and instantly book your consultation.
+                    As well as giving you a look into what certain procedures are like. </div>
+            </div>
+        </div>
+
+        <!-- <div class="img-container-2"><img src="assets/809056467.png" alt=""></div> -->
+        <div style="display: flex; height: 1200px;">
+            <div style="display: flex;" class="img-container-2"><img style="width: 960px; object-fit: cover;"
+                    src="/assets/sp1.png" alt=""></div>
+            <div style="display: flex;" class="img-container-2"><img style="width: 960px; object-fit: cover;"
+                    src="/assets/sp2.png" alt=""></div>
+        </div>
+
+        <div style="display: flex; justify-content: center; margin-bottom: 10rem; margin-top: 10rem;">
+            <img src="/assets/sp_3.png" alt="">
+        </div>
+
+        <div style="display: flex; margin-bottom: 10rem;">
+            <div style="width: 50%;"></div>
+            <div style="width: 50%; display: flex; color: black;">
+                <div data-aos="fade-up" data-aos-duration="2000" data-aos-offset="200" style="font-size: 15px; font-weight: 500; width: 25%; margin-right: 3rem;">Superposition is taking
+                    the stigma
+                    out of plastic surgery, cosmetic
+                    procedures and injectables.
+                </div>
+                <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="200" style="font-size: 13px; width: 40%;">With Superposition you can do a lot of great things – just
+                    take a picture and apply a cosmetic treatment of your choice to a selected area (nose, lips or
+                    brows). You can refresh your face with just a few taps and swipes, compare your before & after, save
+                    your photos and
+                    share them with your friends.</div>
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: center; padding-top: 10rem; padding-bottom: 10rem; background-color: #FFE3D1;"
+            class="img-container-2">
+            <img src="/assets/sp_g.png" alt="">
+        </div>
+
+        <div class="img-container-2">
+            <img src="/assets/sp_4.png" alt="">
+        </div>
+
+        <div style="display: flex;">
+            <div
+                style="width: 50%; display: flex; justify-content: center; align-items: center; background-color: #FFE3D1;">
+                <img style="margin-top: 10rem; margin-bottom: 10rem;" src="/assets/sp_5.png" alt="">
+            </div>
+            <div style="width: 50%; display: flex; flex-direction: column; justify-content: center; align-items: center; color: black;">
+                <div data-aos="fade-up" data-aos-duration="2000" data-aos-offset="500" style="font-size: 15px; font-weight: 500; width: 40%;">
+                    Superposition is able to give a realistic idea
+                    of what you would look like after cosmetic treatments.
+                </div>
+                <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="500" style="font-size: 13px; width: 40%; margin-top: 1rem;">Working with Superposition team has been a
+                    great experience as these guys are really pushing the
+                    cosmetics surgery industry forward by creating seamless experiences by utilizing the latest
+                    technological advancements.</div>
+            </div>
+        </div>
+
+        <div class="img-container-2" style="margin-bottom: 10rem;">
+            <img src="/assets/sp_6.png" alt="">
+        </div>
+
+        <div class="d-flex" style="color: black; height: 25rem;">
+            <div style="width: 40%; font-size:12px; margin-left: 50px;">BACK TO ALL PROJECTS</div>
+            <div style="width: 30%;">
+                <div style="font-size:12px;">NEXT</div>
+                <div style="font-size:226px;">N.</div>
+            </div>
+            <div style="width: 20%;">
+                <div style="font-size: 80px; font-weight: 500;">501c3NFT</div>
+                <div style="font-size: 12px;">WEB DESIGN / INTERACTION DESIGN</div>
+                <div style="margin-top: 2rem;"><img src="assets/right-arrow-sm.png" alt=""></div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- <script src="js/scripts.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="luxy.js" charset="utf-8"></script>
+
+
+
+    <script>
+
+        AOS.init();
+
+
+        luxy.init();
+
+        const images = document.querySelectorAll(".img-container");
+
+        const removeOverlay = (overlay) => {
+            let tl = gsap.timeline();
+
+            tl.to(overlay, {
+                duration: 1.4,
+                ease: "Power2.easeInOut",
+                width: "0%"
+            });
+
+            return tl;
+        };
+
+        const removeOverlayRight = (overlay_right) => {
+            let tl = gsap.timeline();
+
+            tl.to(overlay_right, {
+                duration: 1.4,
+                ease: "Power2.easeInOut",
+                width: "0%"
+            });
+
+            return tl;
+        };
+
+        const scaleInImage = image => {
+            let tl = gsap.timeline();
+
+            tl.from(image, {
+                duration: 1.4,
+                scale: 1,
+                ease: "Power2.easeInOut"
+            });
+
+            return tl;
+        };
+
+        images.forEach(image => {
+
+            gsap.set(image, {
+                visibility: "visible"
+            });
+
+            const overlay = image.querySelector('.img-overlay');
+            const img = image.querySelector("video");
+
+            const masterTL = gsap.timeline({ paused: true });
+            masterTL
+                .add(removeOverlay(overlay))
+                .add(scaleInImage(img), "-=1.4");
+
+
+            let options = {
+                threshold: 0
+            }
+
+            const io = new IntersectionObserver((entries, options) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        masterTL.play();
+                    } else {
+                        masterTL.progress(0).pause()
+                    }
+                });
+            }, options);
+
+            io.observe(image);
+        });
+
+
+
+        images.forEach(image => {
+
+            gsap.set(image, {
+                visibility: "visible"
+            });
+
+            const overlay_right = image.querySelector('.img-overlay-right');
+            // const overlay_right = image.querySelector('.img-overlay-right');
+            const img = image.querySelector("video");
+
+            const masterTL = gsap.timeline({ paused: true });
+            masterTL
+                // .add(removeOverlay(overlay))
+                .add(removeOverlayRight(overlay_right))
+                .add(scaleInImage(img), "-=1.4");
+
+
+            let options = {
+                threshold: 0
+            }
+
+            const io = new IntersectionObserver((entries, options) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        masterTL.play();
+                    } else {
+                        masterTL.progress(0).pause()
+                    }
+                });
+            }, options);
+
+            io.observe(image);
+        });
+
+
+
+    </script>
+
+
+    <script>
+
+        const images3 = document.querySelectorAll(".img-container-01");
+
+        const removeOverlay3 = overlay => {
+            let tl = gsap.timeline();
+
+            tl.to(overlay, {
+                duration: 1.4,
+                ease: "Power2.easeInOut",
+                width: "0%"
+            });
+
+            return tl;
+        };
+
+        const scaleInImage3 = image => {
+            let tl = gsap.timeline();
+
+            tl.from(image, {
+                duration: 2.5,
+                scale: 1.2,
+                ease: "Power2.easeInOut"
+            });
+
+            return tl;
+        };
+
+        images3.forEach(image => {
+
+            gsap.set(image, {
+                visibility: "visible"
+            });
+
+            const overlay = image.querySelector('.img-overlay');
+            const img = image.querySelector("img");
+
+            const masterTL = gsap.timeline({ paused: true });
+            masterTL
+                .add(removeOverlay3(overlay))
+                .add(scaleInImage3(img), "-=1.4");
+
+
+            let options = {
+                threshold: 0
+            }
+
+            const io = new IntersectionObserver((entries, options) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        masterTL.play();
+                    } else {
+                        masterTL.progress(0).pause()
+                    }
+                });
+            }, options);
+
+            io.observe(image);
+        });
+
+    </script>
+
+
+    <script>
+
+        const images2 = document.querySelectorAll(".img-container-2");
+
+        const removeOverlay2 = overlay => {
+            let tl = gsap.timeline();
+
+            tl.to(overlay, {
+                duration: 1.4,
+                ease: "Power2.easeInOut",
+                width: "0%"
+            });
+
+            return tl;
+        };
+
+        const scaleInImage2 = image => {
+            let tl = gsap.timeline();
+
+            tl.from(image, {
+                duration: 2.5,
+                scale: 1.4,
+                ease: "Power2.easeInOut"
+            });
+
+            return tl;
+        };
+
+        images2.forEach(image => {
+
+            gsap.set(image, {
+                visibility: "visible"
+            });
+
+            const overlay = image.querySelector('.img-overlay');
+            const img = image.querySelector("img");
+
+            const masterTL = gsap.timeline({ paused: true });
+            masterTL
+                .add(removeOverlay2(overlay))
+                .add(scaleInImage2(img), "-=1.4");
+
+
+            let options = {
+                threshold: 0
+            }
+
+            const io = new IntersectionObserver((entries, options) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        masterTL.play();
+                    } else {
+                        masterTL.progress(0).pause()
+                    }
+                });
+            }, options);
+
+            io.observe(image);
+        });
+
+    </script>
+</body>
+
+</html>
