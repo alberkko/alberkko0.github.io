@@ -91,6 +91,26 @@
         overflow: hidden;
         display: flex;
     }
+
+
+    .img-w {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    @media screen and (max-width: 1000px) {
+        .desktop-view {
+            display: none !important;
+        }
+    }
+
+    @media screen and (min-width: 1000px) {
+        .mobile-view {
+            display: none !important;
+        }
+    }
+
+
 </style>
 
 
@@ -99,7 +119,7 @@
 
 
 <body style="background-color: #F2F2F2; color: white;">
-    <div id="luxy">
+    <div id="luxy" class="desktop-view">
 
         <div class="d-flex justify-content-between"
             style="align-items: center;  margin-top: 40px; margin-left: 40px; margin-right: 40px;">
@@ -122,7 +142,7 @@
 
         <div class="d-flex justify-content-between" style="color: black; margin-top: 7rem;">
             <div data-aos="fade-up" data-aos-duration="1500" style="width: 30%; margin-left: 10rem; margin-top: -5rem;">
-                <img src="assets/right-arrow.png">
+                <img class="img-w" src="assets/right-arrow.png">
             </div>
             <div style="width: 40%; flex-direction: column;" class="d-flex">
                 <div data-aos="fade-up" data-aos-duration="1500"
@@ -149,14 +169,14 @@
 
         <!-- <div class="img-container-2"><img src="assets/809056467.png" alt=""></div> -->
         <div style="display: flex; height: 1200px;">
-            <div style="display: flex;" class="img-container-2"><img style="width: 960px; object-fit: cover;"
+            <div style="display: flex;" class="img-container-2"><img class="img-w" style="width: 960px; object-fit: cover;"
                     src="/assets/sp1.png" alt=""></div>
-            <div style="display: flex;" class="img-container-2"><img style="width: 960px; object-fit: cover;"
+            <div style="display: flex;" class="img-container-2"><img class="img-w" style="width: 960px; object-fit: cover;"
                     src="/assets/sp2.png" alt=""></div>
         </div>
 
         <div style="display: flex; justify-content: center; margin-bottom: 10rem; margin-top: 10rem;">
-            <img src="/assets/sp_3.png" alt="">
+            <img class="img-w" src="/assets/sp_3.png" alt="">
         </div>
 
         <div style="display: flex; margin-bottom: 10rem;">
@@ -177,17 +197,17 @@
 
         <div style="display: flex; justify-content: center; padding-top: 10rem; padding-bottom: 10rem; background-color: #FFE3D1;"
             class="img-container-2">
-            <img src="/assets/sp_g.png" alt="">
+            <img class="img-w" src="/assets/sp_g.png" alt="">
         </div>
 
         <div class="img-container-2">
-            <img src="/assets/sp_4.png" alt="">
+            <img class="img-w" src="/assets/sp_4.png" alt="">
         </div>
 
         <div style="display: flex;">
             <div
                 style="width: 50%; display: flex; justify-content: center; align-items: center; background-color: #FFE3D1;">
-                <img style="margin-top: 10rem; margin-bottom: 10rem;" src="/assets/sp_5.png" alt="">
+                <img class="img-w" style="margin-top: 10rem; margin-bottom: 10rem;" src="/assets/sp_5.png" alt="">
             </div>
             <div style="width: 50%; display: flex; flex-direction: column; justify-content: center; align-items: center; color: black;">
                 <div data-aos="fade-up" data-aos-duration="2000" data-aos-offset="500" style="font-size: 15px; font-weight: 500; width: 40%;">
@@ -202,7 +222,7 @@
         </div>
 
         <div class="img-container-2" style="margin-bottom: 10rem;">
-            <img src="/assets/sp_6.png" alt="">
+            <img class="img-w" src="/assets/sp_6.png" alt="">
         </div>
 
         <div class="d-flex" style="color: black; height: 25rem;">
@@ -221,6 +241,134 @@
             </div>
       
           </div>
+
+    </div>
+
+
+    <div id="luxy" class="mobile-view">
+
+        <div class="d-flex justify-content-between"
+            style="align-items: center;  margin-top: 40px; margin-left: 20px; margin-right: 20px;">
+            <div>
+                <a style="font-weight: 700; font-size: 30px; color: #1D1D1D; text-decoration: none;" href="/">
+                    Alberkko</a>
+            </div>
+            <div class="d-flex">
+                <a href="/easyweb.html"
+                    style="font-weight: 700; font-size: 20px;  color: #1D1D1D; text-decoration: none;">about
+                    me</a>
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: center; margin-top: 15rem;">
+            <div data-aos="fade-up" data-aos-duration="1000"
+                style="font-weight: 900; font-size: 60px; color: #1d1d1d; font-family: Schnyder L;">
+                Superposition</div>
+        </div>
+
+        <div class="d-flex justify-content-between" style="color: black; margin-top: 7rem;">
+            <!-- <div data-aos="fade-up" data-aos-duration="1500" style="width: 30%; margin-left: 10rem; margin-top: -5rem;">
+                <img class="img-w" src="assets/right-arrow.png">
+            </div> -->
+            <div style="width: 100%; flex-direction: column; margin-left: 1rem; margin-bottom: 7rem;" class="d-flex">
+                <div data-aos="fade-up" data-aos-duration="1500"
+                    style="font-family: GT Walsheim Pro; font-size: 15px; font-weight: 500">Superposition</div>
+                <div data-aos="fade-up" data-aos-duration="1500" style="font-family: GT Walsheim Pro; font-size: 14px;">
+                    Mobile
+                    App Design / Interaction Design</div>
+
+                <div data-aos="fade-up" data-aos-duration="2000"
+                    style="margin-top: 3rem; font-family: GT Walsheim Pro; font-size: 15px; font-weight: 500">Mobile
+                    Application</div>
+                <div data-aos="fade-up" data-aos-duration="2000" style="font-family: GT Walsheim Pro; font-size: 14px;">
+                    Welcome
+                    to the future of beauty!</div>
+                <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="0"
+                    style="margin-top: 20px; font-family: GT Walsheim Pro; font-size: 14px; width: 90%;">Superposition
+                    lets
+                    you to find the
+                    best providers in your area, get an insider’s
+                    perspective on all beauty procedure options, and instantly book your consultation.
+                    As well as giving you a look into what certain procedures are like. </div>
+            </div>
+        </div>
+
+        <!-- <div class="img-container-2"><img src="assets/809056467.png" alt=""></div> -->
+        <div style="display: flex;">
+            <div style="display: flex;" class="img-container-2"><img class="img-w" style="width: 960px; object-fit: cover;"
+                    src="/assets/sp1.png" alt=""></div>
+            <div style="display: flex;" class="img-container-2"><img class="img-w" style="width: 960px; object-fit: cover;"
+                    src="/assets/sp2.png" alt=""></div>
+        </div>
+
+        <div style="display: flex; justify-content: center; margin-bottom: 5rem; margin-top: 2rem;">
+            <img class="img-w" style="width: 50%;" src="/assets/sp_3.png" alt="">
+        </div>
+
+        <div style="margin-bottom: 5rem; margin-left: 1rem;">
+            <div style="width: 100%; color: black;">
+                <div data-aos="fade-up" data-aos-duration="2000" data-aos-offset="200" style="font-size: 15px; font-weight: 500; width: 90%; margin-right: 3rem;">Superposition is taking
+                    the stigma
+                    out of plastic surgery, cosmetic
+                    procedures and injectables.
+                </div>
+                <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="200" style="font-size: 13px; width: 90%;">With Superposition you can do a lot of great things – just
+                    take a picture and apply a cosmetic treatment of your choice to a selected area (nose, lips or
+                    brows). You can refresh your face with just a few taps and swipes, compare your before & after, save
+                    your photos and
+                    share them with your friends.</div>
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: center; padding-top: 5rem; padding-bottom: 5rem; background-color: #FFE3D1;"
+            class="img-container-01">
+            <img class="img-w" style="width: 90%;" src="/assets/sp_g.png" alt="">
+        </div>
+
+        <div class="img-container-2">
+            <img class="img-w" src="/assets/sp_4.png" alt="">
+        </div>
+
+        <div style="">
+            <div
+                style="width: 100%; display: flex; justify-content: center; align-items: center; background-color: #FFE3D1;">
+                <img class="img-w" style="margin-top: 2rem; margin-bottom: 2rem; width: 50%;" src="/assets/sp_5.png" alt="">
+            </div>
+            <div style="width: 100%; flex-direction: column; justify-content: center; align-items: center; color: black; margin-top: 3rem; margin-bottom: 3rem; margin-left: 1rem;">
+                <div data-aos="fade-up" data-aos-duration="2000" data-aos-offset="500" style="font-size: 15px; font-weight: 500; width: 90%;">
+                    Superposition is able to give a realistic idea
+                    of what you would look like after cosmetic treatments.
+                </div>
+                <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="500" style="font-size: 13px; width: 90%; margin-top: 1rem;">Working with Superposition team has been a
+                    great experience as these guys are really pushing the
+                    cosmetics surgery industry forward by creating seamless experiences by utilizing the latest
+                    technological advancements.</div>
+            </div>
+        </div>
+
+        <div class="img-container-2" style="margin-bottom: 0rem;">
+            <img class="img-w" src="/assets/sp_6.png" alt="">
+        </div>
+
+
+        
+    <div class="d-flex" style="color: black; height: 8rem; margin-top: 5rem;">
+
+        <a style="width: 50%; font-size:12px; margin-left: 10px; color: black; " href="/index.html">
+          <div>BACK TO HOME PAGE</div>
+        </a>
+        <div style="width: 30%;">
+          <div style="font-size:12px;">NEXT</div>
+          <div style="font-size:26px;">N.</div>
+        </div>
+        <div style="width: 20%; margin-right: 50px;">
+          <div style="font-size: 20px; font-weight: 500;">501c3NFT</div>
+          <div style="font-size: 12px;">WEB DESIGN / INTERACTION DESIGN</div>
+          <!-- <div style="margin-top: 2rem;"><img class="img-w" src="assets/right-arrow-sm.png" alt=""></div> -->
+        </div>
+  
+      </div>
+
 
     </div>
 
