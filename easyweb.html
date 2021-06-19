@@ -91,6 +91,25 @@
     overflow: hidden;
     display: flex;
   }
+
+  .img-w{
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .desktop-view {
+      display: none !important;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    .mobile-view {
+      display: none !important;
+    }
+  }
+
+  
 </style>
 
 
@@ -99,7 +118,8 @@
 
 
 <body style="background-color: #F2F2F2; color: white;">
-  <div id="luxy">
+
+  <div id="luxy" class="desktop-view">
 
     <div class="d-flex justify-content-between"
       style="align-items: center;  margin-top: 40px; margin-left: 40px; margin-right: 40px;">
@@ -141,12 +161,12 @@
       </div>
     </div>
 
-    <div class="img-container-2"><img src="assets/5c6a9194870107.5e89c6dc5b390.png" alt=""></div>
+    <div class="img-container-2"><img class="img-w" src="assets/5c6a9194870107.5e89c6dc5b390.png" alt=""></div>
 
     <div style="display: flex;">
       <div class="img-container-01"
         style="width: 50%; background-image: url(assets/11-0-Color-Day.png); height: 1080px; width: 1800px; display: flex; justify-content: center; align-items: center;">
-        <img src="assets/Group 63.png" alt="">
+        <img class="img-w" src="assets/Group 63.png" alt="">
       </div>
       <div style="width: 50%; display: flex; justify-content: center; align-items: center;">
         <div
@@ -164,7 +184,7 @@
     <div
     class="img-container-2"
       style="background-image: url(assets/florian-krumm-yLDabpoCL3s-unsplash.png); height: 1080px; display: flex; justify-content: center; align-items: center;">
-      <img src="assets/42134.png" alt="">
+      <img class="img-w" src="assets/42134.png" alt="">
     </div>
 
     <div style="display: flex;">
@@ -207,12 +227,12 @@
       </div>
       <div class="img-container-01"
         style="background-color: #23252E; height: 1080px; width: 70%; display: flex; justify-content: center; align-items: center;">
-        <img src="assets/2533a194870107.5e89c6dc5c2fc.png" alt="">
+        <img class="img-w" src="assets/2533a194870107.5e89c6dc5c2fc.png" alt="">
       </div>
     </div>
 
     <div class="">
-      <img src="/assets/69119d94870107.5e89c6dc5ca8c.png" alt="">
+      <img class="img-w" src="/assets/69119d94870107.5e89c6dc5ca8c.png" alt="">
     </div>
 
     <div class="d-flex" style="color: black; height: 25rem; margin-top: 10rem;">
@@ -227,13 +247,148 @@
       <div style="width: 20%;">
         <div style="font-size: 80px; font-weight: 500;">501c3NFT</div>
         <div style="font-size: 12px;">WEB DESIGN / INTERACTION DESIGN</div>
-        <div style="margin-top: 2rem;"><img src="assets/right-arrow-sm.png" alt=""></div>
+        <div style="margin-top: 2rem;"><img class="img-w" src="assets/right-arrow-sm.png" alt=""></div>
       </div>
 
     </div>
 
   </div>
 
+
+  <div id="luxy" class="mobile-view">
+
+    <div class="d-flex justify-content-between"
+      style="align-items: center;  margin-top: 40px; margin-left: 20px; margin-right: 20px;">
+      <div>
+        <a style="font-weight: 700; font-size: 30px; color: #1D1D1D; text-decoration: none;" href="/">
+          Alberkko</a>
+      </div>
+      <div class="d-flex">
+        <a href="/easyweb.html" style="font-weight: 700; font-size: 20px;  color: #1D1D1D; text-decoration: none;">about
+          me</a>
+      </div>
+    </div>
+
+    <div style="display: flex; justify-content: center; margin-top: 15rem;">
+      <div data-aos="fade-up" data-aos-duration="1000"
+        style="font-weight: 900; font-size: 60px; color: #1d1d1d; font-family: Schnyder L;">
+        Easy Web</div>
+    </div>
+
+    <div class="d-flex justify-content-between" style="color: black; margin-top: 7rem;">
+      <!-- <div data-aos="fade-up" data-aos-duration="1500" style="width: 30%; margin-left: 10rem; margin-top: -5rem;"><img
+          src="assets/right-arrow.png"></div> -->
+      <div style="width: 90%; flex-direction: column; margin-left: 2rem; margin-bottom: 6rem;" class="d-flex">
+        <div data-aos="fade-up" data-aos-duration="1500"
+          style="font-family: GT Walsheim Pro; font-size: 15px; font-weight: 500">Easy Web Desktop</div>
+        <div data-aos="fade-up" data-aos-duration="1500" style="font-family: GT Walsheim Pro; font-size: 14px;">Mobile
+          UI/UX Design / Graphic Design / Development</div>
+
+        <div data-aos="fade-up" data-aos-duration="2000"
+          style="margin-top: 3rem; font-family: GT Walsheim Pro; font-size: 15px; font-weight: 500">Cloud Operating
+          System</div>
+        <div data-aos="fade-up" data-aos-duration="2000" style="font-family: GT Walsheim Pro; font-size: 14px;">As easy
+          as it gets.</div>
+        <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="0"
+          style="margin-top: 20px; font-family: GT Walsheim Pro; font-size: 14px; width: 90%;">Easy Web Desktop is an
+          cloud based operating system. Designed for netbooks and
+          low spec computers. It supports a GUI Interface and a lot of the things that you see
+          on desktop and mobile native operating systems. </div>
+      </div>
+    </div>
+
+    <div class="img-container-2"><img class="img-w" src="assets/5c6a9194870107.5e89c6dc5b390.png" alt=""></div>
+
+    <div style="display: flex; flex-direction: column;">
+      <div class="img-container-01"
+        style="width: 50%;background-image: url(assets/11-0-Color-Day.png); width: 100%; display: flex; justify-content: center; align-items: center;">
+        <img class="img-w" style="width: 80% !important; margin-top: 3rem; margin-bottom: 3rem;" src="assets/Group 63.png" alt="">
+      </div>
+      <div style="width: 100%; display: flex; justify-content: center; align-items: center; margin-top: 3rem; margin-bottom: 3rem;">
+        <div
+          style="display: flex; width: 75%; flex-direction: column; color: black; justify-content: center; align-items: center;">
+          <div data-aos="fade-up" data-aos-duration="2000" data-aos-offset="200" style="font-size: 14px; font-weight: 500; width: 100%; margin-bottom: 10px;">A fully fledged Operating
+            System - on the web.</div>
+          <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="200" style="font-size: 14px; width: 100%;">The system was equipped with features ranging from customizable
+            icons to file preferences, themes, metrics and more. All of which, had to be carefully considered, and
+            assigned their respective place in the system. And always having to conform to our design constraints.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+    class="img-container-01"
+      style="background-image: url(assets/florian-krumm-yLDabpoCL3s-unsplash.png); display: flex; justify-content: center; align-items: center;">
+      <img class="img-w" style="margin-top: 3rem; margin-bottom: 3rem; width: 80%;" src="assets/42134.png" alt="">
+    </div>
+
+    <div style="display: flex; flex-direction: column;">
+      <div
+        style="width: 90%; color: black; display: flex; justify-content: flex-end; align-items: center; margin-right: 5%; margin-top: 5rem; margin-bottom: 5rem;">
+        <div style="direction: rtl;">
+
+          <div data-aos="fade-up" data-aos-duration="2000" data-aos-offset="200" style="font-size: 15px; font-weight: 500; margin-bottom: .5rem; text-align:right;">Creating the Easy Web
+            Design Language</div>
+          <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="200" style="font-size: 13px;  margin-bottom: 2rem; text-align:right; width: 80%;">There were 4 cornerstones
+            that had to be
+            consulted, to create the Easy Web Design Language. The design had to be</div>
+
+          <div data-aos="fade-up" data-aos-duration="2000" data-aos-offset="200" style="font-size: 13px; font-weight: 500; text-align:right; margin-bottom: .5rem;">Flexible</div>
+          <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="200" style="font-size: 13px; width: 80%; text-align:right;">People expect an OS to be intuitive, while
+            simultaneously
+            adaptable to their workflow. Many apps offer configurable preferences, customizable interfaces and alternate
+            ways of completing tasks. Windows can often be resized, interface elements hidden or repositioned. Tasks can
+            be initiated from toolbars, menus, controls, and more. A flexible OS facilitates learning through
+            discoverability.</div>
+
+          <div data-aos="fade-up" data-aos-duration="2000" data-aos-offset="200" style="font-size: 13px; font-weight: 500; text-align:right; margin-bottom: .5rem; margin-top: 2rem;">Expansive</div>
+          <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="200" style="font-size: 13px; width: 80%; text-align:right;">Large, high-resolution displays are typical for
+            most users, and people often extend their workspace by connecting additional displays. Easy Web Desktop can
+            leverage this expansiveness and provide value by utilizing a wide range of interface components—like tabs,
+            sidebars, sheets, and panels—and supporting immersive features like full-screen mode.</div>
+
+          <div data-aos="fade-up" data-aos-duration="2000" data-aos-offset="200" style="font-size: 13px; font-weight: 500; text-align:right; margin-bottom: .5rem; margin-top: 2rem;">Capable</div>
+          <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="200" style="font-size: 13px; width: 80%; text-align:right;">Often people are using devices that lack capable
+            hardware and software, with this solution, users should be able to harness power through the web and be
+            allowed to get into intensive workflows that meet all kinds of niche user needs, without needing a powerful
+            device.</div>
+
+          <div data-aos="fade-up" data-aos-duration="2000" data-aos-offset="200" style="font-size: 13px; font-weight: 500; text-align:right; margin-bottom: .5rem; margin-top: 2rem;">Focused</div>
+          <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="200" style="font-size: 13px; width: 80%; text-align:right;">Easy Web Desktop is designed to keep the current
+            task clear and in focus. Visual contrast, translucency, and a large drop shadow make it easy to
+            differentiate the active window from inactive windows. Interfaces defer to content and related controls.
+            Throughout the system, adornments are subtle and appropriate.</div>
+        </div>
+      </div>
+      <div class="img-container-01"
+        style="background-color: #23252E; width: 100%; display: flex; justify-content: center; align-items: center;">
+        <img class="img-w" style="margin-top: 5rem; margin-bottom: 5rem; width: 80%;" src="assets/2533a194870107.5e89c6dc5c2fc.png" alt="">
+      </div>
+    </div>
+
+    <div class="img-container-01">
+      <img class="img-w" src="/assets/69119d94870107.5e89c6dc5ca8c.png" alt="">
+    </div>
+
+    <div class="d-flex" style="color: black; height: 8rem; margin-top: 5rem;">
+
+      <a style="width: 50%; font-size:12px; margin-left: 10px; color: black; " href="/index.html">
+        <div>BACK TO HOME PAGE</div>
+      </a>
+      <div style="width: 30%;">
+        <div style="font-size:12px;">NEXT</div>
+        <div style="font-size:26px;">N.</div>
+      </div>
+      <div style="width: 20%; margin-right: 50px;">
+        <div style="font-size: 20px; font-weight: 500;">501c3NFT</div>
+        <div style="font-size: 12px;">WEB DESIGN / INTERACTION DESIGN</div>
+        <!-- <div style="margin-top: 2rem;"><img class="img-w" src="assets/right-arrow-sm.png" alt=""></div> -->
+      </div>
+
+    </div>
+
+  </div>
 
 
   <!-- <script src="js/scripts.js"></script> -->

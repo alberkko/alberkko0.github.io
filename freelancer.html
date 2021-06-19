@@ -92,6 +92,23 @@
         overflow: hidden;
         display: flex;
     }
+
+    .img-w {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    @media screen and (max-width: 1000px) {
+        .desktop-view {
+            display: none !important;
+        }
+    }
+
+    @media screen and (min-width: 1000px) {
+        .mobile-view {
+            display: none !important;
+        }
+    }
 </style>
 
 
@@ -100,7 +117,7 @@
 
 
 <body style="background-color: #F2F2F2; color: white;">
-    <div id="luxy">
+    <div id="luxy" class="desktop-view">
         <div class="d-flex justify-content-between"
             style="align-items: center;  margin-top: 40px; margin-left: 40px; margin-right: 40px;">
             <div>
@@ -135,7 +152,8 @@
                 <div data-aos="fade-up" data-aos-duration="2000" style="font-family: GT Walsheim Pro; font-size: 14px;">
                     Find an expert on everything.</div>
                 <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="0"
-                    style="margin-top: 20px; font-family: GT Walsheim Pro; font-size: 14px; width: 70%;">With Free-Lancer.eu employers can hire freelancers to do work in areas such
+                    style="margin-top: 20px; font-family: GT Walsheim Pro; font-size: 14px; width: 70%;">With
+                    Free-Lancer.eu employers can hire freelancers to do work in areas such
                     as software development, writing, data entry and design right through to
                     engineering, the sciences, sales and marketing, accounting and legal services. </div>
             </div>
@@ -143,7 +161,7 @@
         </div>
         <div class="img-container-2"
             style="margin-bottom: 10rem; height: 1080px; background-image: url(/assets/free_br.png); display: flex; justify-content: center; align-items: center;">
-            <img src="assets/free_logo.png" alt="">
+            <img class="img-w" src="assets/free_logo.png" alt="">
         </div>
 
         <div class="d-flex justify-content-between">
@@ -154,9 +172,13 @@
                     Make work more rewarding.
                 </div>
                 <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="200"
-                    style="font-size: 13px; width: 35%;">Free-lancer.eu's mission to create economic opportunities so people have better lives has taken us so much further. As a result, they have become the world’s work marketplace where every day businesses of all sizes and independent talent from around the globe meet here to accomplish incredible things.
-                    <br/>
-                    As such, their platform was designed and built with performance and scalability in mind.</div>
+                    style="font-size: 13px; width: 35%;">Free-lancer.eu's mission to create economic opportunities so
+                    people have better lives has taken us so much further. As a result, they have become the world’s
+                    work marketplace where every day businesses of all sizes and independent talent from around the
+                    globe meet here to accomplish incredible things.
+                    <br />
+                    As such, their platform was designed and built with performance and scalability in mind.
+                </div>
             </div>
         </div>
 
@@ -164,7 +186,7 @@
             <div class="img-overlay"></div>
             <div class="img-overlay-right"></div>
             <video autoplay loop muted>
-                <source src="assets/free-vid-1.mp4" type="video/mp4" />
+                <source class="img-w" src="assets/free-vid-1.mp4" type="video/mp4" />
             </video>
         </div>
 
@@ -175,7 +197,7 @@
                     <div class="img-overlay"></div>
                     <div class="img-overlay-right"></div>
                     <video style="width: 100%; height: 100%;" autoplay loop muted>
-                        <source src="assets/free-vid-2.mp4" type="video/mp4" />
+                        <source class="img-w" src="assets/free-vid-2.mp4" type="video/mp4" />
                     </video>
                 </div>
             </div>
@@ -184,17 +206,21 @@
                 <div
                     style="display: flex; width: 75%; flex-direction: column; color: rgb(255, 255, 255); justify-content: center; align-items: center;">
                     <div data-aos="fade-up" data-aos-duration="2000" data-aos-offset="200"
-                        style="font-size: 14px; font-weight: 500; width: 100%; margin-bottom: 10px;">Freelancer Feed</div>
+                        style="font-size: 14px; font-weight: 500; width: 100%; margin-bottom: 10px;">Freelancer Feed
+                    </div>
                     <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="200"
-                        style="font-size: 14px; width: 100%;">The feed was designed as a way for users to stay in touch with what people the people they follow are working on. Connect with and be the first to jump in on new and exciting projects.
+                        style="font-size: 14px; width: 100%;">The feed was designed as a way for users to stay in touch
+                        with what people the people they follow are working on. Connect with and be the first to jump in
+                        on new and exciting projects.
                     </div>
                 </div>
             </div>
         </div>
 
 
-        <div class="img-container-2" style="display: flex; justify-content: center; align-items: center; margin-top: 10rem; padding-bottom: 10rem; height: 1080px; background-color: #EFF2FA;">
-            <img src="/assets/free_tt.png" alt="">
+        <div class="img-container-2"
+            style="display: flex; justify-content: center; align-items: center; margin-top: 10rem; padding-bottom: 10rem; height: 1080px; background-color: #EFF2FA;">
+            <img class="img-w" src="/assets/free_tt.png" alt="">
         </div>
 
         <div class="d-flex justify-content-between" style="background-color: #EFF2FA;">
@@ -203,36 +229,189 @@
                 <div data-aos="fade-up" data-aos-duration="2000" data-aos-offset="200"
                     style="font-size: 14px; font-weight: 500; width: 25%; margin-right: 3rem;">
                     Leaving your career path in the
-hands of your employer is old-school
+                    hands of your employer is old-school
                 </div>
                 <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="200"
-                    style="font-size: 13px; width: 35%;">Talent should be in the driver’s seat of their careers, equipped with the tools, skill-building, and autonomy to forge their own path. At the same time, talent shouldn’t have to go it alone when it comes to job searching and career decisions—they deserve a partner to coach and advise them along the way.</div>
+                    style="font-size: 13px; width: 35%;">Talent should be in the driver’s seat of their careers,
+                    equipped with the tools, skill-building, and autonomy to forge their own path. At the same time,
+                    talent shouldn’t have to go it alone when it comes to job searching and career decisions—they
+                    deserve a partner to coach and advise them along the way.</div>
             </div>
         </div>
 
-        <div class="img-container-2" style="background-image: url(/assets/free7.png); display: flex; justify-content: center; align-items: center;">
-            <img src="/assets/free6.png" style="margin-top: 13rem; margin-bottom: 13rem;" alt="">
+        <div class="img-container-2"
+            style="background-image: url(/assets/free7.png); display: flex; justify-content: center; align-items: center;">
+            <img class="img-w" src="/assets/free6.png" style="margin-top: 13rem; margin-bottom: 13rem;" alt="">
         </div>
 
-        
+
         <div class="d-flex" style="color: black; height: 25rem; margin-top: 10rem;">
 
             <a style="width: 40%; font-size:12px; margin-left: 50px; color: black; " href="/index.html">
-              <div>BACK TO HOME PAGE</div>
+                <div>BACK TO HOME PAGE</div>
             </a>
             <div style="width: 30%;">
-              <div style="font-size:12px;">NEXT</div>
-              <div style="font-size:226px;">N.</div>
+                <div style="font-size:12px;">NEXT</div>
+                <div style="font-size:226px;">N.</div>
             </div>
             <div style="width: 20%;">
-              <div style="font-size: 80px; font-weight: 500;">501c3NFT</div>
-              <div style="font-size: 12px;">WEB DESIGN / INTERACTION DESIGN</div>
-              <div style="margin-top: 2rem;"><img src="assets/right-arrow-sm.png" alt=""></div>
+                <div style="font-size: 80px; font-weight: 500;">501c3NFT</div>
+                <div style="font-size: 12px;">WEB DESIGN / INTERACTION DESIGN</div>
+                <div style="margin-top: 2rem;"><img src="assets/right-arrow-sm.png" alt=""></div>
             </div>
-      
-          </div>
+
+        </div>
 
     </div>
+
+
+    <div id="luxy" class="mobile-view">
+        <div class="d-flex justify-content-between"
+            style="align-items: center;  margin-top: 40px; margin-left: 40px; margin-right: 40px;">
+            <div>
+                <a style="font-weight: 700; font-size: 30px; color: #1D1D1D; text-decoration: none;" href="/">
+                    Alberkko</a>
+            </div>
+            <div class="d-flex">
+                <a href="/easyweb.html"
+                    style="font-weight: 700; font-size: 20px;  color: #1D1D1D; text-decoration: none;">about
+                    me</a>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: center; margin-top: 15rem;">
+            <div data-aos="fade-up" data-aos-duration="1000"
+                style="font-weight: 900; font-size: 160px; color: #1d1d1d; font-family: Schnyder L;">
+                Free-lancer.eu</div>
+        </div>
+        <div class="d-flex justify-content-between" style="color: black; margin-top: 7rem;">
+            <div data-aos="fade-up" data-aos-duration="1500" style="width: 30%; margin-left: 10rem; margin-top: -5rem;">
+                <img src="assets/right-arrow--ww.png">
+            </div>
+            <div style="width: 40%; flex-direction: column;" class="d-flex">
+                <div data-aos="fade-up" data-aos-duration="1500"
+                    style="font-family: GT Walsheim Pro; font-size: 15px; font-weight: 500">Freelancer EU</div>
+                <div data-aos="fade-up" data-aos-duration="1500" style="font-family: GT Walsheim Pro; font-size: 14px;">
+                    UI/UX Design / Interaction Design / Development</div>
+
+                <div data-aos="fade-up" data-aos-duration="2000"
+                    style="margin-top: 3rem; font-family: GT Walsheim Pro; font-size: 15px; font-weight: 500">Web
+                    Application
+                </div>
+                <div data-aos="fade-up" data-aos-duration="2000" style="font-family: GT Walsheim Pro; font-size: 14px;">
+                    Find an expert on everything.</div>
+                <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="0"
+                    style="margin-top: 20px; font-family: GT Walsheim Pro; font-size: 14px; width: 70%;">With
+                    Free-Lancer.eu employers can hire freelancers to do work in areas such
+                    as software development, writing, data entry and design right through to
+                    engineering, the sciences, sales and marketing, accounting and legal services. </div>
+            </div>
+
+        </div>
+        <div class="img-container-2"
+            style="margin-bottom: 10rem; height: 1080px; background-image: url(/assets/free_br.png); display: flex; justify-content: center; align-items: center;">
+            <img class="img-w" src="assets/free_logo.png" alt="">
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <div></div>
+            <div class="d-flex" style="width: 50%; color: black;  margin-bottom: 10rem;">
+                <div data-aos="fade-up" data-aos-duration="2000" data-aos-offset="200"
+                    style="font-size: 14px; font-weight: 500; width: 25%; margin-right: 3rem;">
+                    Make work more rewarding.
+                </div>
+                <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="200"
+                    style="font-size: 13px; width: 35%;">Free-lancer.eu's mission to create economic opportunities so
+                    people have better lives has taken us so much further. As a result, they have become the world’s
+                    work marketplace where every day businesses of all sizes and independent talent from around the
+                    globe meet here to accomplish incredible things.
+                    <br />
+                    As such, their platform was designed and built with performance and scalability in mind.
+                </div>
+            </div>
+        </div>
+
+        <div class="img-container d-flex justify-content-center my-5">
+            <div class="img-overlay"></div>
+            <div class="img-overlay-right"></div>
+            <video autoplay loop muted>
+                <source class="img-w" src="assets/free-vid-1.mp4" type="video/mp4" />
+            </video>
+        </div>
+
+        <div style="display: flex;">
+            <div class="d-flex justify-content-center"
+                style="width: 80%; display: flex; justify-content: center; align-items: center;">
+                <div class="img-container">
+                    <div class="img-overlay"></div>
+                    <div class="img-overlay-right"></div>
+                    <video style="width: 100%; height: 100%;" autoplay loop muted>
+                        <source class="img-w" src="assets/free-vid-2.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </div>
+            <div
+                style="width: 40%; color: rgb(255, 255, 255); background-image: url(/assets/free_bg_2.png); display: flex; justify-content: center; align-items: center;">
+                <div
+                    style="display: flex; width: 75%; flex-direction: column; color: rgb(255, 255, 255); justify-content: center; align-items: center;">
+                    <div data-aos="fade-up" data-aos-duration="2000" data-aos-offset="200"
+                        style="font-size: 14px; font-weight: 500; width: 100%; margin-bottom: 10px;">Freelancer Feed
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="200"
+                        style="font-size: 14px; width: 100%;">The feed was designed as a way for users to stay in touch
+                        with what people the people they follow are working on. Connect with and be the first to jump in
+                        on new and exciting projects.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="img-container-2"
+            style="display: flex; justify-content: center; align-items: center; margin-top: 10rem; padding-bottom: 10rem; height: 1080px; background-color: #EFF2FA;">
+            <img class="img-w" src="/assets/free_tt.png" alt="">
+        </div>
+
+        <div class="d-flex justify-content-between" style="background-color: #EFF2FA;">
+            <div></div>
+            <div class="d-flex" style="width: 50%; color: black;  margin-bottom: 10rem;">
+                <div data-aos="fade-up" data-aos-duration="2000" data-aos-offset="200"
+                    style="font-size: 14px; font-weight: 500; width: 25%; margin-right: 3rem;">
+                    Leaving your career path in the
+                    hands of your employer is old-school
+                </div>
+                <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="200"
+                    style="font-size: 13px; width: 35%;">Talent should be in the driver’s seat of their careers,
+                    equipped with the tools, skill-building, and autonomy to forge their own path. At the same time,
+                    talent shouldn’t have to go it alone when it comes to job searching and career decisions—they
+                    deserve a partner to coach and advise them along the way.</div>
+            </div>
+        </div>
+
+        <div class="img-container-2"
+            style="background-image: url(/assets/free7.png); display: flex; justify-content: center; align-items: center;">
+            <img class="img-w" src="/assets/free6.png" style="margin-top: 13rem; margin-bottom: 13rem;" alt="">
+        </div>
+
+
+        <div class="d-flex" style="color: black; height: 25rem; margin-top: 10rem;">
+
+            <a style="width: 40%; font-size:12px; margin-left: 50px; color: black; " href="/index.html">
+                <div>BACK TO HOME PAGE</div>
+            </a>
+            <div style="width: 30%;">
+                <div style="font-size:12px;">NEXT</div>
+                <div style="font-size:226px;">N.</div>
+            </div>
+            <div style="width: 20%;">
+                <div style="font-size: 80px; font-weight: 500;">501c3NFT</div>
+                <div style="font-size: 12px;">WEB DESIGN / INTERACTION DESIGN</div>
+                <div style="margin-top: 2rem;"><img src="assets/right-arrow-sm.png" alt=""></div>
+            </div>
+
+        </div>
+
+    </div>
+
 
 
 
