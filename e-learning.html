@@ -65,7 +65,7 @@
     }
 
     .img-container {
-        margin: 120px auto;
+        /* margin: 120px auto; */
         position: relative;
         width: 1298px;
         height: 712px;
@@ -91,6 +91,34 @@
         overflow: hidden;
         display: flex;
     }
+
+
+    .img-w {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    @media screen and (max-width: 1000px) {
+        .desktop-view {
+            display: none !important;
+        }
+    }
+
+    @media screen and (min-width: 1000px) {
+        .mobile-view {
+            display: none !important;
+        }
+    }
+
+
+    .arrow {
+        transition: all .3s ease-in-out;
+    }
+
+    .footer-arrow:hover .arrow {
+        transform: rotate(-45deg);
+        margin-left: 230px;
+    }
 </style>
 
 
@@ -99,7 +127,7 @@
 
 
 <body style="background-color: #F2F2F2; color: white;">
-    <div id="luxy">
+    <div id="luxy" class="desktop-view">
         <div class="d-flex justify-content-between"
             style="align-items: center;  margin-top: 40px; margin-left: 40px; margin-right: 40px;">
             <div>
@@ -107,7 +135,7 @@
                     Alberkko</a>
             </div>
             <div class="d-flex">
-                <a href="/easyweb.html"
+                <a href="/me.html"
                     style="font-weight: 700; font-size: 20px;  color: #1D1D1D; text-decoration: none;">about
                     me</a>
             </div>
@@ -119,10 +147,12 @@
         </div>
         <div class="d-flex justify-content-between" style="color: black; margin-top: 7rem;">
             <div data-aos="fade-up" data-aos-duration="1500" style="width: 30%; margin-left: 10rem; margin-top: -5rem;">
-                <img src="assets/right-arrow.png"></div>
+                <img src="assets/right-arrow.png">
+            </div>
             <div style="width: 40%; flex-direction: column;" class="d-flex">
                 <div data-aos="fade-up" data-aos-duration="1500"
-                    style="font-family: GT Walsheim Pro; font-size: 15px; font-weight: 500">Faculty of Architecture and Urbanism in Tirana, <br/>
+                    style="font-family: GT Walsheim Pro; font-size: 15px; font-weight: 500">Faculty of Architecture and
+                    Urbanism in Tirana, <br />
                     E-Learning Platform.</div>
                 <div data-aos="fade-up" data-aos-duration="1500" style="font-family: GT Walsheim Pro; font-size: 14px;">
                     Mobile App Design / Interaction Design / Development</div>
@@ -134,15 +164,18 @@
                 <div data-aos="fade-up" data-aos-duration="2000" style="font-family: GT Walsheim Pro; font-size: 14px;">
                     Online learning made simple.</div>
                 <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="0"
-                    style="margin-top: 20px; font-family: GT Walsheim Pro; font-size: 14px; width: 70%;">An online learning platform, allowing students of the University of Architecture and Urbanism in Tirana, to tak online classes, examination and monitor their progress. As well as allowing teachers to manage their classes, teach and examine students online. </div>
+                    style="margin-top: 20px; font-family: GT Walsheim Pro; font-size: 14px; width: 70%;">An online
+                    learning platform, allowing students of the University of Architecture and Urbanism in Tirana, to
+                    tak online classes, examination and monitor their progress. As well as allowing teachers to manage
+                    their classes, teach and examine students online. </div>
             </div>
 
         </div>
 
         <div class="img-container-2"
             style="margin-bottom: 10rem; height: 1080px; display: flex; justify-content: center; align-items: center;">
-            <img style="position: relative;" src="/assets/fau1.png" alt="">
-            <img style="position: absolute;" src="assets/fau_logo.png" alt="">
+            <img class="img-w" style="position: relative;" src="/assets/fau1.png" alt="">
+            <img class="img-w" style="position: absolute;" src="assets/fau_logo.png" alt="">
         </div>
 
         <div class="d-flex justify-content-between">
@@ -151,29 +184,235 @@
                 <div data-aos="fade-up" data-aos-duration="2000" data-aos-offset="200"
                     style="font-size: 14px; font-weight: 500; width: 25%; margin-right: 3rem;">
                     An efficient way to manage and
-assess progress while enhancing
-connections.
+                    assess progress while enhancing
+                    connections.
                 </div>
                 <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="200"
-                    style="font-size: 13px; width: 35%;">With
-                    Hyperfluids brings the latest international trends to the street in the form of easy, comfortable
-                    and casual
-                    clothes. The Hyperfluids collections are conceived with the idea of dressing men and women with a
-                    young
-                    mindset, taking into account that age is not an obstacle when choosing our wardrobe. The challenge
-                    was in
-                    finding a way to convey that messaging
-                    through the branding.</div>
+                    style="font-size: 13px; width: 35%;">
+                    By allowing students to submit their work online, teachers can keep track of their sections, view
+                    grades easily, and mark assignments during any free time they have, without having to carry stacks
+                    of paper around.
+                    <br /><br />
+                    This solution would also prove valuable for the faculty during COVID, as their departments were
+                    ready to continue teaching and adapting to the new study-from-home rules.
+                </div>
             </div>
         </div>
 
-        <div class="img-container d-flex justify-content-center my-5">
+        <div class="img-container d-flex justify-content-center my-5" style="margin-bottom: 10rem !important; margin: 120px auto;">
             <div class="img-overlay"></div>
             <div class="img-overlay-right"></div>
             <video autoplay loop muted>
-              <source src="assets/fau vid 1.mp4" type="video/mp4" />
+                <source src="assets/fau vid 1_3.mp4" type="video/mp4" />
             </video>
-          </div>
+        </div>
+
+        <div style="display: flex; background-color: #2B4D82;">
+            <div
+                style="width: 30%; display: flex; flex-direction: column; align-items: flex-end; justify-content: center;">
+                <div style="color: white; width: 80%; text-align: right;">
+                    <div data-aos="fade-up" data-aos-duration="2000" data-aos-offset="200"
+                        style="font-size: 14px; font-weight: 500;">
+                        Class management has never been easier.
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="200" style="font-size: 13px;">
+                        Student management in one screen. For each of their classes, teachers can manage their students
+                        and monitor their progress. The platform also offers the ability to generate reports and
+                        statistics for each class and general department statistics for department directors and
+                        administration staff.</div>
+                </div>
+            </div>
+            <div class="img-container-01"
+                style="width: 70%; display: flex; justify-content: center; align-items: center;">
+                <img class="img-w" style="margin-top: 10rem; margin-bottom: 10rem; width: 80%;" src="/assets/Group 424.png" alt="">
+            </div>
+        </div>
+
+
+        <div class="img-container-01" style="display: flex; justify-content: center; align-items: center;">
+            <img class="img-w" src="/assets/Group 423.png" style="margin-top: 13rem; margin-bottom: 13rem; width: 70%;"
+                alt="">
+        </div>
+
+
+        <div class="d-flex justify-content-between" style="background-color: #EFF2FA;">
+            <div></div>
+            <div class="d-flex" style="width: 50%; color: black;  margin-bottom: 10rem;">
+                <div data-aos="fade-up" data-aos-duration="2000" data-aos-offset="200"
+                    style="font-size: 14px; font-weight: 500; width: 25%; margin-right: 3rem;">
+                    Remotely administer any kind of
+                    tests online.
+                </div>
+                <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="200"
+                    style="font-size: 13px; width: 35%;">Using the platform teachers can create multiple types of tests,
+                    quizzes and courses. The platform is designed to give control over the entire testing process and
+                    ability to test and monitor.</div>
+            </div>
+        </div>
+
+
+        <div class="img-container-2" style=""><img class="img-w" src="assets/fau_last.png" alt="">
+        </div>
+
+
+        <div class="d-flex" style="color: black; height: 25rem; margin-top: 10rem;">
+
+            <a style="width: 40%; font-size:12px; margin-left: 50px; color: black; " href="/index.html">
+                <div>BACK TO HOME PAGE</div>
+            </a>
+            <div style="width: 30%;">
+                <div style="font-size:12px;">NEXT</div>
+                <div style="font-size:226px;">T.</div>
+            </div>
+            <div style="width: 20%;">
+                <a href="/turnup.html" class="footer-arrow" style="color: #1D1D1D; text-decoration: none;">
+                    <div style="font-size: 80px; font-weight: 500;">Turn Up</div>
+                    <div style="font-size: 12px;">UI/UX DESIGN / INTERACTION DESIGN / DEVELOPMENT</div>
+                    <div style="margin-top: 2rem;"><img class="arrow" src="assets/right-arrow-sm.png" alt=""></div>
+                </a>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div id="luxy" class="mobile-view">
+        <div class="d-flex justify-content-between"
+            style="align-items: center;  margin-top: 40px; margin-left: 20px; margin-right: 20px;">
+            <div>
+                <a style="font-weight: 500; font-size: 25px; color: #1D1D1D; text-decoration: none;" href="/">
+                    Alberkko</a>
+            </div>
+            <div class="d-flex">
+                <a href="/me.html"
+                    style="font-weight: 500; font-size: 13px;  color: #1D1D1D; text-decoration: none;">about
+                    me</a>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: center; margin-top: 15rem;">
+            <div data-aos="fade-up" data-aos-duration="1000"
+                style="font-weight: 900; font-size: 60px; color: #1d1d1d; font-family: Schnyder L;">
+                F.A.U</div>
+        </div>
+        <div class="d-flex justify-content-between" style="color: black; margin-top: 7rem;">
+            <!-- <div data-aos="fade-up" data-aos-duration="1500" style="margin-left: 10rem; margin-top: -5rem;">
+                <img src="assets/right-arrow.png">
+            </div> -->
+            <div style="flex-direction: column; width: 90%; margin-left: 1rem;" class="d-flex">
+                <div data-aos="fade-up" data-aos-duration="1500"
+                    style="font-family: GT Walsheim Pro; font-size: 15px; font-weight: 500">Faculty of Architecture and
+                    Urbanism in Tirana, <br />
+                    E-Learning Platform.</div>
+                <div data-aos="fade-up" data-aos-duration="1500" style="font-family: GT Walsheim Pro; font-size: 14px;">
+                    Mobile App Design / Interaction Design / Development</div>
+
+                <div data-aos="fade-up" data-aos-duration="2000"
+                    style="margin-top: 3rem; font-family: GT Walsheim Pro; font-size: 15px; font-weight: 500">Web
+                    Application
+                </div>
+                <div data-aos="fade-up" data-aos-duration="2000" style="font-family: GT Walsheim Pro; font-size: 14px;">
+                    Online learning made simple.</div>
+                <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="0"
+                    style="margin-top: 20px; font-family: GT Walsheim Pro; font-size: 14px;">An online
+                    learning platform, allowing students of the University of Architecture and Urbanism in Tirana, to
+                    tak online classes, examination and monitor their progress. As well as allowing teachers to manage
+                    their classes, teach and examine students online. </div>
+            </div>
+
+        </div>
+
+        <div class="img-container-2"
+            style="margin-bottom: 2rem; margin-top: 5rem; display: flex; justify-content: center; align-items: center;">
+            <img class="img-w" style="position: relative;" src="/assets/fau1.png" alt="">
+            <img class="img-w" style="position: absolute; width: 50%;" src="assets/fau_logo.png" alt="">
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <div></div>
+            <div class="" style="color: black;  margin-bottom: 2rem; margin-left: 1rem;">
+                <div data-aos="fade-up" data-aos-duration="2000" data-aos-offset="200"
+                    style="font-size: 14px; font-weight: 500; margin-right: 3rem;">
+                    An efficient way to manage and
+                    assess progress while enhancing
+                    connections.
+                </div>
+                <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="200"
+                    style="font-size: 13px;">
+                    By allowing students to submit their work online, teachers can keep track of their sections, view
+                    grades easily, and mark assignments during any free time they have, without having to carry stacks
+                    of paper around.
+                    <br /><br />
+                    This solution would also prove valuable for the faculty during COVID, as their departments were
+                    ready to continue teaching and adapting to the new study-from-home rules.
+                </div>
+            </div>
+        </div>
+
+        <div class="img-container d-flex justify-content-center" style="margin-bottom: 2rem !important; margin-top: 2rem; height: 100%; width: 100%;">
+            <div class="img-overlay"></div>
+            <div class="img-overlay-right"></div>
+            <video style="width: 100%;" autoplay loop muted>
+                <source src="assets/fau vid 1_3.mp4" type="video/mp4" />
+            </video>
+        </div>
+
+        <div style="background-color: #2B4D82;">
+            <div
+                style="display: flex; flex-direction: column; align-items: flex-end; justify-content: center;">
+                <div style="color: white; width: 90%; text-align: right; margin-right: 1rem; margin-top: 2rem;">
+                    <div data-aos="fade-up" data-aos-duration="2000" data-aos-offset="200"
+                        style="font-size: 14px; font-weight: 500;">
+                        Class management has never been easier.
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="200" style="font-size: 13px;">
+                        Student management in one screen. For each of their classes, teachers can manage their students
+                        and monitor their progress. The platform also offers the ability to generate reports and
+                        statistics for each class and general department statistics for department directors and
+                        administration staff.</div>
+                </div>
+            </div>
+            <div class="img-container-01"
+                style="display: flex; justify-content: center; align-items: center;">
+                <img class="img-w" style="margin-top: 2rem; margin-bottom: 2rem; width: 80%;" src="/assets/Group 424.png" alt="">
+            </div>
+        </div>
+
+
+        <div class="img-container-01" style="display: flex; justify-content: center; align-items: center;">
+            <img class="img-w" src="/assets/Group 423.png" style="margin-top: 2rem; margin-bottom: 2rem; width: 90%;"
+                alt="">
+        </div>
+
+
+        <div class="d-flex justify-content-between" style="background-color: #EFF2FA;">
+            <div></div>
+            <div class="" style="width: 100%; color: black;  margin-bottom: 4rem; margin-left: 1rem;">
+                <div data-aos="fade-up" data-aos-duration="2000" data-aos-offset="200"
+                    style="font-size: 14px; font-weight: 500; width: 90%; margin-right: 3rem;">
+                    Remotely administer any kind of
+                    tests online.
+                </div>
+                <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="200"
+                    style="font-size: 13px; width: 90%;">Using the platform teachers can create multiple types of tests,
+                    quizzes and courses. The platform is designed to give control over the entire testing process and
+                    ability to test and monitor.</div>
+            </div>
+        </div>
+
+
+        <div class="img-container-2" style=""><img class="img-w" src="assets/fau_last.png" alt="">
+        </div>
+
+
+        
+    <div class="d-flex" style="color: black; height: 2rem; margin-top: 5rem;">
+
+        <a style="width: 50%; font-size:12px; margin-left: 10px; color: black; " href="/index.html">
+          <div>BACK TO HOME PAGE</div>
+        </a>
+      </div>
+
 
     </div>
 
