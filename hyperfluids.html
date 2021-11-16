@@ -129,6 +129,13 @@
 
 
 <body style="background-color: #F2F2F2; color: white;">
+
+  <div id="loader"
+    style="background: #F2F2F2; height: 100vh; width: 100vw; z-index: 100; position: fixed; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    <div style="color: #1d1d1d; font-weight: 500;">alberkko</div>
+    <div style="color: #1d1d1d; font-weight: 500;">Page loading...</div>
+  </div>
+
   <div id="luxy" class="desktop-view">
     <div class="d-flex justify-content-between"
       style="align-items: center;  margin-top: 40px; margin-left: 40px; margin-right: 40px;">
@@ -461,6 +468,10 @@
 
   <script src="luxy.js" charset="utf-8"></script>
 
+  <script>
+    document.body.style.overflow = 'hidden';
+    document.getElementById("luxy").style.display='none'
+  </script>
 
 
   <script>
@@ -707,7 +718,6 @@
   </script>
 
   <script>
-
     var imgs = document.images,
       len = imgs.length,
       counter = 0;
@@ -723,6 +733,9 @@
       counter++;
       if (counter === len) {
         console.log('All images loaded!');
+        document.body.style.overflow = 'visible';
+        document.getElementById("loader").style.display='none'
+        document.getElementById("luxy").style.display='block'
       }
     }
 
