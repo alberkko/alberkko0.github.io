@@ -82,10 +82,39 @@
       display: none !important;
     }
   }
+
+  .loader {
+    border: 6px solid #e2e2e2;
+    /* Light grey */
+    border-top: 6px solid #1d1d1d;
+    /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    margin-bottom: 20px;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 </style>
 
 <body style="background-color: #030303; color: white;">
-  <div>
+
+  <div id="loader"
+  style="background: #F2F2F2; height: 100vh; width: 100vw; z-index: 100; position: fixed; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+  <div class="loader"></div>
+  <div style="color: #1d1d1d; font-weight: 500;">Loading alberkko</div>
+</div>
+
+  <div id="luxy2">
 
     <div class="d-flex justify-content-between"
       style="align-items: center;  margin-top: 40px; margin-left: 20px; margin-right: 20px; z-index: 10000;">
@@ -396,6 +425,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   <script src="https://unpkg.com/scrollbooster@2/dist/scrollbooster.min.js"></script>
 
+  <script>
+    document.body.style.overflow = 'hidden';
+    document.getElementById("luxy2").style.display = 'none'
+  </script>
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-61N7EX19SQ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -417,7 +451,6 @@
   </script>
 
 <script>
-
   var imgs = document.images,
     len = imgs.length,
     counter = 0;
@@ -433,10 +466,16 @@
     counter++;
     if (counter === len) {
       console.log('All images loaded!');
+      document.body.style.overflow = 'visible';
+      document.getElementById("loader").style.display = 'none'
+      document.getElementById("luxy2").style.display = 'block'
     }
   }
 
 </script>
+
+
+
 
 </body>
 
