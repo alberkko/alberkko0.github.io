@@ -15,6 +15,9 @@
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+  <link rel="preload" href="https://alberkko.github.io/assets/809056467.png" as="image">
+
+
 </head>
 
 <style>
@@ -93,34 +96,31 @@
   }
 
   .img-w {
-        max-width: 100%;
-        max-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .desktop-view {
+      display: none !important;
     }
+  }
 
-    @media screen and (max-width: 1000px) {
-        .desktop-view {
-            display: none !important;
-        }
+  @media screen and (min-width: 1000px) {
+    .mobile-view {
+      display: none !important;
     }
-
-    @media screen and (min-width: 1000px) {
-        .mobile-view {
-            display: none !important;
-        }
-    }
+  }
 
 
-    .arrow{
-        transition: all .3s ease-in-out;
-    }
+  .arrow {
+    transition: all .3s ease-in-out;
+  }
 
-    .footer-arrow:hover .arrow {
-        transform: rotate(-45deg);
-        margin-left: 230px;
-    }
-
-
-
+  .footer-arrow:hover .arrow {
+    transform: rotate(-45deg);
+    margin-left: 230px;
+  }
 </style>
 
 
@@ -169,7 +169,8 @@
       </div>
 
     </div>
-    <div class="img-container-2" style="margin-bottom: 10rem;"><img class="img-w" src="assets/809056467.png" alt=""></div>
+    <div class="img-container-2" style="margin-bottom: 10rem;"><img class="img-w" src="assets/809056467.png" alt="">
+    </div>
     <div class="img-container d-flex justify-content-center my-5">
       <div class="img-overlay"></div>
       <div class="img-overlay-right"></div>
@@ -270,10 +271,10 @@
       </div>
       <div style="width: 20%;">
         <a href="/superposition.html" class="footer-arrow" style="color: #1D1D1D; text-decoration: none;">
-        <div style="font-size: 80px; font-weight: 500;">Superposition</div>
-        <div style="font-size: 12px;">MOBILE APP DESIGN / INTERACTION DESIGN</div>
-        <div style="margin-top: 2rem;"><img class="arrow" src="assets/right-arrow-sm.png" alt=""></div>
-      </a>
+          <div style="font-size: 80px; font-weight: 500;">Superposition</div>
+          <div style="font-size: 12px;">MOBILE APP DESIGN / INTERACTION DESIGN</div>
+          <div style="margin-top: 2rem;"><img class="arrow" src="assets/right-arrow-sm.png" alt=""></div>
+        </a>
       </div>
 
     </div>
@@ -314,7 +315,8 @@
         <div data-aos="fade-up" data-aos-duration="2000" style="font-family: GT Walsheim Pro; font-size: 14px;">An every
           young community.</div>
         <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="0"
-          style="margin-top: 20px; font-family: GT Walsheim Pro; font-size: 14px; width: 100%;">Hyperfluids started up in
+          style="margin-top: 20px; font-family: GT Walsheim Pro; font-size: 14px; width: 100%;">Hyperfluids started up
+          in
           2013 with intention of dressing young people who are engaged
           with their environment, who live in the community and relate to each other. Working
           with Hyperfluids was an incredible experience, watching them expand their brand with
@@ -322,7 +324,8 @@
       </div>
 
     </div>
-    <div class="img-container-2" style="margin-bottom: 2rem;"><img class="img-w" src="assets/809056467.png" alt=""></div>
+    <div class="img-container-2" style="margin-bottom: 2rem;"><img class="img-w" src="assets/809056467.png" alt="">
+    </div>
     <div class="img-container d-flex justify-content-center my-5" style="width: 100%; height: 100%;">
       <div class="img-overlay"></div>
       <div class="img-overlay-right"></div>
@@ -367,7 +370,8 @@
       <div
         style="display: flex; width: 100%; flex-direction: column; color: black; justify-content: center; align-items: center;">
         <div data-aos="fade-up" data-aos-duration="2000" data-aos-offset="200"
-          style="font-size: 14px; font-weight: 500; width: 90%; margin-bottom: 10px; margin-top: 3rem;">Evolving at the same pace as the
+          style="font-size: 14px; font-weight: 500; width: 90%; margin-bottom: 10px; margin-top: 3rem;">Evolving at the
+          same pace as the
           customer.</div>
         <div data-aos="fade-up" data-aos-duration="3000" data-aos-offset="200" style="font-size: 13px; width: 90%;">
           Hyperfluids are always watching out for new technologies, social movements and the latest artistic or musical
@@ -699,6 +703,28 @@
 
       io.observe(image);
     });
+
+  </script>
+
+  <script>
+
+    var imgs = document.images,
+      len = imgs.length,
+      counter = 0;
+
+    [].forEach.call(imgs, function (img) {
+      if (img.complete)
+        incrementCounter();
+      else
+        img.addEventListener('load', incrementCounter, false);
+    });
+
+    function incrementCounter() {
+      counter++;
+      if (counter === len) {
+        console.log('All images loaded!');
+      }
+    }
 
   </script>
 </body>
